@@ -833,7 +833,7 @@ public:
 
     void retranslateUi(QMainWindow *PngyuMainWindow)
     {
-        PngyuMainWindow->setWindowTitle(QCoreApplication::translate("PngyuMainWindow", "Pngyu", nullptr));
+        PngyuMainWindow->setWindowTitle(QCoreApplication::translate("PngyuMainWindow", "PngyuNew", nullptr));
         action_preferences->setText(QCoreApplication::translate("PngyuMainWindow", "&Preferences", nullptr));
         action_quit->setText(QCoreApplication::translate("PngyuMainWindow", "&Quit", nullptr));
         pushButton_exec->setText(QCoreApplication::translate("PngyuMainWindow", "Compress Start", nullptr));
