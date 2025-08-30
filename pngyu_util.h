@@ -142,6 +142,8 @@ inline void set_drop_here_stylesheet(
     // Use system background color for better Dark Mode support
     stylesheet += "background-color : palette(base);\n";
   }
+  // Ensure text color adapts to Dark Mode
+  stylesheet += "color : palette(text);\n";
   stylesheet += "}";
 
   widget->setStyleSheet( stylesheet );
