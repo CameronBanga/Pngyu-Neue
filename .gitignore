@@ -20,3 +20,4 @@
 *.o
 PngyuNew.xcodeproj/project.xcworkspace/xcuserdata/*
 *.xcuserstate
+.xcode/XCBuildData/build.db
