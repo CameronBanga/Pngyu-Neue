@@ -364,6 +364,35 @@ pngyu::PngquantOption PngyuMainWindow::make_pngquant_option( const QString &outp
   return option;
 }
 
+pngyu::JpegOption PngyuMainWindow::make_jpeg_option() const
+{
+  // make jpeg option with default settings for now
+  // TODO: Add UI controls for JPEG-specific options
+  
+  pngyu::JpegOption option;
+  
+  if( current_compress_option_mode() == pngyu::COMPRESS_OPTION_CUSTOM )
+  {
+    // For custom mode, we can adjust quality based on compression speed
+    // Lower speed (higher quality) = higher JPEG quality
+    int speed = compress_speed();
+    int quality = 100 - (speed * 10); // Convert speed 1-10 to quality 90-10
+    quality = qMax(10, qMin(95, quality)); // Clamp between 10-95
+    option.set_quality(quality);
+  }
+  else
+  {
+    // Default mode uses good quality
+    option.set_quality(85);
+  }
+  
+  option.set_progressive(false);
+  option.set_optimize_huffman(true);
+  option.set_strip_metadata(true);
+  
+  return option;
+}
+
 void PngyuMainWindow::set_executable_pngquant_path( const QString &path )
 {
   m_current_pngquant_path = path;
@@ -642,6 +671,19 @@ void PngyuMainWindow::execute_compress_all( bool image_optim_enabled )
     data.dst_path = dst_path;
     data.pngquant_path = pngquant_path;
     data.pngquant_option = option;
+    
+    // Set image format and options
+    QFileInfo file_info(src_path);
+    if( pngyu::util::is_jpeg_file(file_info) )
+    {
+      data.image_format = pngyu::IMAGE_FORMAT_JPEG;
+      data.jpeg_option = make_jpeg_option(); // We'll add this method
+    }
+    else
+    {
+      data.image_format = pngyu::IMAGE_FORMAT_PNG;
+    }
+    
     data.overwrite_enabled = b_overwrite_enable;
     data.force_execute_if_negative = b_force_execute_if_negative;
     data.table_widget = table_widget;
@@ -1019,9 +1061,9 @@ void PngyuMainWindow::append_file_info_recursive( const QFileInfo &file_info,
     return;
   }
   if( file_info.isFile() )
-  { // if file_info is file, png check and add to file_list
-    const bool is_png = pngyu::util::has_png_extention( file_info );
-    if( is_png && ! m_file_list.contains( file_info ) )
+  { // if file_info is file, image format check and add to file_list
+    const bool is_supported = pngyu::util::has_supported_image_extention( file_info );
+    if( is_supported && ! m_file_list.contains( file_info ) )
     {
       m_file_list.push_back( file_info );
     }

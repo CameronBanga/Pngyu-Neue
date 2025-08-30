@@ -55,6 +55,7 @@ OBJECTS_DIR   = ./
 SOURCES       = main.cpp \
 		pngyumainwindow.cpp \
 		pngyu_execute_pngquant_command.cpp \
+		pngyu_execute_jpegoptim_command.cpp \
 		preview_window/basicimageview.cpp \
 		preview_window/pngyupreviewwindow.cpp \
 		executecompressthread.cpp \
@@ -71,6 +72,7 @@ SOURCES       = main.cpp \
 OBJECTS       = main.o \
 		pngyumainwindow.o \
 		pngyu_execute_pngquant_command.o \
+		pngyu_execute_jpegoptim_command.o \
 		basicimageview.o \
 		pngyupreviewwindow.o \
 		executecompressthread.o \
@@ -460,8 +462,10 @@ DIST          = /opt/homebrew/share/qt/mkspecs/features/spec_pre.prf \
 		Pngyu.pro pngyumainwindow.h \
 		pngyu_util.h \
 		pngyu_pngquant_option.h \
+		pngyu_jpeg_option.h \
 		pngyu_defines.h \
 		pngyu_execute_pngquant_command.h \
+		pngyu_execute_jpegoptim_command.h \
 		preview_window/basicimageview.h \
 		preview_window/pngyupreviewwindow.h \
 		executecompressthread.h \
@@ -472,6 +476,7 @@ DIST          = /opt/homebrew/share/qt/mkspecs/features/spec_pre.prf \
 		pngyu_custom_tablewidget_item.h main.cpp \
 		pngyumainwindow.cpp \
 		pngyu_execute_pngquant_command.cpp \
+		pngyu_execute_jpegoptim_command.cpp \
 		preview_window/basicimageview.cpp \
 		preview_window/pngyupreviewwindow.cpp \
 		executecompressthread.cpp \
@@ -1288,8 +1293,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents resource/resource.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /opt/homebrew/share/qt/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents pngyumainwindow.h pngyu_util.h pngyu_pngquant_option.h pngyu_defines.h pngyu_execute_pngquant_command.h preview_window/basicimageview.h preview_window/pngyupreviewwindow.h executecompressthread.h spinnerwidget.h preferences_dialog/pngyupreferencesdialog.h imageoptim_integration_question_dialog/pngyuimageoptimintegrationquestiondialog.h executecompressworkerthread.h pngyu_custom_tablewidget_item.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp pngyumainwindow.cpp pngyu_execute_pngquant_command.cpp preview_window/basicimageview.cpp preview_window/pngyupreviewwindow.cpp executecompressthread.cpp preferences_dialog/pngyupreferencesdialog.cpp imageoptim_integration_question_dialog/pngyuimageoptimintegrationquestiondialog.cpp executecompressworkerthread.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents pngyumainwindow.h pngyu_util.h pngyu_pngquant_option.h pngyu_jpeg_option.h pngyu_defines.h pngyu_execute_pngquant_command.h pngyu_execute_jpegoptim_command.h preview_window/basicimageview.h preview_window/pngyupreviewwindow.h executecompressthread.h spinnerwidget.h preferences_dialog/pngyupreferencesdialog.h imageoptim_integration_question_dialog/pngyuimageoptimintegrationquestiondialog.h executecompressworkerthread.h pngyu_custom_tablewidget_item.h $(DISTDIR)/
+	$(COPY_FILE) --parents main.cpp pngyumainwindow.cpp pngyu_execute_pngquant_command.cpp pngyu_execute_jpegoptim_command.cpp preview_window/basicimageview.cpp preview_window/pngyupreviewwindow.cpp executecompressthread.cpp preferences_dialog/pngyupreferencesdialog.cpp imageoptim_integration_question_dialog/pngyuimageoptimintegrationquestiondialog.cpp executecompressworkerthread.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents pngyumainwindow.ui preview_window/pngyupreviewwindow.ui preferences_dialog/pngyupreferencesdialog.ui imageoptim_integration_question_dialog/pngyuimageoptimintegrationquestiondialog.ui $(DISTDIR)/
 
 
@@ -1363,6 +1368,7 @@ moc_pngyumainwindow.cpp: pngyumainwindow.h \
 		/opt/homebrew/lib/QtCore.framework/Headers/QString \
 		/opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
 		pngyu_pngquant_option.h \
+		pngyu_jpeg_option.h \
 		moc_predefs.h \
 		/opt/homebrew/share/qt/libexec/moc
 	/opt/homebrew/share/qt/libexec/moc $(DEFINES) --include /Users/cameronbanga/Developer/git/Pngyu/moc_predefs.h -I/opt/homebrew/share/qt/mkspecs/macx-clang -I/Users/cameronbanga/Developer/git/Pngyu -I/Users/cameronbanga/Developer/git/Pngyu/preview_window -I/Users/cameronbanga/Developer/git/Pngyu/preferences_dialog -I/Users/cameronbanga/Developer/git/Pngyu/imageoptim_integration_question_dialog -I/opt/homebrew/lib/QtWidgets.framework/Headers -I/opt/homebrew/lib/QtGui.framework/Headers -I/opt/homebrew/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/opt/homebrew/lib pngyumainwindow.h -o moc_pngyumainwindow.cpp
@@ -1388,6 +1394,7 @@ moc_pngyupreviewwindow.cpp: preview_window/pngyupreviewwindow.h \
 		pngyu_defines.h \
 		/opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidget \
 		/opt/homebrew/lib/QtWidgets.framework/Headers/qtablewidget.h \
+		pngyu_jpeg_option.h \
 		moc_predefs.h \
 		/opt/homebrew/share/qt/libexec/moc
 	/opt/homebrew/share/qt/libexec/moc $(DEFINES) --include /Users/cameronbanga/Developer/git/Pngyu/moc_predefs.h -I/opt/homebrew/share/qt/mkspecs/macx-clang -I/Users/cameronbanga/Developer/git/Pngyu -I/Users/cameronbanga/Developer/git/Pngyu/preview_window -I/Users/cameronbanga/Developer/git/Pngyu/preferences_dialog -I/Users/cameronbanga/Developer/git/Pngyu/imageoptim_integration_question_dialog -I/opt/homebrew/lib/QtWidgets.framework/Headers -I/opt/homebrew/lib/QtGui.framework/Headers -I/opt/homebrew/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/opt/homebrew/lib preview_window/pngyupreviewwindow.h -o moc_pngyupreviewwindow.cpp
@@ -1403,6 +1410,7 @@ moc_executecompressthread.cpp: executecompressthread.h \
 		/opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidget \
 		/opt/homebrew/lib/QtWidgets.framework/Headers/qtablewidget.h \
 		pngyu_pngquant_option.h \
+		pngyu_jpeg_option.h \
 		moc_predefs.h \
 		/opt/homebrew/share/qt/libexec/moc
 	/opt/homebrew/share/qt/libexec/moc $(DEFINES) --include /Users/cameronbanga/Developer/git/Pngyu/moc_predefs.h -I/opt/homebrew/share/qt/mkspecs/macx-clang -I/Users/cameronbanga/Developer/git/Pngyu -I/Users/cameronbanga/Developer/git/Pngyu/preview_window -I/Users/cameronbanga/Developer/git/Pngyu/preferences_dialog -I/Users/cameronbanga/Developer/git/Pngyu/imageoptim_integration_question_dialog -I/opt/homebrew/lib/QtWidgets.framework/Headers -I/opt/homebrew/lib/QtGui.framework/Headers -I/opt/homebrew/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/opt/homebrew/lib executecompressthread.h -o moc_executecompressthread.cpp
@@ -1418,6 +1426,7 @@ moc_pngyupreferencesdialog.cpp: preferences_dialog/pngyupreferencesdialog.h \
 		/opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidget \
 		/opt/homebrew/lib/QtWidgets.framework/Headers/qtablewidget.h \
 		pngyu_pngquant_option.h \
+		pngyu_jpeg_option.h \
 		moc_predefs.h \
 		/opt/homebrew/share/qt/libexec/moc
 	/opt/homebrew/share/qt/libexec/moc $(DEFINES) --include /Users/cameronbanga/Developer/git/Pngyu/moc_predefs.h -I/opt/homebrew/share/qt/mkspecs/macx-clang -I/Users/cameronbanga/Developer/git/Pngyu -I/Users/cameronbanga/Developer/git/Pngyu/preview_window -I/Users/cameronbanga/Developer/git/Pngyu/preferences_dialog -I/Users/cameronbanga/Developer/git/Pngyu/imageoptim_integration_question_dialog -I/opt/homebrew/lib/QtWidgets.framework/Headers -I/opt/homebrew/lib/QtGui.framework/Headers -I/opt/homebrew/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/opt/homebrew/lib preferences_dialog/pngyupreferencesdialog.h -o moc_pngyupreferencesdialog.cpp
@@ -1442,6 +1451,7 @@ moc_executecompressworkerthread.cpp: executecompressworkerthread.h \
 		/opt/homebrew/lib/QtCore.framework/Headers/QString \
 		/opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
 		pngyu_pngquant_option.h \
+		pngyu_jpeg_option.h \
 		moc_predefs.h \
 		/opt/homebrew/share/qt/libexec/moc
 	/opt/homebrew/share/qt/libexec/moc $(DEFINES) --include /Users/cameronbanga/Developer/git/Pngyu/moc_predefs.h -I/opt/homebrew/share/qt/mkspecs/macx-clang -I/Users/cameronbanga/Developer/git/Pngyu -I/Users/cameronbanga/Developer/git/Pngyu/preview_window -I/Users/cameronbanga/Developer/git/Pngyu/preferences_dialog -I/Users/cameronbanga/Developer/git/Pngyu/imageoptim_integration_question_dialog -I/opt/homebrew/lib/QtWidgets.framework/Headers -I/opt/homebrew/lib/QtGui.framework/Headers -I/opt/homebrew/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/opt/homebrew/lib executecompressworkerthread.h -o moc_executecompressworkerthread.cpp
@@ -1525,6 +1535,7 @@ main.o: main.cpp /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication \
 		/opt/homebrew/lib/QtCore.framework/Headers/QString \
 		/opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
 		pngyu_pngquant_option.h \
+		pngyu_jpeg_option.h \
 		/opt/homebrew/lib/QtGui.framework/Headers/QFileOpenEvent \
 		/opt/homebrew/lib/QtGui.framework/Headers/qevent.h \
 		/opt/homebrew/lib/QtCore.framework/Headers/QDebug \
@@ -1544,6 +1555,7 @@ pngyumainwindow.o: pngyumainwindow.cpp pngyumainwindow.h \
 		/opt/homebrew/lib/QtCore.framework/Headers/QString \
 		/opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
 		pngyu_pngquant_option.h \
+		pngyu_jpeg_option.h \
 		ui_pngyumainwindow.h \
 		spinnerwidget.h \
 		/opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
@@ -1644,6 +1656,28 @@ pngyu_execute_pngquant_command.o: pngyu_execute_pngquant_command.cpp pngyu_execu
 		/opt/homebrew/lib/QtCore.framework/Headers/qregularexpression.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o pngyu_execute_pngquant_command.o pngyu_execute_pngquant_command.cpp
 
+pngyu_execute_jpegoptim_command.o: pngyu_execute_jpegoptim_command.cpp pngyu_execute_jpegoptim_command.h \
+		/opt/homebrew/lib/QtCore.framework/Headers/QString \
+		/opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
+		/opt/homebrew/lib/QtCore.framework/Headers/QByteArray \
+		/opt/homebrew/lib/QtCore.framework/Headers/qbytearray.h \
+		/opt/homebrew/lib/QtCore.framework/Headers/QPair \
+		/opt/homebrew/lib/QtCore.framework/Headers/qpair.h \
+		/opt/homebrew/lib/QtCore.framework/Headers/QFileInfo \
+		/opt/homebrew/lib/QtCore.framework/Headers/qfileinfo.h \
+		pngyu_jpeg_option.h \
+		/opt/homebrew/lib/QtCore.framework/Headers/QProcess \
+		/opt/homebrew/lib/QtCore.framework/Headers/qprocess.h \
+		/opt/homebrew/lib/QtCore.framework/Headers/QDir \
+		/opt/homebrew/lib/QtCore.framework/Headers/qdir.h \
+		/opt/homebrew/lib/QtCore.framework/Headers/QStandardPaths \
+		/opt/homebrew/lib/QtCore.framework/Headers/qstandardpaths.h \
+		/opt/homebrew/lib/QtCore.framework/Headers/QDebug \
+		/opt/homebrew/lib/QtCore.framework/Headers/qdebug.h \
+		/opt/homebrew/lib/QtCore.framework/Headers/QTemporaryFile \
+		/opt/homebrew/lib/QtCore.framework/Headers/qtemporaryfile.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o pngyu_execute_jpegoptim_command.o pngyu_execute_jpegoptim_command.cpp
+
 basicimageview.o: preview_window/basicimageview.cpp preview_window/basicimageview.h \
 		/opt/homebrew/lib/QtWidgets.framework/Headers/QGraphicsView \
 		/opt/homebrew/lib/QtWidgets.framework/Headers/qgraphicsview.h \
@@ -1674,6 +1708,7 @@ pngyupreviewwindow.o: preview_window/pngyupreviewwindow.cpp preview_window/pngyu
 		pngyu_defines.h \
 		/opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidget \
 		/opt/homebrew/lib/QtWidgets.framework/Headers/qtablewidget.h \
+		pngyu_jpeg_option.h \
 		ui_pngyupreviewwindow.h \
 		preview_window/basicimageview.h \
 		/opt/homebrew/lib/QtWidgets.framework/Headers/QGraphicsView \
@@ -1731,6 +1766,7 @@ executecompressthread.o: executecompressthread.cpp executecompressthread.h \
 		/opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidget \
 		/opt/homebrew/lib/QtWidgets.framework/Headers/qtablewidget.h \
 		pngyu_pngquant_option.h \
+		pngyu_jpeg_option.h \
 		/opt/homebrew/lib/QtCore.framework/Headers/QProcess \
 		/opt/homebrew/lib/QtCore.framework/Headers/qprocess.h \
 		/opt/homebrew/lib/QtCore.framework/Headers/QElapsedTimer \
@@ -1754,6 +1790,7 @@ pngyupreferencesdialog.o: preferences_dialog/pngyupreferencesdialog.cpp preferen
 		/opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidget \
 		/opt/homebrew/lib/QtWidgets.framework/Headers/qtablewidget.h \
 		pngyu_pngquant_option.h \
+		pngyu_jpeg_option.h \
 		ui_pngyupreferencesdialog.h \
 		/opt/homebrew/lib/QtCore.framework/Headers/QDebug \
 		/opt/homebrew/lib/QtCore.framework/Headers/qdebug.h \
@@ -1808,6 +1845,7 @@ executecompressworkerthread.o: executecompressworkerthread.cpp executecompresswo
 		/opt/homebrew/lib/QtCore.framework/Headers/QString \
 		/opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
 		pngyu_pngquant_option.h \
+		pngyu_jpeg_option.h \
 		/opt/homebrew/lib/QtCore.framework/Headers/QFile \
 		/opt/homebrew/lib/QtCore.framework/Headers/qfile.h \
 		/opt/homebrew/lib/QtCore.framework/Headers/QDebug \
@@ -1837,6 +1875,9 @@ executecompressworkerthread.o: executecompressworkerthread.cpp executecompresswo
 		/opt/homebrew/lib/QtCore.framework/Headers/qprocess.h \
 		/opt/homebrew/lib/QtGui.framework/Headers/QIcon \
 		/opt/homebrew/lib/QtGui.framework/Headers/qicon.h \
+		pngyu_execute_jpegoptim_command.h \
+		/opt/homebrew/lib/QtCore.framework/Headers/QPair \
+		/opt/homebrew/lib/QtCore.framework/Headers/qpair.h \
 		pngyu_custom_tablewidget_item.h \
 		/opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidgetItem
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o executecompressworkerthread.o executecompressworkerthread.cpp

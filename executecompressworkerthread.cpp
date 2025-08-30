@@ -6,6 +6,7 @@
 
 #include "executecompressthread.h"
 #include "pngyu_util.h"
+#include "pngyu_execute_jpegoptim_command.h"
 
 #include "pngyu_custom_tablewidget_item.h"
 
@@ -99,16 +100,96 @@ pngyu::CompressResult ExecuteCompressWorkerThread::execute_compress(
   return res;
 }
 
+pngyu::CompressResult ExecuteCompressWorkerThread::execute_compress_generic(
+    const pngyu::CompressQueueData &data )
+{
+  pngyu::CompressResult res;
+  res.src_path = data.src_path;
+  res.dst_path = data.dst_path;
+
+  try
+  {
+    if( data.dst_path.isEmpty() )
+    {
+      throw tr( "Error: Output option is invalid" );
+    }
+
+    const bool dst_path_exists = QFile::exists( data.dst_path );
+    if( dst_path_exists && ! data.overwrite_enabled )
+    {
+      throw tr( "Error: \"%1\" is already exists" ).arg( data.dst_path );
+    }
+
+    const QByteArray &src_data = pngyu::util::image_file_to_bytearray( data.src_path );
+    QByteArray dst_data;
+
+    if( data.image_format == pngyu::IMAGE_FORMAT_PNG )
+    {
+      // PNG compression using pngquant
+      ExecuteCompressThread compress_thread;
+      compress_thread.set_executable_pngquant_path( data.pngquant_path );
+      compress_thread.set_pngquant_option( data.pngquant_option );
+      compress_thread.clear_result();
+      compress_thread.set_original_png_data( src_data );
+      compress_thread.start();
+      compress_thread.wait();
+
+      if( ! compress_thread.is_compress_succeeded() )
+      {
+        throw compress_thread.error_string();
+      }
+
+      dst_data = (data.force_execute_if_negative || compress_thread.saved_size() >= 0) ?
+                  compress_thread.output_png_data() : compress_thread.original_png_data();
+    }
+    else if( data.image_format == pngyu::IMAGE_FORMAT_JPEG )
+    {
+      // JPEG compression using jpegoptim
+      QPair<QByteArray,QString> jpeg_result = 
+          pngyu::execute_jpeg_compress_with_data( data.src_path, data.jpeg_option );
+      
+      if( jpeg_result.first.isEmpty() )
+      {
+        throw jpeg_result.second;
+      }
+      
+      dst_data = jpeg_result.first;
+    }
+    else
+    {
+      throw tr( "Error: Unsupported image format" );
+    }
+
+    if( dst_path_exists )
+    {
+      if( ! QFile::remove( data.dst_path ) )
+      {
+        throw tr( "Error: Couldn't overwrite" );
+      }
+    }
+
+    if( ! pngyu::util::write_image_data( data.dst_path, dst_data ) )
+    {
+       throw tr( "Error: Couldn't save output file" );
+    }
+
+    res.result = true;
+    res.src_size = src_data.size();
+    res.dst_size = dst_data.size();
+  }
+  catch( const QString &ex )
+  {
+    res.result = false;
+    res.error_message = ex;
+  }
+
+  return res;
+}
+
 pngyu::CompressResult ExecuteCompressWorkerThread::execute_compress(
     const pngyu::CompressQueueData &data )
 {
-  return execute_compress(
-        data.src_path,
-        data.dst_path,
-        data.pngquant_path,
-        data.pngquant_option,
-        data.overwrite_enabled,
-        data.force_execute_if_negative );
+  return execute_compress_generic( data );
 }
 
 void ExecuteCompressWorkerThread::show_compress_result( QTableWidget *table_widget, const int row, const pngyu::CompressResult &result )

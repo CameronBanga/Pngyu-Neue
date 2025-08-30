@@ -33,6 +33,7 @@ public:
   QString make_output_file_path_string( const QString &input_file_path ) const;
 
   pngyu::PngquantOption make_pngquant_option( const QString &output_file_suffix ) const;
+  pngyu::JpegOption make_jpeg_option() const;
 
   void set_executable_pngquant_path( const QString &path );
   QString executable_pngquant_path() const;

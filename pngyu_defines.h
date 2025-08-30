@@ -5,6 +5,7 @@
 #include <QTableWidget>
 
 #include "pngyu_pngquant_option.h"
+#include "pngyu_jpeg_option.h"
 
 namespace pngyu
 {
@@ -51,6 +52,12 @@ enum ImageOptimIntegration{
   IMAGEOPTIM_ALWAYS_DISABLED
 };
 
+enum ImageFormat
+{
+  IMAGE_FORMAT_PNG = 0,
+  IMAGE_FORMAT_JPEG
+};
+
 enum TableColumn
 {
   COLUMN_BASENAME = 0,
@@ -83,6 +90,7 @@ class CompressQueueData
 {
 public:
   CompressQueueData() :
+    image_format(IMAGE_FORMAT_PNG),
     table_widget(0)
   {}
 
@@ -90,6 +98,8 @@ public:
   QString dst_path;
   QString pngquant_path;
   pngyu::PngquantOption pngquant_option;
+  pngyu::JpegOption jpeg_option;
+  ImageFormat image_format;
   bool overwrite_enabled;
   bool force_execute_if_negative;
 

@@ -19,6 +19,7 @@ SOURCES += \
     main.cpp\
     pngyumainwindow.cpp \
     pngyu_execute_pngquant_command.cpp \
+    pngyu_execute_jpegoptim_command.cpp \
     preview_window/basicimageview.cpp \
     preview_window/pngyupreviewwindow.cpp \
     executecompressthread.cpp \
@@ -30,8 +31,10 @@ HEADERS  += \
     pngyumainwindow.h \
     pngyu_util.h \
     pngyu_pngquant_option.h \
+    pngyu_jpeg_option.h \
     pngyu_defines.h \
     pngyu_execute_pngquant_command.h \
+    pngyu_execute_jpegoptim_command.h \
     preview_window/basicimageview.h \
     preview_window/pngyupreviewwindow.h \
     executecompressthread.h \

@@ -976,7 +976,7 @@ public:
 
     void retranslateUi(QMainWindow *PngyuMainWindow)
     {
-        PngyuMainWindow->setWindowTitle(QCoreApplication::translate("PngyuMainWindow", "New Pngyu", nullptr));
+        PngyuMainWindow->setWindowTitle(QCoreApplication::translate("PngyuMainWindow", "New Pngyu - PNG & JPEG Optimizer", nullptr));
         action_preferences->setText(QCoreApplication::translate("PngyuMainWindow", "&Preferences", nullptr));
         action_quit->setText(QCoreApplication::translate("PngyuMainWindow", "&Quit", nullptr));
         pushButton_exec->setText(QCoreApplication::translate("PngyuMainWindow", "Compress Start", nullptr));
@@ -984,7 +984,7 @@ public:
         label_executing->setText(QCoreApplication::translate("PngyuMainWindow", "Now Compressing...", nullptr));
         groupBox_output_option->setTitle(QCoreApplication::translate("PngyuMainWindow", "Output Option", nullptr));
         groupBox_output_filename->setTitle(QCoreApplication::translate("PngyuMainWindow", "Output Filename", nullptr));
-        comboBox_output_filename_mode->setItemText(0, QCoreApplication::translate("PngyuMainWindow", "[Original].png", nullptr));
+        comboBox_output_filename_mode->setItemText(0, QCoreApplication::translate("PngyuMainWindow", "[Original].png/.jpg", nullptr));
         comboBox_output_filename_mode->setItemText(1, QCoreApplication::translate("PngyuMainWindow", "Custom Filename", nullptr));
 
 #if QT_CONFIG(tooltip)

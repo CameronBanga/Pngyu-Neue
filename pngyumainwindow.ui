@@ -20,7 +20,7 @@
    <bool>true</bool>
   </property>
   <property name="windowTitle">
-   <string>New Pngyu</string>
+   <string>New Pngyu - PNG &amp; JPEG Optimizer</string>
   </property>
   <property name="styleSheet">
    <string notr="true">/* Modern macOS buttons */
@@ -436,7 +436,7 @@ QPushButton#pushButton_filelist_clear:pressed {
                </property>
                <item>
                 <property name="text">
-                 <string>[Original].png</string>
+                 <string>[Original].png/.jpg</string>
                 </property>
                </item>
                <item>
