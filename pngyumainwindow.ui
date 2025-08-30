@@ -198,21 +198,30 @@ QFrame#frame_ie6 {
     background-color: rgba(0, 0, 0, 0.02);
 }
 
-/* Add file button */
+/* Add file button - specific styling to override general QToolButton */
 QToolButton#toolButton_add_file {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
-    background-color: palette(button);
-    color: #007AFF;
-    font-weight: 600;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 6px !important;
+    background-color: palette(button) !important;
+    color: #007AFF !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    padding: 2px !important;
 }
 
 QToolButton#toolButton_add_file:hover {
-    background-color: palette(midlight);
+    background-color: palette(midlight) !important;
+    color: #0051D5 !important;
 }
 
 QToolButton#toolButton_add_file:pressed {
-    background-color: palette(mid);
+    background-color: palette(mid) !important;
+    color: #003D82 !important;
+}
+
+QToolButton#toolButton_add_file:checked {
+    background-color: palette(button) !important;
+    color: #007AFF !important;
 }</string>
   </property>
   <widget class="QWidget" name="centralWidget">
