@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'PngyuNew' in project 'PngyuNew'
+➜ Explicit dependency on target 'Qt Preprocess' in project 'PngyuNew'
+Target 'Qt Preprocess' in project 'PngyuNew' (no dependencies)
