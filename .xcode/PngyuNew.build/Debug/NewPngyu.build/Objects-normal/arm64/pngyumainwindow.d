@@ -190,6 +190,7 @@ dependencies: /Users/cameronbanga/Developer/git/Pngyu/pngyumainwindow.cpp \
   /Users/cameronbanga/Developer/git/Pngyu/pngyu_defines.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /Users/cameronbanga/Developer/git/Pngyu/pngyu_pngquant_option.h \
+  /Users/cameronbanga/Developer/git/Pngyu/pngyu_jpeg_option.h \
   /Users/cameronbanga/Developer/git/Pngyu/ui_pngyumainwindow.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QVariant \
   /opt/homebrew/lib/QtGui.framework/Headers/QAction \

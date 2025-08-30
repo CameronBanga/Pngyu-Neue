@@ -183,6 +183,7 @@ dependencies: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtabwidget.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qrubberband.h \
   /Users/cameronbanga/Developer/git/Pngyu/pngyu_pngquant_option.h \
+  /Users/cameronbanga/Developer/git/Pngyu/pngyu_jpeg_option.h \
   /Users/cameronbanga/Developer/git/Pngyu/ui_pngyupreferencesdialog.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QVariant \
   /opt/homebrew/lib/QtGui.framework/Headers/QIcon \

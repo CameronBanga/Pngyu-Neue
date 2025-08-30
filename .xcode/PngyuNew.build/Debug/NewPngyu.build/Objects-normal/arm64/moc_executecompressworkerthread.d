@@ -188,6 +188,7 @@ dependencies: \
   /Users/cameronbanga/Developer/git/Pngyu/pngyu_defines.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /Users/cameronbanga/Developer/git/Pngyu/pngyu_pngquant_option.h \
+  /Users/cameronbanga/Developer/git/Pngyu/pngyu_jpeg_option.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qtmochelpers.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qtmocconstants.h \
   /opt/homebrew/lib/QtCore.framework/Headers/q20algorithm.h \

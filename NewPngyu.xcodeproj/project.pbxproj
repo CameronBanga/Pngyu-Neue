@@ -13,7 +13,7 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			name = "Qt Qmake";
 			shellPath = "/bin/sh";
-			shellScript = "make -C /Users/cameronbanga/Developer/git/Pngyu -f PngyuNew.xcodeproj/qt_makeqmake.mak";
+			shellScript = "make -C /Users/cameronbanga/Developer/git/Pngyu -f NewPngyu.xcodeproj/qt_makeqmake.mak";
 			showEnvVarsInLog = "0";
 		};
 		E112A95CC58D2C8A417C0C46 = {
@@ -706,7 +706,7 @@
 				"ui_pngyupreferencesdialog.h",
 				"ui_pngyuimageoptimintegrationquestiondialog.h");
 			shellPath = "/bin/sh";
-			shellScript = "make -C /Users/cameronbanga/Developer/git/Pngyu -f PngyuNew.xcodeproj/qt_preprocess.mak";
+			shellScript = "make -C /Users/cameronbanga/Developer/git/Pngyu -f NewPngyu.xcodeproj/qt_preprocess.mak";
 			showEnvVarsInLog = "0";
 			alwaysOutOfDate = "1";
 		};
@@ -927,7 +927,7 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		47E18E8968B89FFDD131F5D5 = {
+		D437446A26C6674DBF5B27DC = {
 			isa = PBXFileReference;
 			includeInIndex = 0;
 			explicitFileType = "wrapper.application";
@@ -936,7 +936,7 @@
 		};
 		FE0A091FDBFB3E9C31B7A1BD = {
 			children = (
-				"47E18E8968B89FFDD131F5D5");
+				"D437446A26C6674DBF5B27DC");
 			isa = PBXGroup;
 			name = "Products";
 			sourceTree = "<group>";
@@ -955,7 +955,7 @@
 			name = "NewPngyu";
 			sourceTree = "<group>";
 		};
-		B725672EB389C4620B6AA1B5 = {
+		CA74E694A596AB45FD6739C8 = {
 			buildPhases = (
 				"5E618435888B9D49F8540165",
 				"7EF0942E79C014DCEC8976BC");
@@ -968,19 +968,19 @@
 			productName = "Qt Preprocess";
 			name = "Qt Preprocess";
 		};
-		5E1D5839ACD6C841B107AFCF = {
+		4E8796C1B663BD9A5AE5B1EE = {
 			isa = PBXTargetDependency;
-			target = "B725672EB389C4620B6AA1B5";
+			target = "CA74E694A596AB45FD6739C8";
 		};
-		F75ECECA645F6067C8B1072A = {
+		96D9AAC3931DD2E5F764C2F9 = {
 			buildPhases = (
 				"F7E50F631C51CD5B5DC0BC43",
 				"D1C883685E82D5676953459A",
 				"30414803F31797EB689AE508",
 				"99542592E9780B9225F24AA8");
 			dependencies = (
-				"5E1D5839ACD6C841B107AFCF");
-			productReference = "47E18E8968B89FFDD131F5D5";
+				"4E8796C1B663BD9A5AE5B1EE");
+			productReference = "D437446A26C6674DBF5B27DC";
 			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59;
 			isa = PBXNativeTarget;
 			buildRules = (
@@ -1205,8 +1205,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"F75ECECA645F6067C8B1072A",
-				"B725672EB389C4620B6AA1B5");
+				"96D9AAC3931DD2E5F764C2F9",
+				"CA74E694A596AB45FD6739C8");
 			attributes = {
 				TargetAttributes = {
 				};

@@ -125,6 +125,7 @@ pngyu::CompressResult ExecuteCompressWorkerThread::execute_compress_generic(
 
     if( data.image_format == pngyu::IMAGE_FORMAT_PNG )
     {
+      qDebug() << "Processing PNG file:" << data.src_path;
       // PNG compression using pngquant
       ExecuteCompressThread compress_thread;
       compress_thread.set_executable_pngquant_path( data.pngquant_path );
@@ -144,15 +145,18 @@ pngyu::CompressResult ExecuteCompressWorkerThread::execute_compress_generic(
     }
     else if( data.image_format == pngyu::IMAGE_FORMAT_JPEG )
     {
+      qDebug() << "Processing JPEG file:" << data.src_path;
       // JPEG compression using jpegoptim
       QPair<QByteArray,QString> jpeg_result = 
           pngyu::execute_jpeg_compress_with_data( data.src_path, data.jpeg_option );
       
       if( jpeg_result.first.isEmpty() )
       {
+        qDebug() << "JPEG compression failed:" << jpeg_result.second;
         throw jpeg_result.second;
       }
       
+      qDebug() << "JPEG compression completed, got" << jpeg_result.first.size() << "bytes";
       dst_data = jpeg_result.first;
     }
     else

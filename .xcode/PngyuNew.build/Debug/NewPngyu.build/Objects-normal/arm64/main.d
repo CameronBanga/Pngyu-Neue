@@ -204,6 +204,7 @@ dependencies: /Users/cameronbanga/Developer/git/Pngyu/main.cpp \
   /Users/cameronbanga/Developer/git/Pngyu/pngyu_defines.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /Users/cameronbanga/Developer/git/Pngyu/pngyu_pngquant_option.h \
+  /Users/cameronbanga/Developer/git/Pngyu/pngyu_jpeg_option.h \
   /opt/homebrew/lib/QtGui.framework/Headers/QFileOpenEvent \
   /opt/homebrew/lib/QtGui.framework/Headers/qevent.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qurl.h \

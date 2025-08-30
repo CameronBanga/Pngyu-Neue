@@ -188,6 +188,7 @@ dependencies: \
   /Users/cameronbanga/Developer/git/Pngyu/pngyu_defines.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /Users/cameronbanga/Developer/git/Pngyu/pngyu_pngquant_option.h \
+  /Users/cameronbanga/Developer/git/Pngyu/pngyu_jpeg_option.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QFile \
   /opt/homebrew/lib/QtCore.framework/Headers/qfile.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qfiledevice.h \
@@ -239,5 +240,7 @@ dependencies: \
   /opt/homebrew/lib/QtCore.framework/Headers/QProcess \
   /opt/homebrew/lib/QtCore.framework/Headers/qprocess.h \
   /opt/homebrew/lib/QtGui.framework/Headers/QIcon \
+  /Users/cameronbanga/Developer/git/Pngyu/pngyu_execute_jpegoptim_command.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QPair \
   /Users/cameronbanga/Developer/git/Pngyu/pngyu_custom_tablewidget_item.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidgetItem

@@ -187,6 +187,7 @@ dependencies: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qstyle.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtabbar.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qrubberband.h \
+  /Users/cameronbanga/Developer/git/Pngyu/pngyu_jpeg_option.h \
   /Users/cameronbanga/Developer/git/Pngyu/ui_pngyupreviewwindow.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QVariant \
   /opt/homebrew/lib/QtGui.framework/Headers/QIcon \

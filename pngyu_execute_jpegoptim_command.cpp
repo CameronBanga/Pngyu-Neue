@@ -77,7 +77,7 @@ QStringList find_executable_jpegoptim()
 QPair<bool,QString> execute_jpeg_compress( const QString &jpegoptim_command )
 {
   QProcess process;
-  process.start( jpegoptim_command );
+  process.start( "/bin/sh", QStringList() << "-c" << jpegoptim_command );
   process.waitForFinished( 30000 ); // 30 second timeout
 
   const bool succeed = ( process.exitCode() == 0 );
@@ -90,6 +90,8 @@ QPair<QByteArray,QString> execute_jpeg_compress_with_data(
     const QString &src_file_path,
     const JpegOption &option )
 {
+  qDebug() << "JPEG compression requested for:" << src_file_path;
+  
   // Create temporary copy since jpegoptim modifies files in-place
   QTemporaryFile temp_file;
   temp_file.setFileTemplate(QDir::tempPath() + "/pngyu_jpeg_XXXXXX.jpg");
@@ -111,25 +113,32 @@ QPair<QByteArray,QString> execute_jpeg_compress_with_data(
   // Find jpegoptim executable
   QStringList jpegoptim_paths = find_executable_jpegoptim();
   if (jpegoptim_paths.isEmpty()) {
+    qDebug() << "jpegoptim not found";
     return QPair<QByteArray,QString>(QByteArray(), "jpegoptim not found. Please install jpegoptim.");
   }
 
   // Execute jpegoptim on temporary file
   const QString jpegoptim_command = jpegoptim_paths.first() + " " + option.make_jpegoptim_command(temp_file.fileName());
+  qDebug() << "Executing jpegoptim command:" << jpegoptim_command;
   
   QPair<bool,QString> result = execute_jpeg_compress(jpegoptim_command);
   
   if (!result.first) {
+    qDebug() << "jpegoptim failed with error:" << result.second;
     return QPair<QByteArray,QString>(QByteArray(), result.second);
   }
+  
+  qDebug() << "jpegoptim succeeded";
 
   // Read compressed data from temporary file
   QFile compressed_file(temp_file.fileName());
   if (!compressed_file.open(QIODevice::ReadOnly)) {
+    qDebug() << "Could not read compressed file:" << temp_file.fileName();
     return QPair<QByteArray,QString>(QByteArray(), "Could not read compressed file");
   }
 
   QByteArray compressed_data = compressed_file.readAll();
+  qDebug() << "Successfully read" << compressed_data.size() << "bytes of compressed data";
   return QPair<QByteArray,QString>(compressed_data, QString());
 }
 

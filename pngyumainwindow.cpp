@@ -677,7 +677,7 @@ void PngyuMainWindow::execute_compress_all( bool image_optim_enabled )
     if( pngyu::util::is_jpeg_file(file_info) )
     {
       data.image_format = pngyu::IMAGE_FORMAT_JPEG;
-      data.jpeg_option = make_jpeg_option(); // We'll add this method
+      data.jpeg_option = make_jpeg_option();
     }
     else
     {
@@ -1290,7 +1290,7 @@ void PngyuMainWindow::preview_window_closed()
 void PngyuMainWindow::add_file_button_pushed()
 {
   const QStringList filepath_list = QFileDialog::getOpenFileNames(
-        this, QString(), QDir::homePath(), "PNG file (*.png);;" );
+        this, QString(), QDir::homePath(), "Image files (*.png *.jpg *.jpeg);;PNG files (*.png);;JPEG files (*.jpg *.jpeg);;All files (*.*)" );
 
   if( filepath_list.empty() )
   {

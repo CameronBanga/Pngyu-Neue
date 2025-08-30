@@ -1,11 +1,9 @@
 dependencies: \
-  /Users/cameronbanga/Developer/git/Pngyu/executecompressthread.cpp \
-  /Users/cameronbanga/Developer/git/Pngyu/executecompressthread.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/QThread \
-  /opt/homebrew/lib/QtCore.framework/Headers/qthread.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qobject.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qobjectdefs.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qnamespace.h \
+  /Users/cameronbanga/Developer/git/Pngyu/pngyu_execute_jpegoptim_command.cpp \
+  /Users/cameronbanga/Developer/git/Pngyu/pngyu_execute_jpegoptim_command.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QString \
+  /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qchar.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qglobal.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qtcoreglobal.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qtversionchecks.h \
@@ -56,14 +54,11 @@ dependencies: \
   /opt/homebrew/lib/QtCore.framework/Headers/qstdlibdetection.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qcomparehelpers.h \
   /opt/homebrew/lib/QtCore.framework/Headers/q20type_traits.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qtmetamacros.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qobjectdefs_impl.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qfunctionaltools_impl.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qchar.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringview.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qbytearray.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qrefcount.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qnamespace.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qtmetamacros.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qarraydata.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qpair.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qarraydatapointer.h \
@@ -85,6 +80,18 @@ dependencies: \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringbuilder.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringconverter.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringconverter_base.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QByteArray \
+  /opt/homebrew/lib/QtCore.framework/Headers/QPair \
+  /opt/homebrew/lib/QtCore.framework/Headers/QFileInfo \
+  /opt/homebrew/lib/QtCore.framework/Headers/qfileinfo.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qfile.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qfiledevice.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qiodevice.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qiodevicebase.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qobject.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qobjectdefs.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qobjectdefs_impl.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qfunctionaltools_impl.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qlist.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qhashfunctions.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qiterator.h \
@@ -95,7 +102,6 @@ dependencies: \
   /opt/homebrew/lib/QtCore.framework/Headers/qscopedpointer.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qmetatype.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qdatastream.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qiodevicebase.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qfloat16.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qmath.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qtformat_impl.h \
@@ -106,48 +112,12 @@ dependencies: \
   /opt/homebrew/lib/QtCore.framework/Headers/qscopeguard.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qobject_impl.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qbindingstorage.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qdeadlinetimer.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qelapsedtimer.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/QByteArray \
-  /Users/cameronbanga/Developer/git/Pngyu/pngyu_defines.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/QString \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidget \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtablewidget.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtableview.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtguiglobal.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtgui-config.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtguiexports.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtwidgets-config.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtwidgetsexports.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractitemview.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractscrollarea.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qframe.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qwindowdefs.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qmargins.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/q23utility.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/q20utility.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qaction.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qkeysequence.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qicon.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qsize.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpixmap.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpaintdevice.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qrect.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qpoint.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qcolor.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qrgb.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qrgba64.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qshareddata.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qimage.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpixelformat.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtransform.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpolygon.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qregion.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qspan.h \
   /opt/homebrew/lib/QtCore.framework/Headers/q20iterator.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qline.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qshareddata.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdatetime.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qcalendar.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qlocale.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qvariant.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qtextstream.h \
@@ -159,38 +129,17 @@ dependencies: \
   /opt/homebrew/lib/QtCore.framework/Headers/qset.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qhash.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qvarlengtharray.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpalette.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qbrush.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qfont.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qendian.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qfontmetrics.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qfontinfo.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qfontvariableaxis.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qsizepolicy.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qcursor.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qbitmap.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qabstractitemmodel.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qitemselectionmodel.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractitemdelegate.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qstyleoption.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qlocale.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractspinbox.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qvalidator.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qregularexpression.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qslider.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractslider.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qstyle.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtabbar.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtabwidget.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qrubberband.h \
-  /Users/cameronbanga/Developer/git/Pngyu/pngyu_pngquant_option.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/q23utility.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/q20utility.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qtimezone.h \
   /Users/cameronbanga/Developer/git/Pngyu/pngyu_jpeg_option.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QProcess \
   /opt/homebrew/lib/QtCore.framework/Headers/qprocess.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qiodevice.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/QElapsedTimer \
+  /opt/homebrew/lib/QtCore.framework/Headers/QDir \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdir.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdirlisting.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QStandardPaths \
+  /opt/homebrew/lib/QtCore.framework/Headers/qstandardpaths.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QDebug \
-  /opt/homebrew/lib/QtCore.framework/Headers/QFile \
-  /opt/homebrew/lib/QtCore.framework/Headers/qfile.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qfiledevice.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/QRegularExpression
+  /opt/homebrew/lib/QtCore.framework/Headers/QTemporaryFile \
+  /opt/homebrew/lib/QtCore.framework/Headers/qtemporaryfile.h
