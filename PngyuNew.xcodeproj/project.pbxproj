@@ -898,7 +898,7 @@
 			isa = PBXFileReference;
 			includeInIndex = 0;
 			explicitFileType = "wrapper.application";
-			path = "PngyuNew.app";
+			path = "NewPngyu.app";
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		FE0A091FDBFB3E9C31B7A1BD = {
@@ -919,7 +919,7 @@
 				"AF39DD055C3EF8226FBE929D",
 				"FE0A091FDBFB3E9C31B7A1BD");
 			isa = PBXGroup;
-			name = "PngyuNew";
+			name = "NewPngyu";
 			sourceTree = "<group>";
 		};
 		B725672EB389C4620B6AA1B5 = {
@@ -953,8 +953,8 @@
 			buildRules = (
 );
 			productType = "com.apple.product-type.application";
-			name = "PngyuNew";
-			productName = "PngyuNew";
+			name = "NewPngyu";
+			productName = "NewPngyu";
 		};
 		3AA6C32AC930069E80220CF1 = {
 			isa = XCBuildConfiguration;
@@ -967,7 +967,7 @@
 				GCC_OPTIMIZATION_LEVEL = "0";
 				ONLY_ACTIVE_ARCH = "YES";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cameronbanga.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "PngyuNew";
+				PRODUCT_NAME = "NewPngyu";
 				QMAKE_FULL_VERSION = "1.0.0";
 				QMAKE_PKGINFO_TYPEINFO = "????";
 				QMAKE_SHORT_VERSION = "1.0";
@@ -1043,13 +1043,13 @@
 				GCC_OPTIMIZATION_LEVEL = "0";
 				ONLY_ACTIVE_ARCH = "YES";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cameronbanga.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "PngyuNew";
+				PRODUCT_NAME = "NewPngyu";
 				QMAKE_FULL_VERSION = "1.0.0";
 				QMAKE_PKGINFO_TYPEINFO = "????";
 				QMAKE_SHORT_VERSION = "1.0";
 				QT_LIBRARY_SUFFIX = "";
 				SDKROOT = "macosx";
-				PRODUCT_NAME = "PngyuNew";
+				PRODUCT_NAME = "NewPngyu";
 			};
 			name = "Debug";
 		};
@@ -1062,7 +1062,7 @@
 				DEVELOPMENT_TEAM = "5YESB723BS";
 				ENABLE_BITCODE = "NO";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cameronbanga.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "PngyuNew";
+				PRODUCT_NAME = "NewPngyu";
 				QMAKE_FULL_VERSION = "1.0.0";
 				QMAKE_PKGINFO_TYPEINFO = "????";
 				QMAKE_SHORT_VERSION = "1.0";
@@ -1136,13 +1136,13 @@
 				DEVELOPMENT_TEAM = "5YESB723BS";
 				ENABLE_BITCODE = "NO";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cameronbanga.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "PngyuNew";
+				PRODUCT_NAME = "NewPngyu";
 				QMAKE_FULL_VERSION = "1.0.0";
 				QMAKE_PKGINFO_TYPEINFO = "????";
 				QMAKE_SHORT_VERSION = "1.0";
 				QT_LIBRARY_SUFFIX = "";
 				SDKROOT = "macosx";
-				PRODUCT_NAME = "PngyuNew";
+				PRODUCT_NAME = "NewPngyu";
 			};
 			name = "Release";
 		};
