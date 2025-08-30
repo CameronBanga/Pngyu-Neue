@@ -18,3 +18,5 @@
 .xcode/XCBuildData/
 .xcode/XCBuildData/*
 *.o
+PngyuNew.xcodeproj/project.xcworkspace/xcuserdata/*
+*.xcuserstate
