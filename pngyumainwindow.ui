@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>689</width>
+    <width>800</width>
     <height>673</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
   </property>
   <property name="acceptDrops">
    <bool>true</bool>
@@ -71,7 +77,7 @@ QFrame#frame_ie6
 
 /* Modern segmented controls */
 QToolButton {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid palette(mid);
     padding: 8px 16px;
     background-color: palette(button);
     color: palette(button-text);
@@ -80,9 +86,9 @@ QToolButton {
 }
 
 QToolButton:checked {
-    background-color: #007AFF;
-    color: white;
-    border-color: #007AFF;
+    background-color: palette(highlight);
+    color: palette(highlighted-text);
+    border-color: palette(highlight);
 }
 
 QToolButton:hover:!checked {
@@ -117,11 +123,13 @@ QToolButton#toolButton_output_option_custom {
 /* Modern table styling */
 QTableWidget {
     background-color: palette(base);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid palette(mid);
     border-radius: 10px;
-    selection-background-color: #007AFF;
-    selection-color: white;
+    selection-background-color: palette(highlight);
+    selection-color: palette(highlighted-text);
     font-size: 13px;
+    alternate-background-color: palette(alternate-base);
+    gridline-color: palette(mid);
 }
 
 QTableWidget::item {
@@ -222,6 +230,25 @@ QToolButton#toolButton_add_file:pressed {
 QToolButton#toolButton_add_file:checked {
     background-color: palette(button) !important;
     color: #007AFF !important;
+}
+
+/* Clear button - adaptive light/dark mode styling */
+QPushButton#pushButton_filelist_clear {
+    border: 1px solid palette(mid);
+    border-radius: 6px;
+    background-color: palette(button);
+    color: palette(button-text);
+    padding: 4px 8px;
+}
+
+QPushButton#pushButton_filelist_clear:hover {
+    background-color: palette(midlight);
+    border-color: palette(dark);
+}
+
+QPushButton#pushButton_filelist_clear:pressed {
+    background-color: palette(mid);
+    color: palette(bright-text);
 }</string>
   </property>
   <widget class="QWidget" name="centralWidget">
@@ -1114,11 +1141,13 @@ QToolButton#toolButton_add_file:checked {
           <string>Clear all files</string>
          </property>
          <property name="text">
-          <string>Clear</string>
+          <string>✕ Clear</string>
          </property>
-         <property name="icon">
-          <iconset resource="resource/resource.qrc">
-           <normaloff>:/icons/clear.png</normaloff>:/icons/clear.png</iconset>
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+           <weight>500</weight>
+          </font>
          </property>
         </widget>
        </item>

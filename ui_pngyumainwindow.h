@@ -143,7 +143,8 @@ public:
     {
         if (PngyuMainWindow->objectName().isEmpty())
             PngyuMainWindow->setObjectName("PngyuMainWindow");
-        PngyuMainWindow->resize(689, 673);
+        PngyuMainWindow->resize(800, 673);
+        PngyuMainWindow->setMinimumSize(QSize(800, 600));
         PngyuMainWindow->setAcceptDrops(true);
         PngyuMainWindow->setStyleSheet(QString::fromUtf8("/* Modern macOS buttons */\n"
 "QPushButton {\n"
@@ -200,7 +201,7 @@ public:
 "\n"
 "/* Modern segmented controls */\n"
 "QToolButton {\n"
-"    border: 1px solid rgba(0, 0, 0, 0.1);\n"
+"    border: 1px solid palette(mid);\n"
 "    padding: 8px 16px;\n"
 "    background-color: palette(button);\n"
 "    color: palette(button-text);\n"
@@ -209,9 +210,9 @@ public:
 "}\n"
 "\n"
 "QToolButton:checked {\n"
-"    background-color: #007AFF;\n"
-"    color: white;\n"
-"    border-color: #007AFF;\n"
+"    background-color: palette(highlight);\n"
+"    color: palette(highlighted-text);\n"
+"    border-color: palette(highlight);\n"
 "}\n"
 "\n"
 "QToolButton:hover:!checked {\n"
@@ -230,9 +231,9 @@ public:
 "{\n"
 "  border-style: outset;\n"
 "  border : 1px solid rgb(127,127,127,127);\n"
-"  border-radius : 0px;\n"
-"  padding"
-                        ": 3px;\n"
+""
+                        "  border-radius : 0px;\n"
+"  padding: 3px;\n"
 "  background : qlineargradient(spread:reflect, x1:0, y1:1, x2:0, y2:0,\n"
 "    stop:0 rgba(127, 127, 127, 64), stop:1 rgba(255, 255, 255, 100));\n"
 "}\n"
@@ -247,11 +248,13 @@ public:
 "/* Modern table styling */\n"
 "QTableWidget {\n"
 "    background-color: palette(base);\n"
-"    border: 1px solid rgba(0, 0, 0, 0.1);\n"
+"    border: 1px solid palette(mid);\n"
 "    border-radius: 10px;\n"
-"    selection-background-color: #007AFF;\n"
-"    selection-color: white;\n"
+"    selection-background-color: palette(highlight);\n"
+"    selection-color: palette(highlighted-text);\n"
 "    font-size: 13px;\n"
+"    alternate-background-color: palette(alternate-base);\n"
+"    gridline-color: palette(mid);\n"
 "}\n"
 "\n"
 "QTableWidget::item {\n"
@@ -262,7 +265,8 @@ public:
 "QHeaderView::section {\n"
 "    background-color: palette(button);\n"
 "    color: palette(button-text);\n"
-"    padding: 10px 8px;\n"
+"    p"
+                        "adding: 10px 8px;\n"
 "    border: none;\n"
 "    font-weight: 600;\n"
 "    font-size: 12px;\n"
@@ -270,8 +274,7 @@ public:
 "\n"
 "/* Modern text fields */\n"
 "QLineEdit {\n"
-"    borde"
-                        "r: 1px solid rgba(0, 0, 0, 0.1);\n"
+"    border: 1px solid rgba(0, 0, 0, 0.1);\n"
 "    border-radius: 8px;\n"
 "    padding: 8px 12px;\n"
 "    background-color: palette(base);\n"
@@ -309,7 +312,8 @@ public:
 "    font-size: 12px;\n"
 "}\n"
 "\n"
-"QLabel#label_current_saved_size[color_positive=\"true\"] {\n"
+"QLabel#label_current_saved_size[color_positive="
+                        "\"true\"] {\n"
 "    color: #30D158;\n"
 "}\n"
 "\n"
@@ -317,8 +321,7 @@ public:
 "    color: #FF453A;\n"
 "}\n"
 "\n"
-"/* Modern f"
-                        "rames */\n"
+"/* Modern frames */\n"
 "QFrame#frame_speed,\n"
 "QFrame#frame_dithered,\n"
 "QFrame#frame_colors,\n"
@@ -346,15 +349,34 @@ public:
 "    color: #0051D5 !important;\n"
 "}\n"
 "\n"
-"QToolButton#toolButton_add_file:pressed {\n"
+""
+                        "QToolButton#toolButton_add_file:pressed {\n"
 "    background-color: palette(mid) !important;\n"
 "    color: #003D82 !important;\n"
 "}\n"
 "\n"
-"QToolButton#toolB"
-                        "utton_add_file:checked {\n"
+"QToolButton#toolButton_add_file:checked {\n"
 "    background-color: palette(button) !important;\n"
 "    color: #007AFF !important;\n"
+"}\n"
+"\n"
+"/* Clear button - adaptive light/dark mode styling */\n"
+"QPushButton#pushButton_filelist_clear {\n"
+"    border: 1px solid palette(mid);\n"
+"    border-radius: 6px;\n"
+"    background-color: palette(button);\n"
+"    color: palette(button-text);\n"
+"    padding: 4px 8px;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_filelist_clear:hover {\n"
+"    background-color: palette(midlight);\n"
+"    border-color: palette(dark);\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_filelist_clear:pressed {\n"
+"    background-color: palette(mid);\n"
+"    color: palette(bright-text);\n"
 "}"));
         action_preferences = new QAction(PngyuMainWindow);
         action_preferences->setObjectName("action_preferences");
@@ -855,9 +877,9 @@ public:
         pushButton_filelist_clear->setObjectName("pushButton_filelist_clear");
         sizePolicy4.setHeightForWidth(pushButton_filelist_clear->sizePolicy().hasHeightForWidth());
         pushButton_filelist_clear->setSizePolicy(sizePolicy4);
-        QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/icons/clear.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        pushButton_filelist_clear->setIcon(icon2);
+        QFont font1;
+        font1.setPointSize(13);
+        pushButton_filelist_clear->setFont(font1);
 
         gridLayout_8->addWidget(pushButton_filelist_clear, 3, 4, 1, 1);
 
@@ -1010,7 +1032,7 @@ public:
 #if QT_CONFIG(tooltip)
         pushButton_filelist_clear->setToolTip(QCoreApplication::translate("PngyuMainWindow", "Clear all files", nullptr));
 #endif // QT_CONFIG(tooltip)
-        pushButton_filelist_clear->setText(QCoreApplication::translate("PngyuMainWindow", "Clear", nullptr));
+        pushButton_filelist_clear->setText(QCoreApplication::translate("PngyuMainWindow", "\342\234\225 Clear", nullptr));
         label_file_appending->setText(QCoreApplication::translate("PngyuMainWindow", "Adding files...", nullptr));
 #if QT_CONFIG(tooltip)
         pushButton_stop_file_appending->setToolTip(QCoreApplication::translate("PngyuMainWindow", "Stop searcing", nullptr));
