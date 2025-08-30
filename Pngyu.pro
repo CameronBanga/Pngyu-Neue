@@ -7,7 +7,7 @@
 
 QT += core gui widgets
 
-TARGET = Pngyu
+TARGET = PngyuNew
 TEMPLATE = app
 
 INCLUDEPATH += \
