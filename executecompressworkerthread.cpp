@@ -56,11 +56,7 @@ pngyu::CompressResult ExecuteCompressWorkerThread::execute_compress(
       compress_thread.set_original_png_data( src_png_data );
       compress_thread.start();
       // waiting for compress finished
-      while( ! compress_thread.wait(50) )
-      {
-        // avoid "aplication no response"
-        QApplication::processEvents();
-      }
+      compress_thread.wait();
 
       // compres result check
       if( ! compress_thread.is_compress_succeeded() )

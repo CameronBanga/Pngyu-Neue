@@ -4,8 +4,9 @@
 #include <QLabel>
 #include <QPixmap>
 #include <QList>
-#include <QTime>
+#include <QElapsedTimer>
 #include <QPaintEvent>
+#include <QTransform>
 
 // This class enables to visualize "waiting" or "loading", "executeing" condition.
 // If you set SpinnerWidget in your layout, spinner pixmap begin spinning immidiately
@@ -23,7 +24,7 @@ public:
     for( int d = 0; d < 360; d += 15 )
     {
       const QPixmap &rotated =
-          spinner.transformed( QMatrix().rotate(d), Qt::SmoothTransformation );
+          spinner.transformed( QTransform().rotate(d), Qt::SmoothTransformation );
       // Trimming rotated image size same as original size,
       // because rotated image is always larger than original size
       const int diff_w = rotated.width() - origin_w;
@@ -37,6 +38,7 @@ public:
     setPixmap( spinner );
 
     startTimer( 50 );
+    m_time.start();
   }
 
   void redraw()
@@ -78,7 +80,7 @@ private:
 
   QList<QPixmap> m_spinner_list;
   int m_current_index;
-  QTime m_time;
+  QElapsedTimer m_time;
 };
 
 #endif // SPINNERWIDGET_H

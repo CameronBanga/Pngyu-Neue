@@ -1,12 +1,11 @@
 #-------------------------------------------------
 #
 # Project created by QtCreator 2013-04-15T21:37:00
+# Updated for Qt6 and macOS 15.0 compatibility
 #
 #-------------------------------------------------
 
-QT += core gui
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT += core gui widgets
 
 TARGET = Pngyu
 TEMPLATE = app
@@ -55,4 +54,16 @@ RESOURCES += \
 macx: ICON = resource/icon.icns
 macx: QMAKE_INFO_PLIST = resource/info.plist
 
+# Modern macOS deployment settings
+macx {
+    CONFIG += app_bundle
+    QMAKE_MACOSX_DEPLOYMENT_TARGET = 12.0
+    QMAKE_APPLE_DEVICE_ARCHS = arm64
+    QMAKE_CXXFLAGS += -std=c++17
+}
+
+# Windows settings
 win32: RC_FILE = resource/resource.rc
+
+# C++ standard for all platforms
+CONFIG += c++17
