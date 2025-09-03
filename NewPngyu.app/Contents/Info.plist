@@ -17,6 +17,8 @@
 			</array>
 		</dict>
 	</array>
+	<key>CFBundleDisplayName</key>
+	<string>New Pngyu</string>
 	<key>CFBundleExecutable</key>
 	<string>NewPngyu</string>
 	<key>CFBundleGetInfoString</key>

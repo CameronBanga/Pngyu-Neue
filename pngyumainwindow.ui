@@ -123,7 +123,7 @@ QToolButton#toolButton_output_option_custom {
 /* Modern table styling */
 QTableWidget {
     background-color: palette(base);
-    border: 1px solid palette(mid);
+    border: none;
     border-radius: 10px;
     selection-background-color: palette(highlight);
     selection-color: palette(highlighted-text);
@@ -142,8 +142,13 @@ QHeaderView::section {
     color: palette(button-text);
     padding: 10px 8px;
     border: none;
+    border-right: 1px solid rgba(128, 128, 128, 0.3);
     font-weight: 600;
     font-size: 12px;
+}
+
+QHeaderView::section:last {
+    border-right: none;
 }
 
 /* Modern text fields */

@@ -58,6 +58,7 @@ PngyuMainWindow::PngyuMainWindow(QWidget *parent) :
 {
   ui->setupUi(this);
 
+
   setWindowTitle( windowTitle() +
                   QString(" %1.%2.%3").arg(pngyu::VERSION_MAJOR)
                                       .arg(pngyu::VERSION_MINOR)
@@ -85,6 +86,16 @@ PngyuMainWindow::PngyuMainWindow(QWidget *parent) :
                                            new QTableWidgetItem( tr("Saved Size") ) );
     table_widget->setHorizontalHeaderItem( pngyu::COLUMN_SAVED_SIZE_RATE,
                                            new QTableWidgetItem( tr("Saved Size(%)") ) );
+
+    // Set minimum column widths to prevent truncation
+    table_widget->horizontalHeader()->setMinimumSectionSize(80);
+    table_widget->setColumnWidth(pngyu::COLUMN_BASENAME, 120);
+    table_widget->setColumnWidth(pngyu::COLUMN_ABSOLUTE_PATH, 140);
+    table_widget->setColumnWidth(pngyu::COLUMN_RESULT, 80);
+    table_widget->setColumnWidth(pngyu::COLUMN_ORIGINAL_SIZE, 80);
+    table_widget->setColumnWidth(pngyu::COLUMN_OUTPUT_SIZE, 130);  // "Compressed Size" needs more space
+    table_widget->setColumnWidth(pngyu::COLUMN_SAVED_SIZE, 100);
+    table_widget->setColumnWidth(pngyu::COLUMN_SAVED_SIZE_RATE, 100);
 
     pngyu::util::set_drop_here_stylesheet(
           table_widget->viewport(), false );
@@ -1255,13 +1266,25 @@ void PngyuMainWindow::table_widget_current_changed()
 {
   const QString current_path = current_selected_filename();
 
-  m_preview_window->set_png_file( current_path );
-
   if( ! current_path.isEmpty() )
   {
+    // Check if the file is a PNG - only PNG files support preview
+    QFileInfo file_info( current_path );
+    const bool is_png_file = pngyu::util::has_png_extention( file_info );
+    
+    if( is_png_file )
+    {
+      m_preview_window->set_png_file( current_path );
+      ui->pushButton_preview->setEnabled( true );
+    }
+    else
+    {
+      // For non-PNG files (like JPEG), disable preview
+      m_preview_window->set_png_file( QString() );
+      ui->pushButton_preview->setEnabled( false );
+    }
 
     { // set icon to preview window button
-      ui->pushButton_preview->setEnabled( true );
       const QSize &icon_size = ui->pushButton_preview->iconSize();
       const QImage &icon_image =
           pngyu::util::read_thumbnail_image( current_path,
@@ -1272,6 +1295,7 @@ void PngyuMainWindow::table_widget_current_changed()
   }
   else
   {
+    m_preview_window->set_png_file( QString() );
     ui->pushButton_preview->setEnabled( false );
     ui->pushButton_preview->setIcon( QIcon() );
   }
