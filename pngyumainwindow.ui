@@ -86,9 +86,9 @@ QToolButton {
 }
 
 QToolButton:checked {
-    background-color: palette(highlight);
-    color: palette(highlighted-text);
-    border-color: palette(highlight);
+    background-color: #007AFF;
+    color: white;
+    border-color: #007AFF;
 }
 
 QToolButton:hover:!checked {
@@ -1086,7 +1086,7 @@ QPushButton#pushButton_filelist_clear:pressed {
        <string>Files</string>
       </property>
       <property name="flat">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
       <layout class="QGridLayout" name="gridLayout_8">
        <property name="leftMargin">
