@@ -187,6 +187,11 @@ dependencies: /Users/cameronbanga/Developer/git/Pngyu/pngyumainwindow.cpp \
   /opt/homebrew/lib/QtCore.framework/Headers/qdatetime.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qcalendar.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qtimezone.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpicture.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qtextdocument.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qurl.h \
   /Users/cameronbanga/Developer/git/Pngyu/pngyu_defines.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /Users/cameronbanga/Developer/git/Pngyu/pngyu_pngquant_option.h \
@@ -227,11 +232,6 @@ dependencies: /Users/cameronbanga/Developer/git/Pngyu/pngyumainwindow.cpp \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QHBoxLayout \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QHeaderView \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qheaderview.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpicture.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtextdocument.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qurl.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlineedit.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qtextcursor.h \

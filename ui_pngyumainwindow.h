@@ -144,7 +144,7 @@ public:
         if (PngyuMainWindow->objectName().isEmpty())
             PngyuMainWindow->setObjectName("PngyuMainWindow");
         PngyuMainWindow->resize(800, 673);
-        PngyuMainWindow->setMinimumSize(QSize(800, 750));
+        PngyuMainWindow->setMinimumSize(QSize(1200, 750));
         PngyuMainWindow->setAcceptDrops(true);
         PngyuMainWindow->setStyleSheet(QString::fromUtf8("/* Modern macOS buttons */\n"
 "QPushButton {\n"

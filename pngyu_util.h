@@ -174,9 +174,6 @@ inline void set_drop_here_stylesheet(
 //  widget->setStyleSheet();
   QString stylesheet =
       "QWidget{"
-      "background-image : url(:/background/drop_here.png);"
-      "background-position: center ;"
-      "background-repeat : repeat-none;"
       "border: 1px solid palette(mid);"
       "border-radius: 8px;";
   if( drag_hoverring )

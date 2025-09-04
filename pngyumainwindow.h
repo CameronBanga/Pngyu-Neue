@@ -5,6 +5,7 @@
 #include <QTableWidget>
 #include <QProcess>
 #include <QFileInfo>
+#include <QLabel>
 
 #include "pngyu_defines.h"
 #include "pngyu_pngquant_option.h"
@@ -103,6 +104,7 @@ protected:
   virtual void moveEvent( QMoveEvent *event );
   virtual void showEvent( QShowEvent *event );
   virtual void closeEvent( QCloseEvent *event );
+  virtual bool eventFilter( QObject *obj, QEvent *event );
 
   void read_settings();
   void write_settings();
@@ -128,6 +130,7 @@ private:
   bool m_image_optim_enabled;
   pngyu::ImageOptimIntegration m_image_optim_integration;
   bool m_force_execute_if_negative_enables;
+  QLabel *m_drop_here_label;
 
 private slots:
   void exec_pushed();

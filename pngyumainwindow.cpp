@@ -89,16 +89,35 @@ PngyuMainWindow::PngyuMainWindow(QWidget *parent) :
 
     // Set minimum column widths to prevent truncation
     table_widget->horizontalHeader()->setMinimumSectionSize(80);
-    table_widget->setColumnWidth(pngyu::COLUMN_BASENAME, 120);
-    table_widget->setColumnWidth(pngyu::COLUMN_ABSOLUTE_PATH, 140);
-    table_widget->setColumnWidth(pngyu::COLUMN_RESULT, 80);
-    table_widget->setColumnWidth(pngyu::COLUMN_ORIGINAL_SIZE, 80);
+    table_widget->setColumnWidth(pngyu::COLUMN_BASENAME, 180);
+    table_widget->setColumnWidth(pngyu::COLUMN_ABSOLUTE_PATH, 380);
+    table_widget->setColumnWidth(pngyu::COLUMN_RESULT, 60);
+    table_widget->setColumnWidth(pngyu::COLUMN_ORIGINAL_SIZE, 100);
     table_widget->setColumnWidth(pngyu::COLUMN_OUTPUT_SIZE, 130);  // "Compressed Size" needs more space
-    table_widget->setColumnWidth(pngyu::COLUMN_SAVED_SIZE, 100);
+    table_widget->setColumnWidth(pngyu::COLUMN_SAVED_SIZE, 90);
     table_widget->setColumnWidth(pngyu::COLUMN_SAVED_SIZE_RATE, 100);
 
     pngyu::util::set_drop_here_stylesheet(
           table_widget->viewport(), false );
+    
+    // Add "Drop here" text overlay
+    QLabel *dropLabel = new QLabel("Drop here", table_widget->viewport());
+    dropLabel->setAlignment(Qt::AlignCenter);
+    dropLabel->setStyleSheet(
+        "QLabel {"
+        "  color: rgba(128, 128, 128, 0.5);"
+        "  font-size: 48px;"
+        "  font-weight: 300;"
+        "  background: transparent;"
+        "}"
+    );
+    dropLabel->setAttribute(Qt::WA_TransparentForMouseEvents);
+    dropLabel->resize(table_widget->viewport()->size());
+    
+    // Install event filter to handle resize
+    table_widget->viewport()->installEventFilter(this);
+    
+    m_drop_here_label = dropLabel;
   }
 
   { // init homepage label layout
@@ -1001,6 +1020,18 @@ void PngyuMainWindow::closeEvent( QCloseEvent *event )
   QMainWindow::closeEvent( event );
 }
 
+bool PngyuMainWindow::eventFilter( QObject *obj, QEvent *event )
+{
+  if( obj == ui->tableWidget_filelist->viewport() && event->type() == QEvent::Resize )
+  {
+    if( m_drop_here_label )
+    {
+      m_drop_here_label->resize( ui->tableWidget_filelist->viewport()->size() );
+    }
+  }
+  return QMainWindow::eventFilter( obj, event );
+}
+
 void PngyuMainWindow::update_file_table()
 {
   QTableWidget * const table_widget = file_list_table_widget();
@@ -1008,6 +1039,12 @@ void PngyuMainWindow::update_file_table()
   disconnect( table_widget, SIGNAL(currentCellChanged(int,int,int,int)), this, SLOT(table_widget_current_changed()) );
   const QString &last_selected_filename = current_selected_filename();
   table_widget->setRowCount( 0 ); // reset file list table
+  
+  // Show drop label when table is cleared
+  if( m_drop_here_label )
+  {
+    m_drop_here_label->setVisible(true);
+  }
   table_widget->setRowCount( m_file_list.size() );
   { // append files
     int row_index = 0;
@@ -1059,6 +1096,12 @@ void PngyuMainWindow::append_file_info_list( const QList<QFileInfo> &info_list )
   update_file_table();
   set_busy_mode( false );
   ui->widget_file_appending->setVisible( false );
+  
+  // Hide drop label when files are added
+  if( m_drop_here_label && ui->tableWidget_filelist->rowCount() > 0 )
+  {
+    m_drop_here_label->setVisible(false);
+  }
 }
 
 void PngyuMainWindow::append_file_info_recursive( const QFileInfo &file_info,
