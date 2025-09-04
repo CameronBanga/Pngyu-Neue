@@ -355,10 +355,10 @@ QString PngyuMainWindow::make_output_file_path_string( const QString &input_file
       else if( output_filename_mode == pngyu::OUTPUT_FILE_CUSTOM )
       {
         const QString &prefix = ui->lineEdit_output_file_prefix->text();
-        const QString &suffix = ui->lineEdit_output_file_suffix->text();
+        const QString &extension = "." + input_file_info.suffix();
 
         const QString &base_name = input_file_info.completeBaseName();
-        output_file_name = prefix + base_name + suffix;
+        output_file_name = prefix + base_name + extension;
       }
       else
       {

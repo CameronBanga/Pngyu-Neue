@@ -71,7 +71,7 @@ public:
     QGridLayout *gridLayout_3;
     QLineEdit *lineEdit_output_file_prefix;
     QLabel *label_outoput_original_name;
-    QLineEdit *lineEdit_output_file_suffix;
+    QLabel *label_output_file_extension;
     QGroupBox *groupBox_output_option_other;
     QGridLayout *gridLayout_11;
     QCheckBox *checkBox_overwrite;
@@ -521,10 +521,10 @@ public:
 
         gridLayout_3->addWidget(label_outoput_original_name, 0, 3, 1, 1);
 
-        lineEdit_output_file_suffix = new QLineEdit(frame_output_filename);
-        lineEdit_output_file_suffix->setObjectName("lineEdit_output_file_suffix");
+        label_output_file_extension = new QLabel(frame_output_filename);
+        label_output_file_extension->setObjectName("label_output_file_extension");
 
-        gridLayout_3->addWidget(lineEdit_output_file_suffix, 0, 4, 1, 1);
+        gridLayout_3->addWidget(label_output_file_extension, 0, 4, 1, 1);
 
 
         horizontalLayout_3->addWidget(frame_output_filename);
@@ -946,8 +946,7 @@ public:
         QWidget::setTabOrder(lineEdit_output_directory, toolButton_open_output_directory);
         QWidget::setTabOrder(toolButton_open_output_directory, comboBox_output_filename_mode);
         QWidget::setTabOrder(comboBox_output_filename_mode, lineEdit_output_file_prefix);
-        QWidget::setTabOrder(lineEdit_output_file_prefix, lineEdit_output_file_suffix);
-        QWidget::setTabOrder(lineEdit_output_file_suffix, checkBox_overwrite);
+        QWidget::setTabOrder(lineEdit_output_file_prefix, checkBox_overwrite);
 
         menuBar->addAction(menuPngyu->menuAction());
         menuPngyu->addAction(action_preferences);
@@ -980,9 +979,9 @@ public:
 #endif // QT_CONFIG(tooltip)
         label_outoput_original_name->setText(QCoreApplication::translate("PngyuMainWindow", "+ [Original Name] +", nullptr));
 #if QT_CONFIG(tooltip)
-        lineEdit_output_file_suffix->setToolTip(QCoreApplication::translate("PngyuMainWindow", "Input cumtom filename suffix", nullptr));
+        label_output_file_extension->setToolTip(QCoreApplication::translate("PngyuMainWindow", "File extension will match the original file type", nullptr));
 #endif // QT_CONFIG(tooltip)
-        lineEdit_output_file_suffix->setText(QCoreApplication::translate("PngyuMainWindow", ".png", nullptr));
+        label_output_file_extension->setText(QCoreApplication::translate("PngyuMainWindow", ".[extension]", nullptr));
         groupBox_output_option_other->setTitle(QString());
         checkBox_overwrite->setText(QCoreApplication::translate("PngyuMainWindow", "Overwrite", nullptr));
         groupBox_output_directory_mode->setTitle(QCoreApplication::translate("PngyuMainWindow", "Output Directory", nullptr));

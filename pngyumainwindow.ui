@@ -500,12 +500,12 @@ QPushButton#pushButton_filelist_clear:pressed {
                     </widget>
                    </item>
                    <item row="0" column="4">
-                    <widget class="QLineEdit" name="lineEdit_output_file_suffix">
+                    <widget class="QLabel" name="label_output_file_extension">
                      <property name="toolTip">
-                      <string>Input cumtom filename suffix</string>
+                      <string>File extension will match the original file type</string>
                      </property>
                      <property name="text">
-                      <string>.png</string>
+                      <string>.[extension]</string>
                      </property>
                     </widget>
                    </item>
