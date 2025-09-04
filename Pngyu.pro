@@ -7,7 +7,7 @@
 
 QT += core gui widgets
 
-TARGET = NewPngyu
+TARGET = PngyuNeue
 TEMPLATE = app
 
 # Code signing configuration for Xcode
@@ -15,6 +15,8 @@ macx {
     QMAKE_DEVELOPMENT_TEAM = ""
     QMAKE_PROVISIONING_PROFILE = ""
     CONFIG += no_code_sign
+    QMAKE_XCODE_CODE_SIGN_IDENTITY = ""
+    QMAKE_XCODE_DEVELOPMENT_TEAM = ""
 }
 
 INCLUDEPATH += \

@@ -144,7 +144,7 @@ public:
         if (PngyuMainWindow->objectName().isEmpty())
             PngyuMainWindow->setObjectName("PngyuMainWindow");
         PngyuMainWindow->resize(800, 673);
-        PngyuMainWindow->setMinimumSize(QSize(1200, 750));
+        PngyuMainWindow->setMinimumSize(QSize(900, 750));
         PngyuMainWindow->setAcceptDrops(true);
         PngyuMainWindow->setStyleSheet(QString::fromUtf8("/* Modern macOS buttons */\n"
 "QPushButton {\n"
@@ -981,7 +981,7 @@ public:
 
     void retranslateUi(QMainWindow *PngyuMainWindow)
     {
-        PngyuMainWindow->setWindowTitle(QCoreApplication::translate("PngyuMainWindow", "New Pngyu - PNG & JPEG Optimizer", nullptr));
+        PngyuMainWindow->setWindowTitle(QCoreApplication::translate("PngyuMainWindow", "Pngyu Neue - PNG & JPEG Optimizer", nullptr));
         action_preferences->setText(QCoreApplication::translate("PngyuMainWindow", "&Preferences", nullptr));
         action_quit->setText(QCoreApplication::translate("PngyuMainWindow", "&Quit", nullptr));
         pushButton_exec->setText(QCoreApplication::translate("PngyuMainWindow", "Compress Start", nullptr));

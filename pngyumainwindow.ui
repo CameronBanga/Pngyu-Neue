@@ -12,7 +12,7 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>1200</width>
+    <width>900</width>
     <height>750</height>
    </size>
   </property>
@@ -20,7 +20,7 @@
    <bool>true</bool>
   </property>
   <property name="windowTitle">
-   <string>New Pngyu - PNG &amp; JPEG Optimizer</string>
+   <string>Pngyu Neue - PNG &amp; JPEG Optimizer</string>
   </property>
   <property name="styleSheet">
    <string notr="true">/* Modern macOS buttons */

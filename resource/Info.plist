@@ -13,9 +13,9 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleExecutable</key>
-	<string>NewPngyu</string>
+	<string>PngyuNeue</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.nukesaq88.Pngyu</string>
+	<string>com.cameronbanga.pngyuneue</string>
 	<key>CFBundleVersion</key>
 	<string>2.0</string>
 	<key>CFBundleShortVersionString</key>

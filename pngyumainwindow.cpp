@@ -89,13 +89,13 @@ PngyuMainWindow::PngyuMainWindow(QWidget *parent) :
 
     // Set minimum column widths to prevent truncation
     table_widget->horizontalHeader()->setMinimumSectionSize(80);
-    table_widget->setColumnWidth(pngyu::COLUMN_BASENAME, 180);
-    table_widget->setColumnWidth(pngyu::COLUMN_ABSOLUTE_PATH, 380);
-    table_widget->setColumnWidth(pngyu::COLUMN_RESULT, 60);
-    table_widget->setColumnWidth(pngyu::COLUMN_ORIGINAL_SIZE, 100);
-    table_widget->setColumnWidth(pngyu::COLUMN_OUTPUT_SIZE, 130);  // "Compressed Size" needs more space
-    table_widget->setColumnWidth(pngyu::COLUMN_SAVED_SIZE, 90);
-    table_widget->setColumnWidth(pngyu::COLUMN_SAVED_SIZE_RATE, 100);
+    table_widget->setColumnWidth(pngyu::COLUMN_BASENAME, 140);
+    table_widget->setColumnWidth(pngyu::COLUMN_ABSOLUTE_PATH, 220);
+    table_widget->setColumnWidth(pngyu::COLUMN_RESULT, 50);
+    table_widget->setColumnWidth(pngyu::COLUMN_ORIGINAL_SIZE, 85);
+    table_widget->setColumnWidth(pngyu::COLUMN_OUTPUT_SIZE, 120);  // "Compressed Size" needs more space
+    table_widget->setColumnWidth(pngyu::COLUMN_SAVED_SIZE, 80);
+    table_widget->setColumnWidth(pngyu::COLUMN_SAVED_SIZE_RATE, 85);
 
     pngyu::util::set_drop_here_stylesheet(
           table_widget->viewport(), false );
