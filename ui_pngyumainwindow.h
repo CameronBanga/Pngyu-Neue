@@ -71,7 +71,7 @@ public:
     QGridLayout *gridLayout_3;
     QLineEdit *lineEdit_output_file_prefix;
     QLabel *label_outoput_original_name;
-    QLineEdit *lineEdit_output_file_suffix;
+    QLabel *label_output_file_extension;
     QGroupBox *groupBox_output_option_other;
     QGridLayout *gridLayout_11;
     QCheckBox *checkBox_overwrite;
@@ -108,9 +108,6 @@ public:
     QLabel *label_compress_high_speed;
     QWidget *widget_compress_option_check_boxes;
     QGridLayout *gridLayout_17;
-    QFrame *frame_ie6;
-    QGridLayout *gridLayout_7;
-    QCheckBox *checkBox_ie6_support;
     QFrame *frame_dithered;
     QGridLayout *gridLayout_4;
     QCheckBox *checkBox_dithered;
@@ -143,17 +140,47 @@ public:
     {
         if (PngyuMainWindow->objectName().isEmpty())
             PngyuMainWindow->setObjectName("PngyuMainWindow");
-        PngyuMainWindow->resize(689, 673);
+        PngyuMainWindow->resize(800, 673);
+        PngyuMainWindow->setMinimumSize(QSize(935, 750));
         PngyuMainWindow->setAcceptDrops(true);
-        PngyuMainWindow->setStyleSheet(QString::fromUtf8("#pushButton_preview,\n"
-"#pushButton_exec,\n"
-"#pushButton_stop_exec\n"
-"{\n"
-"  border-style: outset;\n"
-"  border : 1px solid rgb(127,127,127,127);\n"
-"  border-radius: 5px;\n"
-"  background : qlineargradient(spread:reflect, x1:0, y1:1, x2:0, y2:0,\n"
-"    stop:0 rgba(127, 127, 127, 64), stop:1 rgba(255, 255, 255, 100));\n"
+        PngyuMainWindow->setStyleSheet(QString::fromUtf8("/* Modern macOS buttons */\n"
+"QPushButton {\n"
+"    border: none;\n"
+"    border-radius: 8px;\n"
+"    padding: 10px 16px;\n"
+"    font-size: 13px;\n"
+"    font-weight: 500;\n"
+"    background-color: palette(button);\n"
+"    color: palette(button-text);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: palette(midlight);\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_exec {\n"
+"    background-color: #007AFF;\n"
+"    color: white;\n"
+"    font-weight: 600;\n"
+"    padding: 12px 24px;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_exec:hover {\n"
+"    background-color: #0051D5;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_stop_exec {\n"
+"    background-color: #FF3B30;\n"
+"    color: white;\n"
+"    font-weight: 600;\n"
+"    padding: 12px 24px;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_preview {\n"
+"    background-color: #007AFF;\n"
+"    color: white;\n"
+"    font-weight: 600;\n"
+"    padding: 8px 16px;\n"
 "}\n"
 "\n"
 "\n"
@@ -161,25 +188,39 @@ public:
 "QFrame#frame_dithered,\n"
 "QFrame#frame_colors,\n"
 "QFrame#frame_output_filename,\n"
-"QFrame#frame_ie6\n"
+""
+                        "QFrame#frame_ie6\n"
 "{\n"
 "    border: 1px solid rgba(127,127,127,63);\n"
 "    border-radius: 5px;\n"
 "    padding: 2px;\n"
 "}\n"
 "\n"
-"/*left*/\n"
+"/* Modern segmented controls */\n"
+"QToolButton {\n"
+"    border: 1px solid palette(mid);\n"
+"    padding: 8px 16px;\n"
+"    background-color: palette(button);\n"
+"    color: palette(button-text);\n"
+"    font-size: 13px;\n"
+"    font-weight: 500;\n"
+"}\n"
+"\n"
+"QToolButton:checked {\n"
+"    background-color: #007AFF;\n"
+"    color: white;\n"
+"    border-color: #007AFF;\n"
+"}\n"
+"\n"
+"QToolButton:hover:!checked {\n"
+"    background-color: palette(midlight);\n"
+"}\n"
+"\n"
 "QToolButton#toolButton_compress_option_default,\n"
-"QToolButton#toolButton_output_option_overwrite_original\n"
-"{\n"
-"  border-style: outset;\n"
-"  border : 1px solid rgb(127,127,127,127);\n"
-"  border-top-left-radius : 6px;\n"
-"  border-bottom-left-radius: 6px;\n"
-"  padding: 3px;\n"
-"  background : qlineargradient(spread:reflect, x1:0, y1:1, x2:0, y2:0,\n"
-"    stop:0 rgba(127, 127, 127, 64), stop:1 rgba(255, 255, 2"
-                        "55, 100));\n"
+"QToolButton#toolButton_output_option_overwrite_original {\n"
+"    border-top-left-radius: 8px;\n"
+"    border-bottom-left-radius: 8px;\n"
+"    border-right: none;\n"
 "}\n"
 "\n"
 "/*middle*/\n"
@@ -188,53 +229,156 @@ public:
 "  border-style: outset;\n"
 "  border : 1px solid rgb(127,127,127,127);\n"
 "  border-radius : 0px;\n"
-"  padding: 3px;\n"
+"  padding: 3px;"
+                        "\n"
 "  background : qlineargradient(spread:reflect, x1:0, y1:1, x2:0, y2:0,\n"
 "    stop:0 rgba(127, 127, 127, 64), stop:1 rgba(255, 255, 255, 100));\n"
 "}\n"
 "\n"
-"/*right*/\n"
 "QToolButton#toolButton_compress_option_custom,\n"
-"QToolButton#toolButton_output_option_custom\n"
-"{\n"
-"  border-style: outset;\n"
-"  border : 1px solid rgb(127,127,127,127);\n"
-"  border-top-right-radius : 6px;\n"
-"  border-bottom-right-radius: 6px;\n"
-"  padding: 3px;\n"
-"  background : qlineargradient(spread:reflect, x1:0, y1:1, x2:0, y2:0,\n"
-"    stop:0 rgba(127, 127, 127, 64), stop:1 rgba(255, 255, 255, 100));\n"
+"QToolButton#toolButton_output_option_custom {\n"
+"    border-top-right-radius: 8px;\n"
+"    border-bottom-right-radius: 8px;\n"
+"    border-left: none;\n"
 "}\n"
 "\n"
-"QToolButton#toolButton_compress_option_default::checked,\n"
-"QToolButton#toolButton_compress_option_custom::checked,\n"
-"QToolButton#toolButton_output_option_custom::checked,\n"
-"QToolButton#toolButton_"
-                        "output_option_overwrite_original::checked\n"
-"{\n"
-"  border : 1px solid rgb(100,100,100,127);\n"
-"  border-style: inset;\n"
-"  padding-top : 4px;\n"
-"  padding-left : 4px;\n"
-"  padding-bottom : 2px;\n"
-"  padding-right : 2px;\n"
-"  background : qlineargradient(spread:reflect, x1:0, y1:1, x2:0, y2:0,\n"
-"    stop:1 rgba(40, 40, 40, 64), stop:0 rgba(127, 127, 127, 64));\n"
+"/* Modern table styling */\n"
+"QTableWidget {\n"
+"    background-color: palette(base);\n"
+"    border: none;\n"
+"    border-radius: 10px;\n"
+"    selection-background-color: palette(highlight);\n"
+"    selection-color: palette(highlighted-text);\n"
+"    font-size: 13px;\n"
+"    alternate-background-color: palette(alternate-base);\n"
+"    gridline-color: palette(mid);\n"
 "}\n"
 "\n"
-"QToolButton#toolButton_compress_option_default::pressed,\n"
-"QToolButton#toolButton_compress_option_custom::pressed,\n"
-"QToolButton#toolButton_output_option_custom::pressed,\n"
-"QToolButton#toolButton_output_option_overwrite_original::pressed\n"
-"{ \n"
-"  border : 1px solid rgb(80,80,80,127);\n"
-"  border-style: inset;\n"
-"  padding-top : 4px;\n"
-"  padding-left : 4px;\n"
-"  padding-bottom : 2px;\n"
-"  padding-right : 2px;\n"
-"  background : qlineargradient(spread:reflect, x1:0, y1:1, x2:0, y2:0,\n"
-"    stop:1 rgba(30, 30, 30, 64), stop:0 rgba(100, 100, 100, 64));\n"
+"QTableWidget::item {\n"
+"    padding: 10px 8px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    background-color: palette(button);\n"
+"    color: palette(button-text);\n"
+"    padding: 10px 8px;\n"
+"    border: none;\n"
+"    border-right"
+                        ": 1px solid rgba(128, 128, 128, 0.3);\n"
+"    font-weight: 600;\n"
+"    font-size: 12px;\n"
+"}\n"
+"\n"
+"QHeaderView::section:last {\n"
+"    border-right: none;\n"
+"}\n"
+"\n"
+"/* Modern text fields */\n"
+"QLineEdit {\n"
+"    border: 1px solid rgba(0, 0, 0, 0.1);\n"
+"    border-radius: 8px;\n"
+"    padding: 8px 12px;\n"
+"    background-color: palette(base);\n"
+"    color: palette(text);\n"
+"    font-size: 13px;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border-color: #007AFF;\n"
+"    border-width: 2px;\n"
+"}\n"
+"\n"
+"QLineEdit[drp_enabled=\"true\"] {\n"
+"    background-color: #007AFF;\n"
+"    color: white;\n"
+"    border-color: #007AFF;\n"
+"}\n"
+"\n"
+"/* Modern labels */\n"
+"QLabel {\n"
+"    color: palette(text);\n"
+"    font-size: 13px;\n"
+"}\n"
+"\n"
+"QLabel#label_drop_here {\n"
+"    background-color: palette(base);\n"
+"    color: palette(mid);\n"
+"    font-size: 15px;\n"
+"    font-weight: 500;\n"
+"}\n"
+"\n"
+"/* Status colors */\n"
+"QLabel#label_current_saved_size {\n"
+"    color: palette(mid);\n"
+"    font-size:"
+                        " 12px;\n"
+"}\n"
+"\n"
+"QLabel#label_current_saved_size[color_positive=\"true\"] {\n"
+"    color: #30D158;\n"
+"}\n"
+"\n"
+"QLabel#label_current_saved_size[color_negative=\"true\"] {\n"
+"    color: #FF453A;\n"
+"}\n"
+"\n"
+"/* Modern frames */\n"
+"QFrame#frame_speed,\n"
+"QFrame#frame_dithered,\n"
+"QFrame#frame_colors,\n"
+"QFrame#frame_output_filename,\n"
+"QFrame#frame_ie6 {\n"
+"    border: 1px solid rgba(0, 0, 0, 0.08);\n"
+"    border-radius: 10px;\n"
+"    padding: 8px;\n"
+"    background-color: rgba(0, 0, 0, 0.02);\n"
+"}\n"
+"\n"
+"/* Add file button - specific styling to override general QToolButton */\n"
+"QToolButton#toolButton_add_file {\n"
+"    border: 1px solid rgba(0, 0, 0, 0.1) !important;\n"
+"    border-radius: 6px !important;\n"
+"    background-color: palette(button) !important;\n"
+"    color: #007AFF !important;\n"
+"    font-weight: 600 !important;\n"
+"    font-size: 16px !important;\n"
+"    padding: 2px !important;\n"
+"}\n"
+"\n"
+"QToolButton#toolButton_add_file:hover {\n"
+"    background-color: palette(mid"
+                        "light) !important;\n"
+"    color: #0051D5 !important;\n"
+"}\n"
+"\n"
+"QToolButton#toolButton_add_file:pressed {\n"
+"    background-color: palette(mid) !important;\n"
+"    color: #003D82 !important;\n"
+"}\n"
+"\n"
+"QToolButton#toolButton_add_file:checked {\n"
+"    background-color: palette(button) !important;\n"
+"    color: #007AFF !important;\n"
+"}\n"
+"\n"
+"/* Clear button - adaptive light/dark mode styling */\n"
+"QPushButton#pushButton_filelist_clear {\n"
+"    border: 1px solid palette(mid);\n"
+"    border-radius: 6px;\n"
+"    background-color: palette(button);\n"
+"    color: palette(button-text);\n"
+"    padding: 4px 8px;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_filelist_clear:hover {\n"
+"    background-color: palette(midlight);\n"
+"    border-color: palette(dark);\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_filelist_clear:pressed {\n"
+"    background-color: palette(mid);\n"
+"    color: palette(bright-text);\n"
 "}"));
         action_preferences = new QAction(PngyuMainWindow);
         action_preferences->setObjectName("action_preferences");
@@ -244,7 +388,7 @@ public:
         centralWidget->setObjectName("centralWidget");
         gridLayout = new QGridLayout(centralWidget);
         gridLayout->setSpacing(6);
-        gridLayout->setContentsMargins(6, 6, 6, 6);
+        gridLayout->setContentsMargins(20, 20, 20, 20);
         gridLayout->setObjectName("gridLayout");
         widget = new QWidget(centralWidget);
         widget->setObjectName("widget");
@@ -377,10 +521,10 @@ public:
 
         gridLayout_3->addWidget(label_outoput_original_name, 0, 3, 1, 1);
 
-        lineEdit_output_file_suffix = new QLineEdit(frame_output_filename);
-        lineEdit_output_file_suffix->setObjectName("lineEdit_output_file_suffix");
+        label_output_file_extension = new QLabel(frame_output_filename);
+        label_output_file_extension->setObjectName("label_output_file_extension");
 
-        gridLayout_3->addWidget(lineEdit_output_file_suffix, 0, 4, 1, 1);
+        gridLayout_3->addWidget(label_output_file_extension, 0, 4, 1, 1);
 
 
         horizontalLayout_3->addWidget(frame_output_filename);
@@ -630,23 +774,6 @@ public:
         gridLayout_17->setSpacing(4);
         gridLayout_17->setContentsMargins(0, 0, 0, 0);
         gridLayout_17->setObjectName("gridLayout_17");
-        frame_ie6 = new QFrame(widget_compress_option_check_boxes);
-        frame_ie6->setObjectName("frame_ie6");
-        frame_ie6->setFrameShape(QFrame::Panel);
-        frame_ie6->setFrameShadow(QFrame::Sunken);
-        gridLayout_7 = new QGridLayout(frame_ie6);
-        gridLayout_7->setSpacing(4);
-        gridLayout_7->setContentsMargins(4, 4, 4, 4);
-        gridLayout_7->setObjectName("gridLayout_7");
-        checkBox_ie6_support = new QCheckBox(frame_ie6);
-        checkBox_ie6_support->setObjectName("checkBox_ie6_support");
-        checkBox_ie6_support->setChecked(false);
-
-        gridLayout_7->addWidget(checkBox_ie6_support, 0, 0, 1, 1);
-
-
-        gridLayout_17->addWidget(frame_ie6, 0, 1, 1, 1);
-
         frame_dithered = new QFrame(widget_compress_option_check_boxes);
         frame_dithered->setObjectName("frame_dithered");
         frame_dithered->setFrameShape(QFrame::Panel);
@@ -715,7 +842,7 @@ public:
 
         groupBox_filelist = new QGroupBox(centralWidget);
         groupBox_filelist->setObjectName("groupBox_filelist");
-        groupBox_filelist->setFlat(false);
+        groupBox_filelist->setFlat(true);
         gridLayout_8 = new QGridLayout(groupBox_filelist);
         gridLayout_8->setSpacing(4);
         gridLayout_8->setContentsMargins(11, 11, 11, 11);
@@ -723,10 +850,11 @@ public:
         gridLayout_8->setContentsMargins(6, 6, 6, 3);
         toolButton_add_file = new QToolButton(groupBox_filelist);
         toolButton_add_file->setObjectName("toolButton_add_file");
-        toolButton_add_file->setMaximumSize(QSize(20, 20));
-        QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/icons/plus.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        toolButton_add_file->setIcon(icon2);
+        toolButton_add_file->setMinimumSize(QSize(28, 28));
+        toolButton_add_file->setMaximumSize(QSize(28, 28));
+        QFont font;
+        font.setPointSize(16);
+        toolButton_add_file->setFont(font);
 
         gridLayout_8->addWidget(toolButton_add_file, 3, 0, 1, 1);
 
@@ -734,9 +862,9 @@ public:
         pushButton_filelist_clear->setObjectName("pushButton_filelist_clear");
         sizePolicy4.setHeightForWidth(pushButton_filelist_clear->sizePolicy().hasHeightForWidth());
         pushButton_filelist_clear->setSizePolicy(sizePolicy4);
-        QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/icons/clear.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        pushButton_filelist_clear->setIcon(icon3);
+        QFont font1;
+        font1.setPointSize(13);
+        pushButton_filelist_clear->setFont(font1);
 
         gridLayout_8->addWidget(pushButton_filelist_clear, 3, 4, 1, 1);
 
@@ -806,8 +934,7 @@ public:
         QWidget::setTabOrder(pushButton_preview, horizontalSlider_colors);
         QWidget::setTabOrder(horizontalSlider_colors, spinBox_colors);
         QWidget::setTabOrder(spinBox_colors, horizontalSlider_compress_speed);
-        QWidget::setTabOrder(horizontalSlider_compress_speed, checkBox_ie6_support);
-        QWidget::setTabOrder(checkBox_ie6_support, checkBox_dithered);
+        QWidget::setTabOrder(horizontalSlider_compress_speed, checkBox_dithered);
         QWidget::setTabOrder(checkBox_dithered, tableWidget_filelist);
         QWidget::setTabOrder(tableWidget_filelist, toolButton_add_file);
         QWidget::setTabOrder(toolButton_add_file, pushButton_filelist_clear);
@@ -819,8 +946,7 @@ public:
         QWidget::setTabOrder(lineEdit_output_directory, toolButton_open_output_directory);
         QWidget::setTabOrder(toolButton_open_output_directory, comboBox_output_filename_mode);
         QWidget::setTabOrder(comboBox_output_filename_mode, lineEdit_output_file_prefix);
-        QWidget::setTabOrder(lineEdit_output_file_prefix, lineEdit_output_file_suffix);
-        QWidget::setTabOrder(lineEdit_output_file_suffix, checkBox_overwrite);
+        QWidget::setTabOrder(lineEdit_output_file_prefix, checkBox_overwrite);
 
         menuBar->addAction(menuPngyu->menuAction());
         menuPngyu->addAction(action_preferences);
@@ -833,7 +959,7 @@ public:
 
     void retranslateUi(QMainWindow *PngyuMainWindow)
     {
-        PngyuMainWindow->setWindowTitle(QCoreApplication::translate("PngyuMainWindow", "PngyuNew", nullptr));
+        PngyuMainWindow->setWindowTitle(QCoreApplication::translate("PngyuMainWindow", "Pngyu Neue - PNG & JPEG Optimizer", nullptr));
         action_preferences->setText(QCoreApplication::translate("PngyuMainWindow", "&Preferences", nullptr));
         action_quit->setText(QCoreApplication::translate("PngyuMainWindow", "&Quit", nullptr));
         pushButton_exec->setText(QCoreApplication::translate("PngyuMainWindow", "Compress Start", nullptr));
@@ -841,7 +967,7 @@ public:
         label_executing->setText(QCoreApplication::translate("PngyuMainWindow", "Now Compressing...", nullptr));
         groupBox_output_option->setTitle(QCoreApplication::translate("PngyuMainWindow", "Output Option", nullptr));
         groupBox_output_filename->setTitle(QCoreApplication::translate("PngyuMainWindow", "Output Filename", nullptr));
-        comboBox_output_filename_mode->setItemText(0, QCoreApplication::translate("PngyuMainWindow", "[Original].png", nullptr));
+        comboBox_output_filename_mode->setItemText(0, QCoreApplication::translate("PngyuMainWindow", "[Original].png/.jpg", nullptr));
         comboBox_output_filename_mode->setItemText(1, QCoreApplication::translate("PngyuMainWindow", "Custom Filename", nullptr));
 
 #if QT_CONFIG(tooltip)
@@ -853,9 +979,9 @@ public:
 #endif // QT_CONFIG(tooltip)
         label_outoput_original_name->setText(QCoreApplication::translate("PngyuMainWindow", "+ [Original Name] +", nullptr));
 #if QT_CONFIG(tooltip)
-        lineEdit_output_file_suffix->setToolTip(QCoreApplication::translate("PngyuMainWindow", "Input cumtom filename suffix", nullptr));
+        label_output_file_extension->setToolTip(QCoreApplication::translate("PngyuMainWindow", "File extension will match the original file type", nullptr));
 #endif // QT_CONFIG(tooltip)
-        lineEdit_output_file_suffix->setText(QCoreApplication::translate("PngyuMainWindow", ".png", nullptr));
+        label_output_file_extension->setText(QCoreApplication::translate("PngyuMainWindow", ".[extension]", nullptr));
         groupBox_output_option_other->setTitle(QString());
         checkBox_overwrite->setText(QCoreApplication::translate("PngyuMainWindow", "Overwrite", nullptr));
         groupBox_output_directory_mode->setTitle(QCoreApplication::translate("PngyuMainWindow", "Output Directory", nullptr));
@@ -877,19 +1003,18 @@ public:
         label_homepage->setText(QCoreApplication::translate("PngyuMainWindow", "<a href=\"http://nukesaq88.github.io/Pngyu/\" style=\"color: darkgray;\">Home Page</a>", nullptr));
         groupBox_compress_option->setTitle(QCoreApplication::translate("PngyuMainWindow", "Compress Option", nullptr));
         pushButton_preview->setText(QCoreApplication::translate("PngyuMainWindow", "Preview", nullptr));
-        label_colors->setText(QCoreApplication::translate("PngyuMainWindow", "Colors", nullptr));
+        label_colors->setText(QCoreApplication::translate("PngyuMainWindow", "Colors (PNG)", nullptr));
         label_compress_high_quality->setText(QCoreApplication::translate("PngyuMainWindow", "High Quality", nullptr));
         label_compress_high_speed->setText(QCoreApplication::translate("PngyuMainWindow", "High Speed", nullptr));
-        checkBox_ie6_support->setText(QCoreApplication::translate("PngyuMainWindow", "IE6 alpha support", nullptr));
         checkBox_dithered->setText(QCoreApplication::translate("PngyuMainWindow", "Dithered", nullptr));
         toolButton_compress_option_default->setText(QCoreApplication::translate("PngyuMainWindow", "Default", nullptr));
         toolButton_compress_option_custom->setText(QCoreApplication::translate("PngyuMainWindow", "Custom", nullptr));
         groupBox_filelist->setTitle(QCoreApplication::translate("PngyuMainWindow", "Files", nullptr));
-        toolButton_add_file->setText(QString());
+        toolButton_add_file->setText(QCoreApplication::translate("PngyuMainWindow", "+", nullptr));
 #if QT_CONFIG(tooltip)
         pushButton_filelist_clear->setToolTip(QCoreApplication::translate("PngyuMainWindow", "Clear all files", nullptr));
 #endif // QT_CONFIG(tooltip)
-        pushButton_filelist_clear->setText(QCoreApplication::translate("PngyuMainWindow", "Clear", nullptr));
+        pushButton_filelist_clear->setText(QCoreApplication::translate("PngyuMainWindow", "\342\234\225 Clear", nullptr));
         label_file_appending->setText(QCoreApplication::translate("PngyuMainWindow", "Adding files...", nullptr));
 #if QT_CONFIG(tooltip)
         pushButton_stop_file_appending->setToolTip(QCoreApplication::translate("PngyuMainWindow", "Stop searcing", nullptr));

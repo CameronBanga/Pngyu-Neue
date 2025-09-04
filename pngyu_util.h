@@ -16,6 +16,7 @@
 #include <QProcess>
 #include <QIcon>
 
+
 namespace pngyu
 {
 namespace util
@@ -52,6 +53,13 @@ inline QByteArray png_file_to_bytearray( const QString &filename )
   return f.readAll();
 }
 
+inline QByteArray image_file_to_bytearray( const QString &filename )
+{
+  QFile f( filename );
+  f.open( QIODevice::ReadOnly );
+  return f.readAll();
+}
+
 inline bool write_png_data( const QString &filename, const QByteArray png_data )
 {
   QFile f( filename );
@@ -61,6 +69,21 @@ inline bool write_png_data( const QString &filename, const QByteArray png_data )
   }
 
   if( f.write( png_data ) != png_data.size() )
+  {
+    return false;
+  }
+  return true;
+}
+
+inline bool write_image_data( const QString &filename, const QByteArray image_data )
+{
+  QFile f( filename );
+  if( ! f.open( QIODevice::WriteOnly | QIODevice::Truncate ) )
+  {
+    return false;
+  }
+
+  if( f.write( image_data ) != image_data.size() )
   {
     return false;
   }
@@ -82,6 +105,27 @@ inline QString size_to_string_mb( const qint64 size )
 inline bool has_png_extention( const QFileInfo &file )
 {
   return QString::compare(file.suffix(), "png", Qt::CaseInsensitive) == 0;
+}
+
+inline bool has_jpeg_extention( const QFileInfo &file )
+{
+  const QString suffix = file.suffix().toLower();
+  return suffix == "jpg" || suffix == "jpeg";
+}
+
+inline bool has_supported_image_extention( const QFileInfo &file )
+{
+  return has_png_extention(file) || has_jpeg_extention(file);
+}
+
+inline bool is_jpeg_file( const QFileInfo &file )
+{
+  return has_jpeg_extention(file);
+}
+
+inline bool is_png_file( const QFileInfo &file )
+{
+  return has_png_extention(file);
 }
 
 inline bool can_read_png_file( const QFileInfo &file )
@@ -130,9 +174,8 @@ inline void set_drop_here_stylesheet(
 //  widget->setStyleSheet();
   QString stylesheet =
       "QWidget{"
-      "background-image : url(:/background/drop_here.png);"
-      "background-position: center ;"
-      "background-repeat : repeat-none;";
+      "border: 1px solid palette(mid);"
+      "border-radius: 8px;";
   if( drag_hoverring )
   {
     stylesheet += "background-color : " + hoverring_color.name() + ";\n";

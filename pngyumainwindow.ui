@@ -6,26 +6,61 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>689</width>
+    <width>800</width>
     <height>673</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>935</width>
+    <height>750</height>
+   </size>
   </property>
   <property name="acceptDrops">
    <bool>true</bool>
   </property>
   <property name="windowTitle">
-   <string>PngyuNew</string>
+   <string>Pngyu Neue - PNG &amp; JPEG Optimizer</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#pushButton_preview,
-#pushButton_exec,
-#pushButton_stop_exec
-{
-  border-style: outset;
-  border : 1px solid rgb(127,127,127,127);
-  border-radius: 5px;
-  background : qlineargradient(spread:reflect, x1:0, y1:1, x2:0, y2:0,
-    stop:0 rgba(127, 127, 127, 64), stop:1 rgba(255, 255, 255, 100));
+   <string notr="true">/* Modern macOS buttons */
+QPushButton {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: palette(button);
+    color: palette(button-text);
+}
+
+QPushButton:hover {
+    background-color: palette(midlight);
+}
+
+QPushButton#pushButton_exec {
+    background-color: #007AFF;
+    color: white;
+    font-weight: 600;
+    padding: 12px 24px;
+}
+
+QPushButton#pushButton_exec:hover {
+    background-color: #0051D5;
+}
+
+QPushButton#pushButton_stop_exec {
+    background-color: #FF3B30;
+    color: white;
+    font-weight: 600;
+    padding: 12px 24px;
+}
+
+QPushButton#pushButton_preview {
+    background-color: #007AFF;
+    color: white;
+    font-weight: 600;
+    padding: 8px 16px;
 }
 
 
@@ -40,17 +75,31 @@ QFrame#frame_ie6
     padding: 2px;
 }
 
-/*left*/
+/* Modern segmented controls */
+QToolButton {
+    border: 1px solid palette(mid);
+    padding: 8px 16px;
+    background-color: palette(button);
+    color: palette(button-text);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+QToolButton:checked {
+    background-color: #007AFF;
+    color: white;
+    border-color: #007AFF;
+}
+
+QToolButton:hover:!checked {
+    background-color: palette(midlight);
+}
+
 QToolButton#toolButton_compress_option_default,
-QToolButton#toolButton_output_option_overwrite_original
-{
-  border-style: outset;
-  border : 1px solid rgb(127,127,127,127);
-  border-top-left-radius : 6px;
-  border-bottom-left-radius: 6px;
-  padding: 3px;
-  background : qlineargradient(spread:reflect, x1:0, y1:1, x2:0, y2:0,
-    stop:0 rgba(127, 127, 127, 64), stop:1 rgba(255, 255, 255, 100));
+QToolButton#toolButton_output_option_overwrite_original {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-right: none;
 }
 
 /*middle*/
@@ -64,53 +113,153 @@ QToolButton#toolButton_background_black
     stop:0 rgba(127, 127, 127, 64), stop:1 rgba(255, 255, 255, 100));
 }
 
-/*right*/
 QToolButton#toolButton_compress_option_custom,
-QToolButton#toolButton_output_option_custom
-{
-  border-style: outset;
-  border : 1px solid rgb(127,127,127,127);
-  border-top-right-radius : 6px;
-  border-bottom-right-radius: 6px;
-  padding: 3px;
-  background : qlineargradient(spread:reflect, x1:0, y1:1, x2:0, y2:0,
-    stop:0 rgba(127, 127, 127, 64), stop:1 rgba(255, 255, 255, 100));
+QToolButton#toolButton_output_option_custom {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-left: none;
 }
 
-QToolButton#toolButton_compress_option_default::checked,
-QToolButton#toolButton_compress_option_custom::checked,
-QToolButton#toolButton_output_option_custom::checked,
-QToolButton#toolButton_output_option_overwrite_original::checked
-{
-  border : 1px solid rgb(100,100,100,127);
-  border-style: inset;
-  padding-top : 4px;
-  padding-left : 4px;
-  padding-bottom : 2px;
-  padding-right : 2px;
-  background : qlineargradient(spread:reflect, x1:0, y1:1, x2:0, y2:0,
-    stop:1 rgba(40, 40, 40, 64), stop:0 rgba(127, 127, 127, 64));
+/* Modern table styling */
+QTableWidget {
+    background-color: palette(base);
+    border: none;
+    border-radius: 10px;
+    selection-background-color: palette(highlight);
+    selection-color: palette(highlighted-text);
+    font-size: 13px;
+    alternate-background-color: palette(alternate-base);
+    gridline-color: palette(mid);
 }
 
-QToolButton#toolButton_compress_option_default::pressed,
-QToolButton#toolButton_compress_option_custom::pressed,
-QToolButton#toolButton_output_option_custom::pressed,
-QToolButton#toolButton_output_option_overwrite_original::pressed
-{ 
-  border : 1px solid rgb(80,80,80,127);
-  border-style: inset;
-  padding-top : 4px;
-  padding-left : 4px;
-  padding-bottom : 2px;
-  padding-right : 2px;
-  background : qlineargradient(spread:reflect, x1:0, y1:1, x2:0, y2:0,
-    stop:1 rgba(30, 30, 30, 64), stop:0 rgba(100, 100, 100, 64));
+QTableWidget::item {
+    padding: 10px 8px;
+    border: none;
+}
+
+QHeaderView::section {
+    background-color: palette(button);
+    color: palette(button-text);
+    padding: 10px 8px;
+    border: none;
+    border-right: 1px solid rgba(128, 128, 128, 0.3);
+    font-weight: 600;
+    font-size: 12px;
+}
+
+QHeaderView::section:last {
+    border-right: none;
+}
+
+/* Modern text fields */
+QLineEdit {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 8px 12px;
+    background-color: palette(base);
+    color: palette(text);
+    font-size: 13px;
+}
+
+QLineEdit:focus {
+    border-color: #007AFF;
+    border-width: 2px;
+}
+
+QLineEdit[drp_enabled="true"] {
+    background-color: #007AFF;
+    color: white;
+    border-color: #007AFF;
+}
+
+/* Modern labels */
+QLabel {
+    color: palette(text);
+    font-size: 13px;
+}
+
+QLabel#label_drop_here {
+    background-color: palette(base);
+    color: palette(mid);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Status colors */
+QLabel#label_current_saved_size {
+    color: palette(mid);
+    font-size: 12px;
+}
+
+QLabel#label_current_saved_size[color_positive="true"] {
+    color: #30D158;
+}
+
+QLabel#label_current_saved_size[color_negative="true"] {
+    color: #FF453A;
+}
+
+/* Modern frames */
+QFrame#frame_speed,
+QFrame#frame_dithered,
+QFrame#frame_colors,
+QFrame#frame_output_filename,
+QFrame#frame_ie6 {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Add file button - specific styling to override general QToolButton */
+QToolButton#toolButton_add_file {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 6px !important;
+    background-color: palette(button) !important;
+    color: #007AFF !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    padding: 2px !important;
+}
+
+QToolButton#toolButton_add_file:hover {
+    background-color: palette(midlight) !important;
+    color: #0051D5 !important;
+}
+
+QToolButton#toolButton_add_file:pressed {
+    background-color: palette(mid) !important;
+    color: #003D82 !important;
+}
+
+QToolButton#toolButton_add_file:checked {
+    background-color: palette(button) !important;
+    color: #007AFF !important;
+}
+
+/* Clear button - adaptive light/dark mode styling */
+QPushButton#pushButton_filelist_clear {
+    border: 1px solid palette(mid);
+    border-radius: 6px;
+    background-color: palette(button);
+    color: palette(button-text);
+    padding: 4px 8px;
+}
+
+QPushButton#pushButton_filelist_clear:hover {
+    background-color: palette(midlight);
+    border-color: palette(dark);
+}
+
+QPushButton#pushButton_filelist_clear:pressed {
+    background-color: palette(mid);
+    color: palette(bright-text);
 }</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
     <property name="margin">
-     <number>6</number>
+     <number>20</number>
     </property>
     <item row="7" column="0" colspan="5">
      <widget class="QWidget" name="widget" native="true">
@@ -292,7 +441,7 @@ QToolButton#toolButton_output_option_overwrite_original::pressed
                </property>
                <item>
                 <property name="text">
-                 <string>[Original].png</string>
+                 <string>[Original].png/.jpg</string>
                 </property>
                </item>
                <item>
@@ -351,12 +500,12 @@ QToolButton#toolButton_output_option_overwrite_original::pressed
                     </widget>
                    </item>
                    <item row="0" column="4">
-                    <widget class="QLineEdit" name="lineEdit_output_file_suffix">
+                    <widget class="QLabel" name="label_output_file_extension">
                      <property name="toolTip">
-                      <string>Input cumtom filename suffix</string>
+                      <string>File extension will match the original file type</string>
                      </property>
                      <property name="text">
-                      <string>.png</string>
+                      <string>.[extension]</string>
                      </property>
                     </widget>
                    </item>
@@ -721,7 +870,7 @@ QToolButton#toolButton_output_option_overwrite_original::pressed
                 <item row="1" column="0">
                  <widget class="QLabel" name="label_colors">
                   <property name="text">
-                   <string>Colors</string>
+                   <string>Colors (PNG)</string>
                   </property>
                  </widget>
                 </item>
@@ -794,34 +943,6 @@ QToolButton#toolButton_output_option_overwrite_original::pressed
              <property name="spacing">
               <number>4</number>
              </property>
-             <item row="0" column="1">
-              <widget class="QFrame" name="frame_ie6">
-               <property name="frameShape">
-                <enum>QFrame::Panel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Sunken</enum>
-               </property>
-               <layout class="QGridLayout" name="gridLayout_7">
-                <property name="margin">
-                 <number>4</number>
-                </property>
-                <property name="spacing">
-                 <number>4</number>
-                </property>
-                <item row="0" column="0">
-                 <widget class="QCheckBox" name="checkBox_ie6_support">
-                  <property name="text">
-                   <string>IE6 alpha support</string>
-                  </property>
-                  <property name="checked">
-                   <bool>false</bool>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
              <item row="0" column="0">
               <widget class="QFrame" name="frame_dithered">
                <property name="frameShape">
@@ -942,7 +1063,7 @@ QToolButton#toolButton_output_option_overwrite_original::pressed
        <string>Files</string>
       </property>
       <property name="flat">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
       <layout class="QGridLayout" name="gridLayout_8">
        <property name="leftMargin">
@@ -962,18 +1083,26 @@ QToolButton#toolButton_output_option_overwrite_original::pressed
        </property>
        <item row="3" column="0">
         <widget class="QToolButton" name="toolButton_add_file">
+         <property name="minimumSize">
+          <size>
+           <width>28</width>
+           <height>28</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
-           <width>20</width>
-           <height>20</height>
+           <width>28</width>
+           <height>28</height>
           </size>
          </property>
          <property name="text">
-          <string/>
+          <string>+</string>
          </property>
-         <property name="icon">
-          <iconset resource="resource/resource.qrc">
-           <normaloff>:/icons/plus.png</normaloff>:/icons/plus.png</iconset>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>600</weight>
+          </font>
          </property>
         </widget>
        </item>
@@ -989,11 +1118,13 @@ QToolButton#toolButton_output_option_overwrite_original::pressed
           <string>Clear all files</string>
          </property>
          <property name="text">
-          <string>Clear</string>
+          <string>✕ Clear</string>
          </property>
-         <property name="icon">
-          <iconset resource="resource/resource.qrc">
-           <normaloff>:/icons/clear.png</normaloff>:/icons/clear.png</iconset>
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+           <weight>500</weight>
+          </font>
          </property>
         </widget>
        </item>

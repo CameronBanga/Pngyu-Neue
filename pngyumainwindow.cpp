@@ -58,6 +58,7 @@ PngyuMainWindow::PngyuMainWindow(QWidget *parent) :
 {
   ui->setupUi(this);
 
+
   setWindowTitle( windowTitle() +
                   QString(" %1.%2.%3").arg(pngyu::VERSION_MAJOR)
                                       .arg(pngyu::VERSION_MINOR)
@@ -86,8 +87,37 @@ PngyuMainWindow::PngyuMainWindow(QWidget *parent) :
     table_widget->setHorizontalHeaderItem( pngyu::COLUMN_SAVED_SIZE_RATE,
                                            new QTableWidgetItem( tr("Saved Size(%)") ) );
 
+    // Set minimum column widths to prevent truncation
+    table_widget->horizontalHeader()->setMinimumSectionSize(50);
+    table_widget->setColumnWidth(pngyu::COLUMN_BASENAME, 140);
+    table_widget->setColumnWidth(pngyu::COLUMN_ABSOLUTE_PATH, 220);
+    table_widget->setColumnWidth(pngyu::COLUMN_RESULT, 70);
+    table_widget->setColumnWidth(pngyu::COLUMN_ORIGINAL_SIZE, 115);
+    table_widget->setColumnWidth(pngyu::COLUMN_OUTPUT_SIZE, 125);
+    table_widget->setColumnWidth(pngyu::COLUMN_SAVED_SIZE, 110);
+    table_widget->setColumnWidth(pngyu::COLUMN_SAVED_SIZE_RATE, 110);
+
     pngyu::util::set_drop_here_stylesheet(
           table_widget->viewport(), false );
+    
+    // Add "Drop here" text overlay
+    QLabel *dropLabel = new QLabel("Drop here", table_widget->viewport());
+    dropLabel->setAlignment(Qt::AlignCenter);
+    dropLabel->setStyleSheet(
+        "QLabel {"
+        "  color: rgba(128, 128, 128, 0.5);"
+        "  font-size: 48px;"
+        "  font-weight: 300;"
+        "  background: transparent;"
+        "}"
+    );
+    dropLabel->setAttribute(Qt::WA_TransparentForMouseEvents);
+    dropLabel->resize(table_widget->viewport()->size());
+    
+    // Install event filter to handle resize
+    table_widget->viewport()->installEventFilter(this);
+    
+    m_drop_here_label = dropLabel;
   }
 
   { // init homepage label layout
@@ -140,8 +170,6 @@ PngyuMainWindow::PngyuMainWindow(QWidget *parent) :
   connect( ui->spinBox_colors, SIGNAL(valueChanged(int)),
            this, SLOT(compress_option_changed()) );
   connect( ui->horizontalSlider_compress_speed, SIGNAL(valueChanged(int)),
-           this, SLOT(compress_option_changed()) );
-  connect( ui->checkBox_ie6_support, SIGNAL(stateChanged(int)),
            this, SLOT(compress_option_changed()) );
   connect( ui->checkBox_dithered, SIGNAL(stateChanged(int)),
            this, SLOT(compress_option_changed()) );
@@ -327,10 +355,10 @@ QString PngyuMainWindow::make_output_file_path_string( const QString &input_file
       else if( output_filename_mode == pngyu::OUTPUT_FILE_CUSTOM )
       {
         const QString &prefix = ui->lineEdit_output_file_prefix->text();
-        const QString &suffix = ui->lineEdit_output_file_suffix->text();
+        const QString &extension = "." + input_file_info.suffix();
 
         const QString &base_name = input_file_info.completeBaseName();
-        output_file_name = prefix + base_name + suffix;
+        output_file_name = prefix + base_name + extension;
       }
       else
       {
@@ -359,8 +387,36 @@ pngyu::PngquantOption PngyuMainWindow::make_pngquant_option( const QString &outp
     //option.set_force_overwrite( true );
     option.set_speed( compress_speed() );
     option.set_floyd_steinberg_dithering_disabled( ! dither_enabled() );
-    option.set_ie6_alpha_support( ie6_alpha_support_enabled() );
   }
+  return option;
+}
+
+pngyu::JpegOption PngyuMainWindow::make_jpeg_option() const
+{
+  // make jpeg option with default settings for now
+  // TODO: Add UI controls for JPEG-specific options
+  
+  pngyu::JpegOption option;
+  
+  if( current_compress_option_mode() == pngyu::COMPRESS_OPTION_CUSTOM )
+  {
+    // For custom mode, we can adjust quality based on compression speed
+    // Lower speed (higher quality) = higher JPEG quality
+    int speed = compress_speed();
+    int quality = 100 - (speed * 10); // Convert speed 1-10 to quality 90-10
+    quality = qMax(10, qMin(95, quality)); // Clamp between 10-95
+    option.set_quality(quality);
+  }
+  else
+  {
+    // Default mode uses good quality
+    option.set_quality(85);
+  }
+  
+  option.set_progressive(false);
+  option.set_optimize_huffman(true);
+  option.set_strip_metadata(true);
+  
   return option;
 }
 
@@ -543,15 +599,6 @@ void PngyuMainWindow::set_compress_speed( const int speed )
   ui->horizontalSlider_compress_speed->setValue( speed );
 }
 
-void PngyuMainWindow::set_ie6_alpha_support_enabled( const bool b )
-{
-  ui->checkBox_ie6_support->setChecked( b );
-}
-
-bool PngyuMainWindow::ie6_alpha_support_enabled() const
-{
-  return ui->checkBox_ie6_support->isChecked();
-}
 
 int PngyuMainWindow::compress_speed() const
 {
@@ -642,6 +689,19 @@ void PngyuMainWindow::execute_compress_all( bool image_optim_enabled )
     data.dst_path = dst_path;
     data.pngquant_path = pngquant_path;
     data.pngquant_option = option;
+    
+    // Set image format and options
+    QFileInfo file_info(src_path);
+    if( pngyu::util::is_jpeg_file(file_info) )
+    {
+      data.image_format = pngyu::IMAGE_FORMAT_JPEG;
+      data.jpeg_option = make_jpeg_option();
+    }
+    else
+    {
+      data.image_format = pngyu::IMAGE_FORMAT_PNG;
+    }
+    
     data.overwrite_enabled = b_overwrite_enable;
     data.force_execute_if_negative = b_force_execute_if_negative;
     data.table_widget = table_widget;
@@ -948,6 +1008,18 @@ void PngyuMainWindow::closeEvent( QCloseEvent *event )
   QMainWindow::closeEvent( event );
 }
 
+bool PngyuMainWindow::eventFilter( QObject *obj, QEvent *event )
+{
+  if( obj == ui->tableWidget_filelist->viewport() && event->type() == QEvent::Resize )
+  {
+    if( m_drop_here_label )
+    {
+      m_drop_here_label->resize( ui->tableWidget_filelist->viewport()->size() );
+    }
+  }
+  return QMainWindow::eventFilter( obj, event );
+}
+
 void PngyuMainWindow::update_file_table()
 {
   QTableWidget * const table_widget = file_list_table_widget();
@@ -955,6 +1027,12 @@ void PngyuMainWindow::update_file_table()
   disconnect( table_widget, SIGNAL(currentCellChanged(int,int,int,int)), this, SLOT(table_widget_current_changed()) );
   const QString &last_selected_filename = current_selected_filename();
   table_widget->setRowCount( 0 ); // reset file list table
+  
+  // Show drop label when table is cleared
+  if( m_drop_here_label )
+  {
+    m_drop_here_label->setVisible(true);
+  }
   table_widget->setRowCount( m_file_list.size() );
   { // append files
     int row_index = 0;
@@ -1006,6 +1084,12 @@ void PngyuMainWindow::append_file_info_list( const QList<QFileInfo> &info_list )
   update_file_table();
   set_busy_mode( false );
   ui->widget_file_appending->setVisible( false );
+  
+  // Hide drop label when files are added
+  if( m_drop_here_label && ui->tableWidget_filelist->rowCount() > 0 )
+  {
+    m_drop_here_label->setVisible(false);
+  }
 }
 
 void PngyuMainWindow::append_file_info_recursive( const QFileInfo &file_info,
@@ -1019,9 +1103,9 @@ void PngyuMainWindow::append_file_info_recursive( const QFileInfo &file_info,
     return;
   }
   if( file_info.isFile() )
-  { // if file_info is file, png check and add to file_list
-    const bool is_png = pngyu::util::has_png_extention( file_info );
-    if( is_png && ! m_file_list.contains( file_info ) )
+  { // if file_info is file, image format check and add to file_list
+    const bool is_supported = pngyu::util::has_supported_image_extention( file_info );
+    if( is_supported && ! m_file_list.contains( file_info ) )
     {
       m_file_list.push_back( file_info );
     }
@@ -1213,13 +1297,25 @@ void PngyuMainWindow::table_widget_current_changed()
 {
   const QString current_path = current_selected_filename();
 
-  m_preview_window->set_png_file( current_path );
-
   if( ! current_path.isEmpty() )
   {
+    // Check if the file is a PNG - only PNG files support preview
+    QFileInfo file_info( current_path );
+    const bool is_png_file = pngyu::util::has_png_extention( file_info );
+    
+    if( is_png_file )
+    {
+      m_preview_window->set_png_file( current_path );
+      ui->pushButton_preview->setEnabled( true );
+    }
+    else
+    {
+      // For non-PNG files (like JPEG), disable preview
+      m_preview_window->set_png_file( QString() );
+      ui->pushButton_preview->setEnabled( false );
+    }
 
     { // set icon to preview window button
-      ui->pushButton_preview->setEnabled( true );
       const QSize &icon_size = ui->pushButton_preview->iconSize();
       const QImage &icon_image =
           pngyu::util::read_thumbnail_image( current_path,
@@ -1230,6 +1326,7 @@ void PngyuMainWindow::table_widget_current_changed()
   }
   else
   {
+    m_preview_window->set_png_file( QString() );
     ui->pushButton_preview->setEnabled( false );
     ui->pushButton_preview->setIcon( QIcon() );
   }
@@ -1248,7 +1345,7 @@ void PngyuMainWindow::preview_window_closed()
 void PngyuMainWindow::add_file_button_pushed()
 {
   const QStringList filepath_list = QFileDialog::getOpenFileNames(
-        this, QString(), QDir::homePath(), "PNG file (*.png);;" );
+        this, QString(), QDir::homePath(), "Image files (*.png *.jpg *.jpeg);;PNG files (*.png);;JPEG files (*.jpg *.jpeg);;All files (*.*)" );
 
   if( filepath_list.empty() )
   {

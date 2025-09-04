@@ -25,6 +25,9 @@ public:
   static pngyu::CompressResult execute_compress(
       const pngyu::CompressQueueData &data );
 
+  static pngyu::CompressResult execute_compress_generic(
+      const pngyu::CompressQueueData &data );
+
   static void show_compress_result( QTableWidget *table_widget, const int row, const pngyu::CompressResult &result );
 
   void set_queue_ptr( QQueue<pngyu::CompressQueueData> *queue_ptr,

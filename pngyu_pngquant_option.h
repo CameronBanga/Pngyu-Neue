@@ -16,7 +16,6 @@ public:
     m_ncolors(-1),
     m_speed(-1),
     m_force_overwrite(false),
-    m_ie6_alpha_support(false),
     m_disable_floyd_steinberg_dithering(false)
   {}
 
@@ -62,15 +61,6 @@ public:
     return m_force_overwrite;
   }
 
-  void set_ie6_alpha_support( const bool b )
-  {
-    m_ie6_alpha_support = b;
-  }
-
-  bool get_ie6_frilendly() const
-  {
-    return m_ie6_alpha_support;
-  }
 
   void set_floyd_steinberg_dithering_disabled( const bool b )
   {
@@ -93,10 +83,6 @@ public:
     if( m_force_overwrite )
     {
       command += QString( "--force " );
-    }
-    if( m_ie6_alpha_support )
-    {
-      command += QString( "--iebug " );
     }
     if( m_disable_floyd_steinberg_dithering )
     {
@@ -133,7 +119,6 @@ private:
   int m_ncolors;
   int m_speed;
   bool m_force_overwrite;
-  bool m_ie6_alpha_support;
   bool m_disable_floyd_steinberg_dithering;
 };
 
@@ -144,7 +129,6 @@ inline bool operator!=( const pngyu::PngquantOption &o1, const pngyu::PngquantOp
       o1.m_ncolors != o2.m_ncolors ||
       o1.m_speed != o2.m_speed ||
       o1.m_force_overwrite != o2.m_force_overwrite ||
-      o1.m_ie6_alpha_support != o2.m_ie6_alpha_support ||
       o1.m_disable_floyd_steinberg_dithering != o2.m_disable_floyd_steinberg_dithering;
 }
 

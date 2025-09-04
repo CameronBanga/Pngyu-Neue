@@ -5,6 +5,7 @@
 #include <QTableWidget>
 #include <QProcess>
 #include <QFileInfo>
+#include <QLabel>
 
 #include "pngyu_defines.h"
 #include "pngyu_pngquant_option.h"
@@ -33,6 +34,7 @@ public:
   QString make_output_file_path_string( const QString &input_file_path ) const;
 
   pngyu::PngquantOption make_pngquant_option( const QString &output_file_suffix ) const;
+  pngyu::JpegOption make_jpeg_option() const;
 
   void set_executable_pngquant_path( const QString &path );
   QString executable_pngquant_path() const;
@@ -64,8 +66,6 @@ public:
   void set_dither_enabled( const bool b );
   bool dither_enabled() const;
 
-  void set_ie6_alpha_support_enabled( const bool b );
-  bool ie6_alpha_support_enabled() const;
 
   void set_compress_speed( const int speed );
   int compress_speed() const;
@@ -102,6 +102,7 @@ protected:
   virtual void moveEvent( QMoveEvent *event );
   virtual void showEvent( QShowEvent *event );
   virtual void closeEvent( QCloseEvent *event );
+  virtual bool eventFilter( QObject *obj, QEvent *event );
 
   void read_settings();
   void write_settings();
@@ -127,6 +128,7 @@ private:
   bool m_image_optim_enabled;
   pngyu::ImageOptimIntegration m_image_optim_integration;
   bool m_force_execute_if_negative_enables;
+  QLabel *m_drop_here_label;
 
 private slots:
   void exec_pushed();

@@ -232,9 +232,60 @@ public:
     {
         PngyuPreferencesDialog->setWindowTitle(QCoreApplication::translate("PngyuPreferencesDialog", "Preferences", nullptr));
         pushButton_apply->setText(QCoreApplication::translate("PngyuPreferencesDialog", "&Apply", nullptr));
+        pushButton_apply->setStyleSheet(QCoreApplication::translate("PngyuPreferencesDialog", "QPushButton {\n"
+"    background-color: #007AFF;\n"
+"    color: white;\n"
+"    border: none;\n"
+"    border-radius: 8px;\n"
+"    font-weight: 600;\n"
+"    font-size: 13px;\n"
+"    padding: 8px 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #0056CC;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #004499;\n"
+"}", nullptr));
         pushButton_ok->setText(QCoreApplication::translate("PngyuPreferencesDialog", "&OK", nullptr));
+        pushButton_ok->setStyleSheet(QCoreApplication::translate("PngyuPreferencesDialog", "QPushButton {\n"
+"    background-color: #007AFF;\n"
+"    color: white;\n"
+"    border: none;\n"
+"    border-radius: 8px;\n"
+"    font-weight: 600;\n"
+"    font-size: 13px;\n"
+"    padding: 8px 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #0056CC;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #004499;\n"
+"}", nullptr));
         pushButton_cancel->setText(QCoreApplication::translate("PngyuPreferencesDialog", "&Cancel", nullptr));
         pushButton_close->setText(QCoreApplication::translate("PngyuPreferencesDialog", "&Close", nullptr));
+        pushButton_close->setStyleSheet(QCoreApplication::translate("PngyuPreferencesDialog", "QPushButton {\n"
+"    background-color: #007AFF;\n"
+"    color: white;\n"
+"    border: none;\n"
+"    border-radius: 8px;\n"
+"    font-weight: 600;\n"
+"    font-size: 13px;\n"
+"    padding: 8px 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #0056CC;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #004499;\n"
+"}", nullptr));
         groupBox_general->setTitle(QCoreApplication::translate("PngyuPreferencesDialog", "General", nullptr));
         label_n_jobs->setText(QCoreApplication::translate("PngyuPreferencesDialog", "Compress N files at once", nullptr));
         label_pngquant_path->setText(QCoreApplication::translate("PngyuPreferencesDialog", "pngquatnt location", nullptr));

@@ -7,8 +7,21 @@
 
 QT += core gui widgets
 
-TARGET = PngyuNew
+TARGET = PngyuNeue
 TEMPLATE = app
+
+# Code signing configuration for Xcode
+macx {
+    QMAKE_DEVELOPMENT_TEAM = ""
+    QMAKE_PROVISIONING_PROFILE = ""
+    CONFIG += no_code_sign
+    QMAKE_XCODE_CODE_SIGN_IDENTITY = ""
+    QMAKE_XCODE_DEVELOPMENT_TEAM = ""
+    QMAKE_XCODE_CODE_SIGNING_REQUIRED = "NO"
+    QMAKE_XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY = ""
+    QMAKE_XCODE_ATTRIBUTE_CODE_SIGNING_REQUIRED = "NO"
+    QMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM = ""
+}
 
 INCLUDEPATH += \
     preview_window \
@@ -19,6 +32,7 @@ SOURCES += \
     main.cpp\
     pngyumainwindow.cpp \
     pngyu_execute_pngquant_command.cpp \
+    pngyu_execute_jpegoptim_command.cpp \
     preview_window/basicimageview.cpp \
     preview_window/pngyupreviewwindow.cpp \
     executecompressthread.cpp \
@@ -30,8 +44,10 @@ HEADERS  += \
     pngyumainwindow.h \
     pngyu_util.h \
     pngyu_pngquant_option.h \
+    pngyu_jpeg_option.h \
     pngyu_defines.h \
     pngyu_execute_pngquant_command.h \
+    pngyu_execute_jpegoptim_command.h \
     preview_window/basicimageview.h \
     preview_window/pngyupreviewwindow.h \
     executecompressthread.h \
