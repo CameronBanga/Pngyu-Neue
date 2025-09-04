@@ -108,9 +108,6 @@ public:
     QLabel *label_compress_high_speed;
     QWidget *widget_compress_option_check_boxes;
     QGridLayout *gridLayout_17;
-    QFrame *frame_ie6;
-    QGridLayout *gridLayout_7;
-    QCheckBox *checkBox_ie6_support;
     QFrame *frame_dithered;
     QGridLayout *gridLayout_4;
     QCheckBox *checkBox_dithered;
@@ -144,7 +141,7 @@ public:
         if (PngyuMainWindow->objectName().isEmpty())
             PngyuMainWindow->setObjectName("PngyuMainWindow");
         PngyuMainWindow->resize(800, 673);
-        PngyuMainWindow->setMinimumSize(QSize(900, 750));
+        PngyuMainWindow->setMinimumSize(QSize(935, 750));
         PngyuMainWindow->setAcceptDrops(true);
         PngyuMainWindow->setStyleSheet(QString::fromUtf8("/* Modern macOS buttons */\n"
 "QPushButton {\n"
@@ -777,23 +774,6 @@ public:
         gridLayout_17->setSpacing(4);
         gridLayout_17->setContentsMargins(0, 0, 0, 0);
         gridLayout_17->setObjectName("gridLayout_17");
-        frame_ie6 = new QFrame(widget_compress_option_check_boxes);
-        frame_ie6->setObjectName("frame_ie6");
-        frame_ie6->setFrameShape(QFrame::Panel);
-        frame_ie6->setFrameShadow(QFrame::Sunken);
-        gridLayout_7 = new QGridLayout(frame_ie6);
-        gridLayout_7->setSpacing(4);
-        gridLayout_7->setContentsMargins(4, 4, 4, 4);
-        gridLayout_7->setObjectName("gridLayout_7");
-        checkBox_ie6_support = new QCheckBox(frame_ie6);
-        checkBox_ie6_support->setObjectName("checkBox_ie6_support");
-        checkBox_ie6_support->setChecked(false);
-
-        gridLayout_7->addWidget(checkBox_ie6_support, 0, 0, 1, 1);
-
-
-        gridLayout_17->addWidget(frame_ie6, 0, 1, 1, 1);
-
         frame_dithered = new QFrame(widget_compress_option_check_boxes);
         frame_dithered->setObjectName("frame_dithered");
         frame_dithered->setFrameShape(QFrame::Panel);
@@ -954,8 +934,7 @@ public:
         QWidget::setTabOrder(pushButton_preview, horizontalSlider_colors);
         QWidget::setTabOrder(horizontalSlider_colors, spinBox_colors);
         QWidget::setTabOrder(spinBox_colors, horizontalSlider_compress_speed);
-        QWidget::setTabOrder(horizontalSlider_compress_speed, checkBox_ie6_support);
-        QWidget::setTabOrder(checkBox_ie6_support, checkBox_dithered);
+        QWidget::setTabOrder(horizontalSlider_compress_speed, checkBox_dithered);
         QWidget::setTabOrder(checkBox_dithered, tableWidget_filelist);
         QWidget::setTabOrder(tableWidget_filelist, toolButton_add_file);
         QWidget::setTabOrder(toolButton_add_file, pushButton_filelist_clear);
@@ -1025,10 +1004,9 @@ public:
         label_homepage->setText(QCoreApplication::translate("PngyuMainWindow", "<a href=\"http://nukesaq88.github.io/Pngyu/\" style=\"color: darkgray;\">Home Page</a>", nullptr));
         groupBox_compress_option->setTitle(QCoreApplication::translate("PngyuMainWindow", "Compress Option", nullptr));
         pushButton_preview->setText(QCoreApplication::translate("PngyuMainWindow", "Preview", nullptr));
-        label_colors->setText(QCoreApplication::translate("PngyuMainWindow", "Colors", nullptr));
+        label_colors->setText(QCoreApplication::translate("PngyuMainWindow", "Colors (PNG)", nullptr));
         label_compress_high_quality->setText(QCoreApplication::translate("PngyuMainWindow", "High Quality", nullptr));
         label_compress_high_speed->setText(QCoreApplication::translate("PngyuMainWindow", "High Speed", nullptr));
-        checkBox_ie6_support->setText(QCoreApplication::translate("PngyuMainWindow", "IE6 alpha support", nullptr));
         checkBox_dithered->setText(QCoreApplication::translate("PngyuMainWindow", "Dithered", nullptr));
         toolButton_compress_option_default->setText(QCoreApplication::translate("PngyuMainWindow", "Default", nullptr));
         toolButton_compress_option_custom->setText(QCoreApplication::translate("PngyuMainWindow", "Custom", nullptr));

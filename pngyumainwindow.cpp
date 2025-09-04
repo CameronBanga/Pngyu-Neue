@@ -88,14 +88,14 @@ PngyuMainWindow::PngyuMainWindow(QWidget *parent) :
                                            new QTableWidgetItem( tr("Saved Size(%)") ) );
 
     // Set minimum column widths to prevent truncation
-    table_widget->horizontalHeader()->setMinimumSectionSize(80);
+    table_widget->horizontalHeader()->setMinimumSectionSize(50);
     table_widget->setColumnWidth(pngyu::COLUMN_BASENAME, 140);
     table_widget->setColumnWidth(pngyu::COLUMN_ABSOLUTE_PATH, 220);
-    table_widget->setColumnWidth(pngyu::COLUMN_RESULT, 50);
-    table_widget->setColumnWidth(pngyu::COLUMN_ORIGINAL_SIZE, 85);
-    table_widget->setColumnWidth(pngyu::COLUMN_OUTPUT_SIZE, 120);  // "Compressed Size" needs more space
-    table_widget->setColumnWidth(pngyu::COLUMN_SAVED_SIZE, 80);
-    table_widget->setColumnWidth(pngyu::COLUMN_SAVED_SIZE_RATE, 85);
+    table_widget->setColumnWidth(pngyu::COLUMN_RESULT, 70);
+    table_widget->setColumnWidth(pngyu::COLUMN_ORIGINAL_SIZE, 115);
+    table_widget->setColumnWidth(pngyu::COLUMN_OUTPUT_SIZE, 125);
+    table_widget->setColumnWidth(pngyu::COLUMN_SAVED_SIZE, 110);
+    table_widget->setColumnWidth(pngyu::COLUMN_SAVED_SIZE_RATE, 110);
 
     pngyu::util::set_drop_here_stylesheet(
           table_widget->viewport(), false );
@@ -170,8 +170,6 @@ PngyuMainWindow::PngyuMainWindow(QWidget *parent) :
   connect( ui->spinBox_colors, SIGNAL(valueChanged(int)),
            this, SLOT(compress_option_changed()) );
   connect( ui->horizontalSlider_compress_speed, SIGNAL(valueChanged(int)),
-           this, SLOT(compress_option_changed()) );
-  connect( ui->checkBox_ie6_support, SIGNAL(stateChanged(int)),
            this, SLOT(compress_option_changed()) );
   connect( ui->checkBox_dithered, SIGNAL(stateChanged(int)),
            this, SLOT(compress_option_changed()) );
@@ -389,7 +387,6 @@ pngyu::PngquantOption PngyuMainWindow::make_pngquant_option( const QString &outp
     //option.set_force_overwrite( true );
     option.set_speed( compress_speed() );
     option.set_floyd_steinberg_dithering_disabled( ! dither_enabled() );
-    option.set_ie6_alpha_support( ie6_alpha_support_enabled() );
   }
   return option;
 }
@@ -602,15 +599,6 @@ void PngyuMainWindow::set_compress_speed( const int speed )
   ui->horizontalSlider_compress_speed->setValue( speed );
 }
 
-void PngyuMainWindow::set_ie6_alpha_support_enabled( const bool b )
-{
-  ui->checkBox_ie6_support->setChecked( b );
-}
-
-bool PngyuMainWindow::ie6_alpha_support_enabled() const
-{
-  return ui->checkBox_ie6_support->isChecked();
-}
 
 int PngyuMainWindow::compress_speed() const
 {

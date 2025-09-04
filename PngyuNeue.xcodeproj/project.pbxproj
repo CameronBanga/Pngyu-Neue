@@ -3,1215 +3,731 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
-		5E618435888B9D49F8540165 = {
-			buildActionMask = 2147483647;
-			files = (
-				);
-			isa = PBXShellScriptBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-			name = "Qt Qmake";
-			shellPath = "/bin/sh";
-			shellScript = "make -C /Users/cameronbanga/Developer/git/Pngyu -f PngyuNeue.xcodeproj/qt_makeqmake.mak";
-			showEnvVarsInLog = "0";
-		};
-		E112A95CC58D2C8A417C0C46 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/main.cpp";
-			name = "main.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		C4612779BD147E9E990DA208 = {
-			fileRef = "E112A95CC58D2C8A417C0C46";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		2B00B777CCBB7190AFB54DC4 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/pngyumainwindow.cpp";
-			name = "pngyumainwindow.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		A541E82F11C26C4306933DA6 = {
-			fileRef = "2B00B777CCBB7190AFB54DC4";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		E46CEEEAEB28C24E4224D9EB = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/pngyu_execute_pngquant_command.cpp";
-			name = "pngyu_execute_pngquant_command.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		34C96C8E703A3694DD2F19A3 = {
-			fileRef = "E46CEEEAEB28C24E4224D9EB";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		334D2A5F7DA7F9CCF2929918 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/pngyu_execute_jpegoptim_command.cpp";
-			name = "pngyu_execute_jpegoptim_command.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		26B0240293380ECBD8CBF4D7 = {
-			fileRef = "334D2A5F7DA7F9CCF2929918";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		E07A92EDCC1E85F658C71A37 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/preview_window/basicimageview.cpp";
-			name = "basicimageview.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		514FA5B633061CE0C5973342 = {
-			fileRef = "E07A92EDCC1E85F658C71A37";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		BD7E37270EC6B811DCE4CAFC = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/preview_window/pngyupreviewwindow.cpp";
-			name = "pngyupreviewwindow.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		48F27E95EAF2833C121BC426 = {
-			fileRef = "BD7E37270EC6B811DCE4CAFC";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		E0BAF0FA16FB7A2ECB632E0B = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/executecompressthread.cpp";
-			name = "executecompressthread.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		6F40797F7B431B07E730B215 = {
-			fileRef = "E0BAF0FA16FB7A2ECB632E0B";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		A814361A105AABBC536DD6CF = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/preferences_dialog/pngyupreferencesdialog.cpp";
-			name = "pngyupreferencesdialog.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		E10D80BB8B68B480BDAB74CE = {
-			fileRef = "A814361A105AABBC536DD6CF";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		1BD72BCAF184115270EDCF71 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/imageoptim_integration_question_dialog/pngyuimageoptimintegrationquestiondialog.cpp";
-			name = "pngyuimageoptimintegrationquestiondialog.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		A41E247355521CBC01DDA826 = {
-			fileRef = "1BD72BCAF184115270EDCF71";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		CDD0DB50BE3F13906DFA3BEF = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/executecompressworkerthread.cpp";
-			name = "executecompressworkerthread.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		E53193B965E815E400CDEAC0 = {
-			fileRef = "CDD0DB50BE3F13906DFA3BEF";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		532E20A5ED335FA176008CFC = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/resource/icon.icns";
-			name = "icon.icns";
-			sourceTree = "<absolute>";
-		};
-		C897ADB27B23B1657051A404 = {
-			fileRef = "532E20A5ED335FA176008CFC";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		AC46FD8A14A28B88F440EEEA = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/qrc_resource.cpp";
-			name = "qrc_resource.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		0AC47DE8D92D4F8A8490A39B = {
-			fileRef = "AC46FD8A14A28B88F440EEEA";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		9FBEAE56BFDC2A195A019976 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/moc_pngyumainwindow.cpp";
-			name = "moc_pngyumainwindow.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		F3B04214A1128AB8F674F6A1 = {
-			fileRef = "9FBEAE56BFDC2A195A019976";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		6C892512849A385351ED62BC = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/moc_basicimageview.cpp";
-			name = "moc_basicimageview.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		201D30BB9AEF86904E6B09AA = {
-			fileRef = "6C892512849A385351ED62BC";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		D420E6CC430A4EC5D2EBB7E1 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/moc_pngyupreviewwindow.cpp";
-			name = "moc_pngyupreviewwindow.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		4676FD2734753C2366CF2BE5 = {
-			fileRef = "D420E6CC430A4EC5D2EBB7E1";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		87D342ACCEC0589D679570C4 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/moc_executecompressthread.cpp";
-			name = "moc_executecompressthread.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		40B8BD7702C855ADECB06149 = {
-			fileRef = "87D342ACCEC0589D679570C4";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		9038D143066834B71313C9CC = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/moc_pngyupreferencesdialog.cpp";
-			name = "moc_pngyupreferencesdialog.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		4EC0685E6993B91EF17181FE = {
-			fileRef = "9038D143066834B71313C9CC";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		4254EC30C2B0D39ADA187B57 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/moc_pngyuimageoptimintegrationquestiondialog.cpp";
-			name = "moc_pngyuimageoptimintegrationquestiondialog.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		6EAE243D9C68AAF60A3496F9 = {
-			fileRef = "4254EC30C2B0D39ADA187B57";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		40636AB63523B75A25215A1E = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/moc_executecompressworkerthread.cpp";
-			name = "moc_executecompressworkerthread.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		F39DA98A72382977F192875A = {
-			fileRef = "40636AB63523B75A25215A1E";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		5257BC6E59E043784950F804 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/ui_pngyumainwindow.h";
-			name = "ui_pngyumainwindow.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		A95F44CA62584CBEE19B35DF = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/ui_pngyupreviewwindow.h";
-			name = "ui_pngyupreviewwindow.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		E9174C59D30461F7B43A76DF = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/ui_pngyupreferencesdialog.h";
-			name = "ui_pngyupreferencesdialog.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		D38285A4BB9ADFA0D198F74C = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/ui_pngyuimageoptimintegrationquestiondialog.h";
-			name = "ui_pngyuimageoptimintegrationquestiondialog.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		FEE091EFEE006F0B2DA4F89B = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/pngyumainwindow.h";
-			name = "pngyumainwindow.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		FF1317CA58142DA670710699 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/pngyu_util.h";
-			name = "pngyu_util.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		867D459B98A5D89F1C89D5C8 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/pngyu_pngquant_option.h";
-			name = "pngyu_pngquant_option.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		06C14D2DBF2EB6DA5FA7FD6C = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/pngyu_jpeg_option.h";
-			name = "pngyu_jpeg_option.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		FDE3BCD4B39AA42858B53C30 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/pngyu_defines.h";
-			name = "pngyu_defines.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		2357A2CE56598EB71D0BD991 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/pngyu_execute_pngquant_command.h";
-			name = "pngyu_execute_pngquant_command.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		997D2F97616DEF5FD02F542E = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/pngyu_execute_jpegoptim_command.h";
-			name = "pngyu_execute_jpegoptim_command.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		F639A814C410F80339FC35B6 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/preview_window/basicimageview.h";
-			name = "basicimageview.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		31515AB8D0D8DFD2026538D0 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/preview_window/pngyupreviewwindow.h";
-			name = "pngyupreviewwindow.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		B3D0F405A24F790D59CE6198 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/executecompressthread.h";
-			name = "executecompressthread.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		53ECFF813AE005A18157948E = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/spinnerwidget.h";
-			name = "spinnerwidget.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		39145EAB0391A8DAB33EFCDC = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/preferences_dialog/pngyupreferencesdialog.h";
-			name = "pngyupreferencesdialog.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		01DD70DB31CD2772332F77EF = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/imageoptim_integration_question_dialog/pngyuimageoptimintegrationquestiondialog.h";
-			name = "pngyuimageoptimintegrationquestiondialog.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		0C239DA4B53AF4959AA7F151 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/executecompressworkerthread.h";
-			name = "executecompressworkerthread.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		E2E66260751263F3330551BE = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/pngyu_custom_tablewidget_item.h";
-			name = "pngyu_custom_tablewidget_item.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		0CFA31409155FEBF92DE18F1 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/resource/resource.qrc";
-			name = "resource.qrc";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "text";
-		};
-		C4A3B2181DA2A7C5D84380E8 = {
-			fileRef = "0CFA31409155FEBF92DE18F1";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		821298A917E5BFA9064C9F3C = {
-			isa = PBXFileReference;
-			path = "/opt/homebrew/share/qt/mkspecs/features/data/dummy.cpp";
-			name = "dummy.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		034ED4AAD568CD9B9C6425CB = {
-			fileRef = "821298A917E5BFA9064C9F3C";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		E8F976AE0C892F57169E0E84 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/pngyumainwindow.ui";
-			name = "pngyumainwindow.ui";
-			sourceTree = "<absolute>";
-		};
-		BC85F89DABA814D9628D36F8 = {
-			fileRef = "E8F976AE0C892F57169E0E84";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		4F7DB87A5C20E0ED7C59E867 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/preview_window/pngyupreviewwindow.ui";
-			name = "pngyupreviewwindow.ui";
-			sourceTree = "<absolute>";
-		};
-		46DAA2FF5A530DBE3F4595AE = {
-			fileRef = "4F7DB87A5C20E0ED7C59E867";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		3E957B07AFFB13AA1370F27F = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/preferences_dialog/pngyupreferencesdialog.ui";
-			name = "pngyupreferencesdialog.ui";
-			sourceTree = "<absolute>";
-		};
-		A9AAFAF4B6F0F62B39098057 = {
-			fileRef = "3E957B07AFFB13AA1370F27F";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		CD8F1101BCAA21A764D2384D = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/imageoptim_integration_question_dialog/pngyuimageoptimintegrationquestiondialog.ui";
-			name = "pngyuimageoptimintegrationquestiondialog.ui";
-			sourceTree = "<absolute>";
-		};
-		EDDBCE50C5C4518B96CC81C3 = {
-			fileRef = "CD8F1101BCAA21A764D2384D";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		015A8C1BCF4CB97E28D5C0D5 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/Pngyu.pro";
-			name = "Pngyu.pro";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "text";
-		};
-		64788652B2CD5A2ACAFF1EE7 = {
-			isa = PBXFileReference;
-			path = "/Users/cameronbanga/Developer/git/Pngyu/.qmake.stash";
-			name = ".qmake.stash";
-			sourceTree = "<absolute>";
-		};
-		25B08E2869634E9BCBA333A2 = {
-			isa = PBXGroup;
-			children = (
-				"AC46FD8A14A28B88F440EEEA",
-				"9FBEAE56BFDC2A195A019976",
-				"6C892512849A385351ED62BC",
-				"D420E6CC430A4EC5D2EBB7E1",
-				"87D342ACCEC0589D679570C4",
-				"9038D143066834B71313C9CC",
-				"4254EC30C2B0D39ADA187B57",
-				"40636AB63523B75A25215A1E",
-				"5257BC6E59E043784950F804",
-				"A95F44CA62584CBEE19B35DF",
-				"E9174C59D30461F7B43A76DF",
-				"D38285A4BB9ADFA0D198F74C");
-			name = "Generated Sources";
-			sourceTree = "<group>";
-		};
-		4ADB1752486307428F9A061F = {
-			isa = PBXGroup;
-			children = (
-				"0CFA31409155FEBF92DE18F1");
-			name = "resource";
-			sourceTree = "<group>";
-		};
-		7A25CB49BDEE814D865E85FA = {
-			isa = PBXGroup;
-			children = (
-				"CD8F1101BCAA21A764D2384D");
-			name = "imageoptim_integration_question_dialog";
-			sourceTree = "<group>";
-		};
-		3BCE219505EDE8E19C3FF4A9 = {
-			isa = PBXGroup;
-			children = (
-				"3E957B07AFFB13AA1370F27F");
-			name = "preferences_dialog";
-			sourceTree = "<group>";
-		};
-		77AE1968AC4041837A634743 = {
-			isa = PBXGroup;
-			children = (
-				"4F7DB87A5C20E0ED7C59E867");
-			name = "preview_window";
-			sourceTree = "<group>";
-		};
-		7CCD4F543B3B6CE05B3B8598 = {
-			isa = PBXGroup;
-			children = (
-				"1BD72BCAF184115270EDCF71",
-				"01DD70DB31CD2772332F77EF");
-			name = "imageoptim_integration_question_dialog";
-			sourceTree = "<group>";
-		};
-		4DB8AB02AC4D231FAC107DFF = {
-			isa = PBXGroup;
-			children = (
-				"A814361A105AABBC536DD6CF",
-				"39145EAB0391A8DAB33EFCDC");
-			name = "preferences_dialog";
-			sourceTree = "<group>";
-		};
-		A625F4C672805518E90429BD = {
-			isa = PBXGroup;
-			children = (
-				"E07A92EDCC1E85F658C71A37",
-				"BD7E37270EC6B811DCE4CAFC",
-				"F639A814C410F80339FC35B6",
-				"31515AB8D0D8DFD2026538D0");
-			name = "preview_window";
-			sourceTree = "<group>";
-		};
-		D044928BEC81F9DB4B39DF78 = {
-			isa = PBXGroup;
-			children = (
-				"532E20A5ED335FA176008CFC");
-			name = "resource";
-			sourceTree = "<group>";
-		};
-		87DF60DE337FB58864343E39 = {
-			isa = PBXGroup;
-			children = (
-				"4ADB1752486307428F9A061F");
-			name = "Resources";
-			sourceTree = "<group>";
-		};
-		2EB56BE3C2D93CDAB0C52E67 = {
-			isa = PBXGroup;
-			children = (
-				"E112A95CC58D2C8A417C0C46",
-				"2B00B777CCBB7190AFB54DC4",
-				"E46CEEEAEB28C24E4224D9EB",
-				"334D2A5F7DA7F9CCF2929918",
-				"A625F4C672805518E90429BD",
-				"E0BAF0FA16FB7A2ECB632E0B",
-				"4DB8AB02AC4D231FAC107DFF",
-				"7CCD4F543B3B6CE05B3B8598",
-				"CDD0DB50BE3F13906DFA3BEF",
-				"D044928BEC81F9DB4B39DF78",
-				"FEE091EFEE006F0B2DA4F89B",
-				"FF1317CA58142DA670710699",
-				"867D459B98A5D89F1C89D5C8",
-				"06C14D2DBF2EB6DA5FA7FD6C",
-				"FDE3BCD4B39AA42858B53C30",
-				"2357A2CE56598EB71D0BD991",
-				"997D2F97616DEF5FD02F542E",
-				"B3D0F405A24F790D59CE6198",
-				"53ECFF813AE005A18157948E",
-				"0C239DA4B53AF4959AA7F151",
-				"E2E66260751263F3330551BE");
-			name = "Sources";
-			sourceTree = "<group>";
-		};
-		B8254625CFD509ED2A24A166 = {
-			isa = PBXGroup;
-			children = (
-				"821298A917E5BFA9064C9F3C");
-			name = "Sources [moc_predefs]";
-			sourceTree = "<group>";
-		};
-		12E908B8A1C3C07C115504F5 = {
-			isa = PBXGroup;
-			children = (
-				"E8F976AE0C892F57169E0E84",
-				"77AE1968AC4041837A634743",
-				"3BCE219505EDE8E19C3FF4A9",
-				"7A25CB49BDEE814D865E85FA");
-			name = "Sources [uic]";
-			sourceTree = "<group>";
-		};
-		74B182DB50CB5611B5C1C297 = {
-			isa = PBXGroup;
-			children = (
-				"015A8C1BCF4CB97E28D5C0D5",
-				"64788652B2CD5A2ACAFF1EE7");
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7EF0942E79C014DCEC8976BC = {
-			buildActionMask = 2147483647;
-			files = (
-				);
-			isa = PBXShellScriptBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-			name = "Qt Preprocessors";
-			inputPaths = (
-				"resource/resource.qrc",
-				"/opt/homebrew/share/qt/mkspecs/features/data/dummy.cpp",
-				"pngyumainwindow.h",
-				"preview_window/basicimageview.h",
-				"preview_window/pngyupreviewwindow.h",
-				"executecompressthread.h",
-				"preferences_dialog/pngyupreferencesdialog.h",
-				"imageoptim_integration_question_dialog/pngyuimageoptimintegrationquestiondialog.h",
-				"executecompressworkerthread.h",
-				"pngyumainwindow.ui",
-				"preview_window/pngyupreviewwindow.ui",
-				"preferences_dialog/pngyupreferencesdialog.ui",
-				"imageoptim_integration_question_dialog/pngyuimageoptimintegrationquestiondialog.ui");
-			outputPaths = (
-				"qrc_resource.cpp",
-				"moc_predefs.h",
-				"moc_pngyumainwindow.cpp",
-				"moc_basicimageview.cpp",
-				"moc_pngyupreviewwindow.cpp",
-				"moc_executecompressthread.cpp",
-				"moc_pngyupreferencesdialog.cpp",
-				"moc_pngyuimageoptimintegrationquestiondialog.cpp",
-				"moc_executecompressworkerthread.cpp",
-				"ui_pngyumainwindow.h",
-				"ui_pngyupreviewwindow.h",
-				"ui_pngyupreferencesdialog.h",
-				"ui_pngyuimageoptimintegrationquestiondialog.h");
-			shellPath = "/bin/sh";
-			shellScript = "make -C /Users/cameronbanga/Developer/git/Pngyu -f PngyuNeue.xcodeproj/qt_preprocess.mak";
-			showEnvVarsInLog = "0";
-			alwaysOutOfDate = "1";
-		};
-		F7E50F631C51CD5B5DC0BC43 = {
-			buildActionMask = 2147483647;
-			files = (
-				"C4612779BD147E9E990DA208",
-				"A541E82F11C26C4306933DA6",
-				"34C96C8E703A3694DD2F19A3",
-				"26B0240293380ECBD8CBF4D7",
-				"514FA5B633061CE0C5973342",
-				"48F27E95EAF2833C121BC426",
-				"6F40797F7B431B07E730B215",
-				"E10D80BB8B68B480BDAB74CE",
-				"A41E247355521CBC01DDA826",
-				"E53193B965E815E400CDEAC0",
-				"0AC47DE8D92D4F8A8490A39B",
-				"F3B04214A1128AB8F674F6A1",
-				"201D30BB9AEF86904E6B09AA",
-				"4676FD2734753C2366CF2BE5",
-				"40B8BD7702C855ADECB06149",
-				"4EC0685E6993B91EF17181FE",
-				"6EAE243D9C68AAF60A3496F9",
-				"F39DA98A72382977F192875A",
-				"034ED4AAD568CD9B9C6425CB");
-			isa = PBXSourcesBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-			name = "Compile Sources";
-		};
-		DC4C2E7E45CB83B707419776 = {
-			isa = PBXFileReference;
-			name = "QtWidgets.framework";
-			path = "/opt/homebrew/lib/QtWidgets.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		7C30F361268D052FF71E287F = {
-			fileRef = "DC4C2E7E45CB83B707419776";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		75BB98347AA20D28579DDB5E = {
-			isa = PBXFileReference;
-			name = "QtGui.framework";
-			path = "/opt/homebrew/lib/QtGui.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		A5F48226AD16997661123CAF = {
-			fileRef = "75BB98347AA20D28579DDB5E";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		723F90793B2C195E2CCB2233 = {
-			isa = PBXFileReference;
-			name = "AppKit.framework";
-			path = "/System/Library/Frameworks/AppKit.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		F2A75ACAC9DF6A3F4E5711E7 = {
-			fileRef = "723F90793B2C195E2CCB2233";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		3A8EF9C62A8D4790CBB89CEA = {
-			isa = PBXFileReference;
-			name = "ImageIO.framework";
-			path = "/System/Library/Frameworks/ImageIO.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		61EEC397DC8556BF8C4E36A7 = {
-			fileRef = "3A8EF9C62A8D4790CBB89CEA";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		1B2543FCC48E9436F21C4F63 = {
-			isa = PBXFileReference;
-			name = "Metal.framework";
-			path = "/System/Library/Frameworks/Metal.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		B3FE8FAC746D3D5BB24FA398 = {
-			fileRef = "1B2543FCC48E9436F21C4F63";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		53419A4ADDA92E410E5591BA = {
-			isa = PBXFileReference;
-			name = "QtCore.framework";
-			path = "/opt/homebrew/lib/QtCore.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		38E7C438D5325CA0A308DF2D = {
-			fileRef = "53419A4ADDA92E410E5591BA";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		A1A67BEAA744704B29168D39 = {
-			isa = PBXFileReference;
-			name = "IOKit.framework";
-			path = "/System/Library/Frameworks/IOKit.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		8D267F2E4776F0ECA2F49DC8 = {
-			fileRef = "A1A67BEAA744704B29168D39";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		2B774D8E4178765CE52EAAF5 = {
-			isa = PBXFileReference;
-			name = "DiskArbitration.framework";
-			path = "/System/Library/Frameworks/DiskArbitration.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		A99B2AA0F9CBBDD12BA126A4 = {
-			fileRef = "2B774D8E4178765CE52EAAF5";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		5F9A4B2B3FF5EC87C57CF6B4 = {
-			isa = PBXFileReference;
-			name = "UniformTypeIdentifiers.framework";
-			path = "/System/Library/Frameworks/UniformTypeIdentifiers.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		F30795E5207D73289814C47C = {
-			fileRef = "5F9A4B2B3FF5EC87C57CF6B4";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		D4B32C2222F82AC56BADEB21 = {
-			isa = PBXFileReference;
-			name = "OpenGL.framework";
-			path = "/System/Library/Frameworks/OpenGL.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		8771A8C96E9C391044035D99 = {
-			fileRef = "D4B32C2222F82AC56BADEB21";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		AF39DD055C3EF8226FBE929D = {
-			children = (
-				"DC4C2E7E45CB83B707419776",
-				"75BB98347AA20D28579DDB5E",
-				"723F90793B2C195E2CCB2233",
-				"3A8EF9C62A8D4790CBB89CEA",
-				"1B2543FCC48E9436F21C4F63",
-				"53419A4ADDA92E410E5591BA",
-				"A1A67BEAA744704B29168D39",
-				"2B774D8E4178765CE52EAAF5",
-				"5F9A4B2B3FF5EC87C57CF6B4",
-				"D4B32C2222F82AC56BADEB21");
-			isa = PBXGroup;
-			name = "Frameworks";
-			sourceTree = "<group>";
-		};
-		D1C883685E82D5676953459A = {
-			buildActionMask = 2147483647;
-			files = (
-				"7C30F361268D052FF71E287F",
-				"A5F48226AD16997661123CAF",
-				"F2A75ACAC9DF6A3F4E5711E7",
-				"61EEC397DC8556BF8C4E36A7",
-				"B3FE8FAC746D3D5BB24FA398",
-				"38E7C438D5325CA0A308DF2D",
-				"8D267F2E4776F0ECA2F49DC8",
-				"A99B2AA0F9CBBDD12BA126A4",
-				"F30795E5207D73289814C47C",
-				"8771A8C96E9C391044035D99");
-			isa = PBXFrameworksBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-			name = "Link Binary With Libraries";
-		};
-		30414803F31797EB689AE508 = {
-			buildActionMask = 2147483647;
-			files = (
-				"0039F148B8FB981C840389FF");
-			isa = PBXResourcesBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-			name = "Copy Bundle Resources";
-		};
-		99542592E9780B9225F24AA8 = {
+
+/* Begin PBXAggregateTarget section */
+		D68E809868D072EACC3DD0E1 /* Qt Preprocess */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59 /* Build configuration list for PBXNativeTarget "PngyuNeue" */;
+			buildPhases = (
+				5E618435888B9D49F8540165 /* Qt Qmake */,
+				7EF0942E79C014DCEC8976BC /* Qt Preprocessors */,
+			);
+			dependencies = (
+			);
+			name = "Qt Preprocess";
+			productName = "Qt Preprocess";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		034ED4AAD568CD9B9C6425CB /* dummy.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 821298A917E5BFA9064C9F3C /* dummy.cpp */; settings = {ATTRIBUTES = (); }; };
+		0AC47DE8D92D4F8A8490A39B /* qrc_resource.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = AC46FD8A14A28B88F440EEEA /* qrc_resource.cpp */; settings = {ATTRIBUTES = (); }; };
+		201D30BB9AEF86904E6B09AA /* moc_basicimageview.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 6C892512849A385351ED62BC /* moc_basicimageview.cpp */; settings = {ATTRIBUTES = (); }; };
+		26B0240293380ECBD8CBF4D7 /* pngyu_execute_jpegoptim_command.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 334D2A5F7DA7F9CCF2929918 /* pngyu_execute_jpegoptim_command.cpp */; settings = {ATTRIBUTES = (); }; };
+		34C96C8E703A3694DD2F19A3 /* pngyu_execute_pngquant_command.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = E46CEEEAEB28C24E4224D9EB /* pngyu_execute_pngquant_command.cpp */; settings = {ATTRIBUTES = (); }; };
+		38E7C438D5325CA0A308DF2D /* QtCore.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 53419A4ADDA92E410E5591BA /* QtCore.framework */; };
+		40B8BD7702C855ADECB06149 /* moc_executecompressthread.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 87D342ACCEC0589D679570C4 /* moc_executecompressthread.cpp */; settings = {ATTRIBUTES = (); }; };
+		4676FD2734753C2366CF2BE5 /* moc_pngyupreviewwindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = D420E6CC430A4EC5D2EBB7E1 /* moc_pngyupreviewwindow.cpp */; settings = {ATTRIBUTES = (); }; };
+		48F27E95EAF2833C121BC426 /* pngyupreviewwindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = BD7E37270EC6B811DCE4CAFC /* pngyupreviewwindow.cpp */; settings = {ATTRIBUTES = (); }; };
+		4EC0685E6993B91EF17181FE /* moc_pngyupreferencesdialog.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 9038D143066834B71313C9CC /* moc_pngyupreferencesdialog.cpp */; settings = {ATTRIBUTES = (); }; };
+		514FA5B633061CE0C5973342 /* basicimageview.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = E07A92EDCC1E85F658C71A37 /* basicimageview.cpp */; settings = {ATTRIBUTES = (); }; };
+		61EEC397DC8556BF8C4E36A7 /* ImageIO.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 3A8EF9C62A8D4790CBB89CEA /* ImageIO.framework */; };
+		6EAE243D9C68AAF60A3496F9 /* moc_pngyuimageoptimintegrationquestiondialog.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 4254EC30C2B0D39ADA187B57 /* moc_pngyuimageoptimintegrationquestiondialog.cpp */; settings = {ATTRIBUTES = (); }; };
+		6F40797F7B431B07E730B215 /* executecompressthread.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = E0BAF0FA16FB7A2ECB632E0B /* executecompressthread.cpp */; settings = {ATTRIBUTES = (); }; };
+		7C30F361268D052FF71E287F /* QtWidgets.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = DC4C2E7E45CB83B707419776 /* QtWidgets.framework */; };
+		8771A8C96E9C391044035D99 /* OpenGL.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = D4B32C2222F82AC56BADEB21 /* OpenGL.framework */; };
+		8D267F2E4776F0ECA2F49DC8 /* IOKit.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = A1A67BEAA744704B29168D39 /* IOKit.framework */; };
+		A41E247355521CBC01DDA826 /* pngyuimageoptimintegrationquestiondialog.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 1BD72BCAF184115270EDCF71 /* pngyuimageoptimintegrationquestiondialog.cpp */; settings = {ATTRIBUTES = (); }; };
+		A541E82F11C26C4306933DA6 /* pngyumainwindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2B00B777CCBB7190AFB54DC4 /* pngyumainwindow.cpp */; settings = {ATTRIBUTES = (); }; };
+		A5F48226AD16997661123CAF /* QtGui.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 75BB98347AA20D28579DDB5E /* QtGui.framework */; };
+		A99B2AA0F9CBBDD12BA126A4 /* DiskArbitration.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */; };
+		B3FE8FAC746D3D5BB24FA398 /* Metal.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 1B2543FCC48E9436F21C4F63 /* Metal.framework */; };
+		C4612779BD147E9E990DA208 /* main.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = E112A95CC58D2C8A417C0C46 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
+		E10D80BB8B68B480BDAB74CE /* pngyupreferencesdialog.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A814361A105AABBC536DD6CF /* pngyupreferencesdialog.cpp */; settings = {ATTRIBUTES = (); }; };
+		E53193B965E815E400CDEAC0 /* executecompressworkerthread.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = CDD0DB50BE3F13906DFA3BEF /* executecompressworkerthread.cpp */; settings = {ATTRIBUTES = (); }; };
+		F2A75ACAC9DF6A3F4E5711E7 /* AppKit.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 723F90793B2C195E2CCB2233 /* AppKit.framework */; };
+		F30795E5207D73289814C47C /* UniformTypeIdentifiers.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 5F9A4B2B3FF5EC87C57CF6B4 /* UniformTypeIdentifiers.framework */; };
+		F39DA98A72382977F192875A /* moc_executecompressworkerthread.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 40636AB63523B75A25215A1E /* moc_executecompressworkerthread.cpp */; settings = {ATTRIBUTES = (); }; };
+		F3B04214A1128AB8F674F6A1 /* moc_pngyumainwindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 9FBEAE56BFDC2A195A019976 /* moc_pngyumainwindow.cpp */; settings = {ATTRIBUTES = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF9662C52E6915B4006155A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DB9C3763D02B1415CD9D565 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D68E809868D072EACC3DD0E1;
+			remoteInfo = "Qt Preprocess";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		99542592E9780B9225F24AA8 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				);
+			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C03F66BA1925AAC50944DCE = {
-			isa = PBXFileReference;
-			includeInIndex = 0;
-			explicitFileType = "wrapper.application";
-			path = "PngyuNeue.app";
-			sourceTree = BUILT_PRODUCTS_DIR;
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		015A8C1BCF4CB97E28D5C0D5 /* Pngyu.pro */ = {isa = PBXFileReference; lastKnownFileType = text; name = Pngyu.pro; path = /Users/cameronbanga/Developer/git/Pngyu/Pngyu.pro; sourceTree = "<absolute>"; };
+		01DD70DB31CD2772332F77EF /* pngyuimageoptimintegrationquestiondialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pngyuimageoptimintegrationquestiondialog.h; path = /Users/cameronbanga/Developer/git/Pngyu/imageoptim_integration_question_dialog/pngyuimageoptimintegrationquestiondialog.h; sourceTree = "<absolute>"; };
+		06C14D2DBF2EB6DA5FA7FD6C /* pngyu_jpeg_option.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pngyu_jpeg_option.h; path = /Users/cameronbanga/Developer/git/Pngyu/pngyu_jpeg_option.h; sourceTree = "<absolute>"; };
+		0C239DA4B53AF4959AA7F151 /* executecompressworkerthread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = executecompressworkerthread.h; path = /Users/cameronbanga/Developer/git/Pngyu/executecompressworkerthread.h; sourceTree = "<absolute>"; };
+		0CFA31409155FEBF92DE18F1 /* resource.qrc */ = {isa = PBXFileReference; lastKnownFileType = text; name = resource.qrc; path = /Users/cameronbanga/Developer/git/Pngyu/resource/resource.qrc; sourceTree = "<absolute>"; };
+		1B2543FCC48E9436F21C4F63 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = /System/Library/Frameworks/Metal.framework; sourceTree = "<absolute>"; };
+		1BD72BCAF184115270EDCF71 /* pngyuimageoptimintegrationquestiondialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = pngyuimageoptimintegrationquestiondialog.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/imageoptim_integration_question_dialog/pngyuimageoptimintegrationquestiondialog.cpp; sourceTree = "<absolute>"; };
+		2357A2CE56598EB71D0BD991 /* pngyu_execute_pngquant_command.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pngyu_execute_pngquant_command.h; path = /Users/cameronbanga/Developer/git/Pngyu/pngyu_execute_pngquant_command.h; sourceTree = "<absolute>"; };
+		2B00B777CCBB7190AFB54DC4 /* pngyumainwindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = pngyumainwindow.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/pngyumainwindow.cpp; sourceTree = "<absolute>"; };
+		2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
+		31515AB8D0D8DFD2026538D0 /* pngyupreviewwindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pngyupreviewwindow.h; path = /Users/cameronbanga/Developer/git/Pngyu/preview_window/pngyupreviewwindow.h; sourceTree = "<absolute>"; };
+		334D2A5F7DA7F9CCF2929918 /* pngyu_execute_jpegoptim_command.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = pngyu_execute_jpegoptim_command.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/pngyu_execute_jpegoptim_command.cpp; sourceTree = "<absolute>"; };
+		39145EAB0391A8DAB33EFCDC /* pngyupreferencesdialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pngyupreferencesdialog.h; path = /Users/cameronbanga/Developer/git/Pngyu/preferences_dialog/pngyupreferencesdialog.h; sourceTree = "<absolute>"; };
+		3A8EF9C62A8D4790CBB89CEA /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = /System/Library/Frameworks/ImageIO.framework; sourceTree = "<absolute>"; };
+		3E957B07AFFB13AA1370F27F /* pngyupreferencesdialog.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = pngyupreferencesdialog.ui; path = /Users/cameronbanga/Developer/git/Pngyu/preferences_dialog/pngyupreferencesdialog.ui; sourceTree = "<absolute>"; };
+		40636AB63523B75A25215A1E /* moc_executecompressworkerthread.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_executecompressworkerthread.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/moc_executecompressworkerthread.cpp; sourceTree = "<absolute>"; };
+		4254EC30C2B0D39ADA187B57 /* moc_pngyuimageoptimintegrationquestiondialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_pngyuimageoptimintegrationquestiondialog.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/moc_pngyuimageoptimintegrationquestiondialog.cpp; sourceTree = "<absolute>"; };
+		4F7DB87A5C20E0ED7C59E867 /* pngyupreviewwindow.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = pngyupreviewwindow.ui; path = /Users/cameronbanga/Developer/git/Pngyu/preview_window/pngyupreviewwindow.ui; sourceTree = "<absolute>"; };
+		5257BC6E59E043784950F804 /* ui_pngyumainwindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_pngyumainwindow.h; path = /Users/cameronbanga/Developer/git/Pngyu/ui_pngyumainwindow.h; sourceTree = "<absolute>"; };
+		532E20A5ED335FA176008CFC /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = /Users/cameronbanga/Developer/git/Pngyu/resource/icon.icns; sourceTree = "<absolute>"; };
+		53419A4ADDA92E410E5591BA /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = /opt/homebrew/lib/QtCore.framework; sourceTree = "<absolute>"; };
+		53ECFF813AE005A18157948E /* spinnerwidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = spinnerwidget.h; path = /Users/cameronbanga/Developer/git/Pngyu/spinnerwidget.h; sourceTree = "<absolute>"; };
+		5F9A4B2B3FF5EC87C57CF6B4 /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = /System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = "<absolute>"; };
+		64788652B2CD5A2ACAFF1EE7 /* .qmake.stash */ = {isa = PBXFileReference; lastKnownFileType = text; name = .qmake.stash; path = /Users/cameronbanga/Developer/git/Pngyu/.qmake.stash; sourceTree = "<absolute>"; };
+		6C892512849A385351ED62BC /* moc_basicimageview.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_basicimageview.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/moc_basicimageview.cpp; sourceTree = "<absolute>"; };
+		723F90793B2C195E2CCB2233 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		75BB98347AA20D28579DDB5E /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = /opt/homebrew/lib/QtGui.framework; sourceTree = "<absolute>"; };
+		821298A917E5BFA9064C9F3C /* dummy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = dummy.cpp; path = /opt/homebrew/share/qt/mkspecs/features/data/dummy.cpp; sourceTree = "<absolute>"; };
+		867D459B98A5D89F1C89D5C8 /* pngyu_pngquant_option.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pngyu_pngquant_option.h; path = /Users/cameronbanga/Developer/git/Pngyu/pngyu_pngquant_option.h; sourceTree = "<absolute>"; };
+		87D342ACCEC0589D679570C4 /* moc_executecompressthread.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_executecompressthread.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/moc_executecompressthread.cpp; sourceTree = "<absolute>"; };
+		8C03F66BA1925AAC50944DCE /* PngyuNeue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PngyuNeue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9038D143066834B71313C9CC /* moc_pngyupreferencesdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_pngyupreferencesdialog.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/moc_pngyupreferencesdialog.cpp; sourceTree = "<absolute>"; };
+		997D2F97616DEF5FD02F542E /* pngyu_execute_jpegoptim_command.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pngyu_execute_jpegoptim_command.h; path = /Users/cameronbanga/Developer/git/Pngyu/pngyu_execute_jpegoptim_command.h; sourceTree = "<absolute>"; };
+		9FBEAE56BFDC2A195A019976 /* moc_pngyumainwindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_pngyumainwindow.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/moc_pngyumainwindow.cpp; sourceTree = "<absolute>"; };
+		A1A67BEAA744704B29168D39 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		A814361A105AABBC536DD6CF /* pngyupreferencesdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = pngyupreferencesdialog.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/preferences_dialog/pngyupreferencesdialog.cpp; sourceTree = "<absolute>"; };
+		A95F44CA62584CBEE19B35DF /* ui_pngyupreviewwindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_pngyupreviewwindow.h; path = /Users/cameronbanga/Developer/git/Pngyu/ui_pngyupreviewwindow.h; sourceTree = "<absolute>"; };
+		AC46FD8A14A28B88F440EEEA /* qrc_resource.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = qrc_resource.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/qrc_resource.cpp; sourceTree = "<absolute>"; };
+		B3D0F405A24F790D59CE6198 /* executecompressthread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = executecompressthread.h; path = /Users/cameronbanga/Developer/git/Pngyu/executecompressthread.h; sourceTree = "<absolute>"; };
+		BD7E37270EC6B811DCE4CAFC /* pngyupreviewwindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = pngyupreviewwindow.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/preview_window/pngyupreviewwindow.cpp; sourceTree = "<absolute>"; };
+		CD8F1101BCAA21A764D2384D /* pngyuimageoptimintegrationquestiondialog.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = pngyuimageoptimintegrationquestiondialog.ui; path = /Users/cameronbanga/Developer/git/Pngyu/imageoptim_integration_question_dialog/pngyuimageoptimintegrationquestiondialog.ui; sourceTree = "<absolute>"; };
+		CDD0DB50BE3F13906DFA3BEF /* executecompressworkerthread.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = executecompressworkerthread.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/executecompressworkerthread.cpp; sourceTree = "<absolute>"; };
+		D38285A4BB9ADFA0D198F74C /* ui_pngyuimageoptimintegrationquestiondialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_pngyuimageoptimintegrationquestiondialog.h; path = /Users/cameronbanga/Developer/git/Pngyu/ui_pngyuimageoptimintegrationquestiondialog.h; sourceTree = "<absolute>"; };
+		D420E6CC430A4EC5D2EBB7E1 /* moc_pngyupreviewwindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_pngyupreviewwindow.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/moc_pngyupreviewwindow.cpp; sourceTree = "<absolute>"; };
+		D4B32C2222F82AC56BADEB21 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		DC4C2E7E45CB83B707419776 /* QtWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtWidgets.framework; path = /opt/homebrew/lib/QtWidgets.framework; sourceTree = "<absolute>"; };
+		E07A92EDCC1E85F658C71A37 /* basicimageview.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = basicimageview.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/preview_window/basicimageview.cpp; sourceTree = "<absolute>"; };
+		E0BAF0FA16FB7A2ECB632E0B /* executecompressthread.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = executecompressthread.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/executecompressthread.cpp; sourceTree = "<absolute>"; };
+		E112A95CC58D2C8A417C0C46 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/main.cpp; sourceTree = "<absolute>"; };
+		E2E66260751263F3330551BE /* pngyu_custom_tablewidget_item.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pngyu_custom_tablewidget_item.h; path = /Users/cameronbanga/Developer/git/Pngyu/pngyu_custom_tablewidget_item.h; sourceTree = "<absolute>"; };
+		E46CEEEAEB28C24E4224D9EB /* pngyu_execute_pngquant_command.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = pngyu_execute_pngquant_command.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/pngyu_execute_pngquant_command.cpp; sourceTree = "<absolute>"; };
+		E8F976AE0C892F57169E0E84 /* pngyumainwindow.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = pngyumainwindow.ui; path = /Users/cameronbanga/Developer/git/Pngyu/pngyumainwindow.ui; sourceTree = "<absolute>"; };
+		E9174C59D30461F7B43A76DF /* ui_pngyupreferencesdialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_pngyupreferencesdialog.h; path = /Users/cameronbanga/Developer/git/Pngyu/ui_pngyupreferencesdialog.h; sourceTree = "<absolute>"; };
+		F639A814C410F80339FC35B6 /* basicimageview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = basicimageview.h; path = /Users/cameronbanga/Developer/git/Pngyu/preview_window/basicimageview.h; sourceTree = "<absolute>"; };
+		FDE3BCD4B39AA42858B53C30 /* pngyu_defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pngyu_defines.h; path = /Users/cameronbanga/Developer/git/Pngyu/pngyu_defines.h; sourceTree = "<absolute>"; };
+		FEE091EFEE006F0B2DA4F89B /* pngyumainwindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pngyumainwindow.h; path = /Users/cameronbanga/Developer/git/Pngyu/pngyumainwindow.h; sourceTree = "<absolute>"; };
+		FF1317CA58142DA670710699 /* pngyu_util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pngyu_util.h; path = /Users/cameronbanga/Developer/git/Pngyu/pngyu_util.h; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1C883685E82D5676953459A /* Link Binary With Libraries */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C30F361268D052FF71E287F /* QtWidgets.framework in Link Binary With Libraries */,
+				A5F48226AD16997661123CAF /* QtGui.framework in Link Binary With Libraries */,
+				F2A75ACAC9DF6A3F4E5711E7 /* AppKit.framework in Link Binary With Libraries */,
+				61EEC397DC8556BF8C4E36A7 /* ImageIO.framework in Link Binary With Libraries */,
+				B3FE8FAC746D3D5BB24FA398 /* Metal.framework in Link Binary With Libraries */,
+				38E7C438D5325CA0A308DF2D /* QtCore.framework in Link Binary With Libraries */,
+				8D267F2E4776F0ECA2F49DC8 /* IOKit.framework in Link Binary With Libraries */,
+				A99B2AA0F9CBBDD12BA126A4 /* DiskArbitration.framework in Link Binary With Libraries */,
+				F30795E5207D73289814C47C /* UniformTypeIdentifiers.framework in Link Binary With Libraries */,
+				8771A8C96E9C391044035D99 /* OpenGL.framework in Link Binary With Libraries */,
+			);
+			name = "Link Binary With Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE0A091FDBFB3E9C31B7A1BD = {
-			children = (
-				"8C03F66BA1925AAC50944DCE");
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12E908B8A1C3C07C115504F5 /* Sources [uic] */ = {
 			isa = PBXGroup;
-			name = "Products";
+			children = (
+				E8F976AE0C892F57169E0E84 /* pngyumainwindow.ui */,
+				77AE1968AC4041837A634743 /* preview_window */,
+				3BCE219505EDE8E19C3FF4A9 /* preferences_dialog */,
+				7A25CB49BDEE814D865E85FA /* imageoptim_integration_question_dialog */,
+			);
+			name = "Sources [uic]";
 			sourceTree = "<group>";
 		};
-		E8C543AB96796ECAA2E65C57 = {
-			children = (
-				"2EB56BE3C2D93CDAB0C52E67",
-				"25B08E2869634E9BCBA333A2",
-				"87DF60DE337FB58864343E39",
-				"B8254625CFD509ED2A24A166",
-				"12E908B8A1C3C07C115504F5",
-				"74B182DB50CB5611B5C1C297",
-				"AF39DD055C3EF8226FBE929D",
-				"FE0A091FDBFB3E9C31B7A1BD");
+		25B08E2869634E9BCBA333A2 /* Generated Sources */ = {
 			isa = PBXGroup;
-			name = "PngyuNeue";
+			children = (
+				AC46FD8A14A28B88F440EEEA /* qrc_resource.cpp */,
+				9FBEAE56BFDC2A195A019976 /* moc_pngyumainwindow.cpp */,
+				6C892512849A385351ED62BC /* moc_basicimageview.cpp */,
+				D420E6CC430A4EC5D2EBB7E1 /* moc_pngyupreviewwindow.cpp */,
+				87D342ACCEC0589D679570C4 /* moc_executecompressthread.cpp */,
+				9038D143066834B71313C9CC /* moc_pngyupreferencesdialog.cpp */,
+				4254EC30C2B0D39ADA187B57 /* moc_pngyuimageoptimintegrationquestiondialog.cpp */,
+				40636AB63523B75A25215A1E /* moc_executecompressworkerthread.cpp */,
+				5257BC6E59E043784950F804 /* ui_pngyumainwindow.h */,
+				A95F44CA62584CBEE19B35DF /* ui_pngyupreviewwindow.h */,
+				E9174C59D30461F7B43A76DF /* ui_pngyupreferencesdialog.h */,
+				D38285A4BB9ADFA0D198F74C /* ui_pngyuimageoptimintegrationquestiondialog.h */,
+			);
+			name = "Generated Sources";
 			sourceTree = "<group>";
 		};
-		D68E809868D072EACC3DD0E1 = {
-			buildPhases = (
-				"5E618435888B9D49F8540165",
-				"7EF0942E79C014DCEC8976BC");
-			dependencies = (
-				);
-			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59;
-			isa = PBXAggregateTarget;
-			buildRules = (
-);
-			productName = "Qt Preprocess";
-			name = "Qt Preprocess";
+		2EB56BE3C2D93CDAB0C52E67 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E112A95CC58D2C8A417C0C46 /* main.cpp */,
+				2B00B777CCBB7190AFB54DC4 /* pngyumainwindow.cpp */,
+				E46CEEEAEB28C24E4224D9EB /* pngyu_execute_pngquant_command.cpp */,
+				334D2A5F7DA7F9CCF2929918 /* pngyu_execute_jpegoptim_command.cpp */,
+				A625F4C672805518E90429BD /* preview_window */,
+				E0BAF0FA16FB7A2ECB632E0B /* executecompressthread.cpp */,
+				4DB8AB02AC4D231FAC107DFF /* preferences_dialog */,
+				7CCD4F543B3B6CE05B3B8598 /* imageoptim_integration_question_dialog */,
+				CDD0DB50BE3F13906DFA3BEF /* executecompressworkerthread.cpp */,
+				D044928BEC81F9DB4B39DF78 /* resource */,
+				FEE091EFEE006F0B2DA4F89B /* pngyumainwindow.h */,
+				FF1317CA58142DA670710699 /* pngyu_util.h */,
+				867D459B98A5D89F1C89D5C8 /* pngyu_pngquant_option.h */,
+				06C14D2DBF2EB6DA5FA7FD6C /* pngyu_jpeg_option.h */,
+				FDE3BCD4B39AA42858B53C30 /* pngyu_defines.h */,
+				2357A2CE56598EB71D0BD991 /* pngyu_execute_pngquant_command.h */,
+				997D2F97616DEF5FD02F542E /* pngyu_execute_jpegoptim_command.h */,
+				B3D0F405A24F790D59CE6198 /* executecompressthread.h */,
+				53ECFF813AE005A18157948E /* spinnerwidget.h */,
+				0C239DA4B53AF4959AA7F151 /* executecompressworkerthread.h */,
+				E2E66260751263F3330551BE /* pngyu_custom_tablewidget_item.h */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
 		};
-		8349AC4C53A01297A8E3113E = {
-			isa = PBXTargetDependency;
-			target = "D68E809868D072EACC3DD0E1";
+		3BCE219505EDE8E19C3FF4A9 /* preferences_dialog */ = {
+			isa = PBXGroup;
+			children = (
+				3E957B07AFFB13AA1370F27F /* pngyupreferencesdialog.ui */,
+			);
+			name = preferences_dialog;
+			sourceTree = "<group>";
 		};
-		D2CEF0AE651F12F4CDCB4169 = {
-			buildPhases = (
-				"F7E50F631C51CD5B5DC0BC43",
-				"D1C883685E82D5676953459A",
-				"30414803F31797EB689AE508",
-				"99542592E9780B9225F24AA8");
-			dependencies = (
-				"8349AC4C53A01297A8E3113E");
-			productReference = "8C03F66BA1925AAC50944DCE";
-			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59;
+		4ADB1752486307428F9A061F /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				0CFA31409155FEBF92DE18F1 /* resource.qrc */,
+			);
+			name = resource;
+			sourceTree = "<group>";
+		};
+		4DB8AB02AC4D231FAC107DFF /* preferences_dialog */ = {
+			isa = PBXGroup;
+			children = (
+				A814361A105AABBC536DD6CF /* pngyupreferencesdialog.cpp */,
+				39145EAB0391A8DAB33EFCDC /* pngyupreferencesdialog.h */,
+			);
+			name = preferences_dialog;
+			sourceTree = "<group>";
+		};
+		74B182DB50CB5611B5C1C297 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				015A8C1BCF4CB97E28D5C0D5 /* Pngyu.pro */,
+				64788652B2CD5A2ACAFF1EE7 /* .qmake.stash */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		77AE1968AC4041837A634743 /* preview_window */ = {
+			isa = PBXGroup;
+			children = (
+				4F7DB87A5C20E0ED7C59E867 /* pngyupreviewwindow.ui */,
+			);
+			name = preview_window;
+			sourceTree = "<group>";
+		};
+		7A25CB49BDEE814D865E85FA /* imageoptim_integration_question_dialog */ = {
+			isa = PBXGroup;
+			children = (
+				CD8F1101BCAA21A764D2384D /* pngyuimageoptimintegrationquestiondialog.ui */,
+			);
+			name = imageoptim_integration_question_dialog;
+			sourceTree = "<group>";
+		};
+		7CCD4F543B3B6CE05B3B8598 /* imageoptim_integration_question_dialog */ = {
+			isa = PBXGroup;
+			children = (
+				1BD72BCAF184115270EDCF71 /* pngyuimageoptimintegrationquestiondialog.cpp */,
+				01DD70DB31CD2772332F77EF /* pngyuimageoptimintegrationquestiondialog.h */,
+			);
+			name = imageoptim_integration_question_dialog;
+			sourceTree = "<group>";
+		};
+		87DF60DE337FB58864343E39 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4ADB1752486307428F9A061F /* resource */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A625F4C672805518E90429BD /* preview_window */ = {
+			isa = PBXGroup;
+			children = (
+				E07A92EDCC1E85F658C71A37 /* basicimageview.cpp */,
+				BD7E37270EC6B811DCE4CAFC /* pngyupreviewwindow.cpp */,
+				F639A814C410F80339FC35B6 /* basicimageview.h */,
+				31515AB8D0D8DFD2026538D0 /* pngyupreviewwindow.h */,
+			);
+			name = preview_window;
+			sourceTree = "<group>";
+		};
+		AF39DD055C3EF8226FBE929D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC4C2E7E45CB83B707419776 /* QtWidgets.framework */,
+				75BB98347AA20D28579DDB5E /* QtGui.framework */,
+				723F90793B2C195E2CCB2233 /* AppKit.framework */,
+				3A8EF9C62A8D4790CBB89CEA /* ImageIO.framework */,
+				1B2543FCC48E9436F21C4F63 /* Metal.framework */,
+				53419A4ADDA92E410E5591BA /* QtCore.framework */,
+				A1A67BEAA744704B29168D39 /* IOKit.framework */,
+				2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */,
+				5F9A4B2B3FF5EC87C57CF6B4 /* UniformTypeIdentifiers.framework */,
+				D4B32C2222F82AC56BADEB21 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8254625CFD509ED2A24A166 /* Sources [moc_predefs] */ = {
+			isa = PBXGroup;
+			children = (
+				821298A917E5BFA9064C9F3C /* dummy.cpp */,
+			);
+			name = "Sources [moc_predefs]";
+			sourceTree = "<group>";
+		};
+		D044928BEC81F9DB4B39DF78 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				532E20A5ED335FA176008CFC /* icon.icns */,
+			);
+			name = resource;
+			sourceTree = "<group>";
+		};
+		E8C543AB96796ECAA2E65C57 /* PngyuNeue */ = {
+			isa = PBXGroup;
+			children = (
+				2EB56BE3C2D93CDAB0C52E67 /* Sources */,
+				25B08E2869634E9BCBA333A2 /* Generated Sources */,
+				87DF60DE337FB58864343E39 /* Resources */,
+				B8254625CFD509ED2A24A166 /* Sources [moc_predefs] */,
+				12E908B8A1C3C07C115504F5 /* Sources [uic] */,
+				74B182DB50CB5611B5C1C297 /* Supporting Files */,
+				AF39DD055C3EF8226FBE929D /* Frameworks */,
+				FE0A091FDBFB3E9C31B7A1BD /* Products */,
+			);
+			name = PngyuNeue;
+			sourceTree = "<group>";
+		};
+		FE0A091FDBFB3E9C31B7A1BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C03F66BA1925AAC50944DCE /* PngyuNeue.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2CEF0AE651F12F4CDCB4169 /* PngyuNeue */ = {
 			isa = PBXNativeTarget;
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59 /* Build configuration list for PBXNativeTarget "PngyuNeue" */;
+			buildPhases = (
+				F7E50F631C51CD5B5DC0BC43 /* Compile Sources */,
+				D1C883685E82D5676953459A /* Link Binary With Libraries */,
+				30414803F31797EB689AE508 /* Copy Bundle Resources */,
+				99542592E9780B9225F24AA8 /* Embed Frameworks */,
+			);
 			buildRules = (
-);
+			);
+			dependencies = (
+				8349AC4C53A01297A8E3113E /* PBXTargetDependency */,
+			);
+			name = PngyuNeue;
+			productName = PngyuNeue;
+			productReference = 8C03F66BA1925AAC50944DCE /* PngyuNeue.app */;
 			productType = "com.apple.product-type.application";
-			name = "PngyuNeue";
-			productName = "PngyuNeue";
 		};
-		3AA6C32AC930069E80220CF1 = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = "NO";
-				"ARCHS[sdk=macosx*]" = "arm64";
-				COPY_PHASE_STRIP = "NO";
-				DEVELOPMENT_TEAM = "5YESB723BS";
-				ENABLE_BITCODE = "NO";
-				GCC_OPTIMIZATION_LEVEL = "0";
-				ONLY_ACTIVE_ARCH = "YES";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cameronbanga.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "PngyuNeue";
-				QMAKE_FULL_VERSION = "1.0.0";
-				QMAKE_PKGINFO_TYPEINFO = "????";
-				QMAKE_SHORT_VERSION = "1.0";
-				QT_LIBRARY_SUFFIX = "";
-				SDKROOT = "macosx";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				CC = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang";
-				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
-				INFOPLIST_FILE = "resource/info.plist";
-				SYMROOT = ".xcode";
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				DYLIB_CURRENT_VERSION = "1.0.0";
-				DYLIB_COMPATIBILITY_VERSION = "1.0";
-				MACOSX_DEPLOYMENT_TARGET = "12.0";
-				HEADER_SEARCH_PATHS = (
-					".",
-					"preview_window",
-					"preferences_dialog",
-					"imageoptim_integration_question_dialog",
-					"/opt/homebrew/lib/QtWidgets.framework/Headers",
-					"/opt/homebrew/lib/QtGui.framework/Headers",
-					"/opt/homebrew/lib/QtCore.framework/Headers",
-					".",
-					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
-					".",
-					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
-					"/opt/homebrew/Cellar/qt/6.9.2/share/qt/mkspecs/macx-clang");
-				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib",
-					"/System/Library/Frameworks/");
-				FRAMEWORK_SEARCH_PATHS = (
-					"/opt/homebrew/lib",
-					"/opt/homebrew/lib");
-				OTHER_CFLAGS = (
-					"-pipe",
-					"-O2",
-					"-Wall",
-					"-Wextra",
-					"-DQT_NO_DEBUG",
-					"-DQT_WIDGETS_LIB",
-					"-DQT_GUI_LIB",
-					"-DQT_CORE_LIB");
-				OTHER_CPLUSPLUSFLAGS = (
-					"-pipe",
-					"-stdlib=libc++",
-					"-std=c++17",
-					"-O2",
-					"-std=gnu++1z",
-					"-Wall",
-					"-Wextra",
-					"-DQT_NO_DEBUG",
-					"-DQT_WIDGETS_LIB",
-					"-DQT_GUI_LIB",
-					"-DQT_CORE_LIB");
-				OTHER_LDFLAGS = (
-						"-stdlib=libc++",
-						"-headerpad_max_install_names",
-						"-Wl,-rpath,@executable_path/../Frameworks",
-						"-Wl,-rpath,/opt/homebrew/lib",
-						"-F/opt/homebrew/lib");
-				ARCHS = "arm64";
-			};
-			name = "Debug";
-		};
-		77418F46922677BB04ED38DD = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = "NO";
-				"ARCHS[sdk=macosx*]" = "arm64";
-				COPY_PHASE_STRIP = "NO";
-				DEVELOPMENT_TEAM = "5YESB723BS";
-				ENABLE_BITCODE = "NO";
-				GCC_OPTIMIZATION_LEVEL = "0";
-				ONLY_ACTIVE_ARCH = "YES";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cameronbanga.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "PngyuNeue";
-				QMAKE_FULL_VERSION = "1.0.0";
-				QMAKE_PKGINFO_TYPEINFO = "????";
-				QMAKE_SHORT_VERSION = "1.0";
-				QT_LIBRARY_SUFFIX = "";
-				SDKROOT = "macosx";
-				PRODUCT_NAME = "PngyuNeue";
-			};
-			name = "Debug";
-		};
-		339EE1B2CC4FC24589A0EA95 = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = "NO";
-				"ARCHS[sdk=macosx*]" = "arm64";
-				COPY_PHASE_STRIP = "NO";
-				DEVELOPMENT_TEAM = "5YESB723BS";
-				ENABLE_BITCODE = "NO";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cameronbanga.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "PngyuNeue";
-				QMAKE_FULL_VERSION = "1.0.0";
-				QMAKE_PKGINFO_TYPEINFO = "????";
-				QMAKE_SHORT_VERSION = "1.0";
-				QT_LIBRARY_SUFFIX = "";
-				SDKROOT = "macosx";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				CC = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang";
-				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
-				INFOPLIST_FILE = "resource/info.plist";
-				SYMROOT = ".xcode";
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				DYLIB_CURRENT_VERSION = "1.0.0";
-				DYLIB_COMPATIBILITY_VERSION = "1.0";
-				MACOSX_DEPLOYMENT_TARGET = "12.0";
-				HEADER_SEARCH_PATHS = (
-					".",
-					"preview_window",
-					"preferences_dialog",
-					"imageoptim_integration_question_dialog",
-					"/opt/homebrew/lib/QtWidgets.framework/Headers",
-					"/opt/homebrew/lib/QtGui.framework/Headers",
-					"/opt/homebrew/lib/QtCore.framework/Headers",
-					".",
-					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
-					".",
-					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
-					"/opt/homebrew/Cellar/qt/6.9.2/share/qt/mkspecs/macx-clang");
-				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib",
-					"/System/Library/Frameworks/");
-				FRAMEWORK_SEARCH_PATHS = (
-					"/opt/homebrew/lib",
-					"/opt/homebrew/lib");
-				OTHER_CFLAGS = (
-					"-pipe",
-					"-O2",
-					"-Wall",
-					"-Wextra",
-					"-DQT_NO_DEBUG",
-					"-DQT_WIDGETS_LIB",
-					"-DQT_GUI_LIB",
-					"-DQT_CORE_LIB");
-				OTHER_CPLUSPLUSFLAGS = (
-					"-pipe",
-					"-stdlib=libc++",
-					"-std=c++17",
-					"-O2",
-					"-std=gnu++1z",
-					"-Wall",
-					"-Wextra",
-					"-DQT_NO_DEBUG",
-					"-DQT_WIDGETS_LIB",
-					"-DQT_GUI_LIB",
-					"-DQT_CORE_LIB");
-				OTHER_LDFLAGS = (
-						"-stdlib=libc++",
-						"-headerpad_max_install_names",
-						"-Wl,-rpath,@executable_path/../Frameworks",
-						"-Wl,-rpath,/opt/homebrew/lib",
-						"-F/opt/homebrew/lib");
-				ARCHS = "arm64";
-			};
-			name = "Release";
-		};
-		6666AA5E688052234F6758D8 = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = "NO";
-				"ARCHS[sdk=macosx*]" = "arm64";
-				COPY_PHASE_STRIP = "NO";
-				DEVELOPMENT_TEAM = "5YESB723BS";
-				ENABLE_BITCODE = "NO";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cameronbanga.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "PngyuNeue";
-				QMAKE_FULL_VERSION = "1.0.0";
-				QMAKE_PKGINFO_TYPEINFO = "????";
-				QMAKE_SHORT_VERSION = "1.0";
-				QT_LIBRARY_SUFFIX = "";
-				SDKROOT = "macosx";
-				PRODUCT_NAME = "PngyuNeue";
-			};
-			name = "Release";
-		};
-		DAC4C1AA5EDEA1C85E9CA5E6 = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				"3AA6C32AC930069E80220CF1",
-				"339EE1B2CC4FC24589A0EA95");
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release";
-		};
-		6CC3B5D2136C7CD6A5CF5A59 = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				"77418F46922677BB04ED38DD",
-				"6666AA5E688052234F6758D8");
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release";
-		};
-		6DB9C3763D02B1415CD9D565 = {
-			hasScannedForEncodings = 1;
-			compatibilityVersion = "Xcode 3.2";
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DB9C3763D02B1415CD9D565 /* Project object */ = {
 			isa = PBXProject;
-			mainGroup = "E8C543AB96796ECAA2E65C57";
-			productRefGroup = "FE0A091FDBFB3E9C31B7A1BD";
-			buildConfigurationList = "DAC4C1AA5EDEA1C85E9CA5E6";
+			attributes = {
+			};
+			buildConfigurationList = DAC4C1AA5EDEA1C85E9CA5E6 /* Build configuration list for PBXProject "PngyuNeue" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E8C543AB96796ECAA2E65C57 /* PngyuNeue */;
+			productRefGroup = FE0A091FDBFB3E9C31B7A1BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"D2CEF0AE651F12F4CDCB4169",
-				"D68E809868D072EACC3DD0E1");
-			attributes = {
-				TargetAttributes = {
-				};
-			};
+				D2CEF0AE651F12F4CDCB4169 /* PngyuNeue */,
+				D68E809868D072EACC3DD0E1 /* Qt Preprocess */,
+			);
 		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30414803F31797EB689AE508 /* Copy Bundle Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Copy Bundle Resources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E618435888B9D49F8540165 /* Qt Qmake */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Qt Qmake";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/cameronbanga/Developer/git/Pngyu -f PngyuNeue.xcodeproj/qt_makeqmake.mak";
+			showEnvVarsInLog = 0;
+		};
+		7EF0942E79C014DCEC8976BC /* Qt Preprocessors */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				resource/resource.qrc,
+				/opt/homebrew/share/qt/mkspecs/features/data/dummy.cpp,
+				pngyumainwindow.h,
+				preview_window/basicimageview.h,
+				preview_window/pngyupreviewwindow.h,
+				executecompressthread.h,
+				preferences_dialog/pngyupreferencesdialog.h,
+				imageoptim_integration_question_dialog/pngyuimageoptimintegrationquestiondialog.h,
+				executecompressworkerthread.h,
+				pngyumainwindow.ui,
+				preview_window/pngyupreviewwindow.ui,
+				preferences_dialog/pngyupreferencesdialog.ui,
+				imageoptim_integration_question_dialog/pngyuimageoptimintegrationquestiondialog.ui,
+			);
+			name = "Qt Preprocessors";
+			outputPaths = (
+				qrc_resource.cpp,
+				moc_predefs.h,
+				moc_pngyumainwindow.cpp,
+				moc_basicimageview.cpp,
+				moc_pngyupreviewwindow.cpp,
+				moc_executecompressthread.cpp,
+				moc_pngyupreferencesdialog.cpp,
+				moc_pngyuimageoptimintegrationquestiondialog.cpp,
+				moc_executecompressworkerthread.cpp,
+				ui_pngyumainwindow.h,
+				ui_pngyupreviewwindow.h,
+				ui_pngyupreferencesdialog.h,
+				ui_pngyuimageoptimintegrationquestiondialog.h,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/cameronbanga/Developer/git/Pngyu -f PngyuNeue.xcodeproj/qt_preprocess.mak";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7E50F631C51CD5B5DC0BC43 /* Compile Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4612779BD147E9E990DA208 /* main.cpp in Compile Sources */,
+				A541E82F11C26C4306933DA6 /* pngyumainwindow.cpp in Compile Sources */,
+				34C96C8E703A3694DD2F19A3 /* pngyu_execute_pngquant_command.cpp in Compile Sources */,
+				26B0240293380ECBD8CBF4D7 /* pngyu_execute_jpegoptim_command.cpp in Compile Sources */,
+				514FA5B633061CE0C5973342 /* basicimageview.cpp in Compile Sources */,
+				48F27E95EAF2833C121BC426 /* pngyupreviewwindow.cpp in Compile Sources */,
+				6F40797F7B431B07E730B215 /* executecompressthread.cpp in Compile Sources */,
+				E10D80BB8B68B480BDAB74CE /* pngyupreferencesdialog.cpp in Compile Sources */,
+				A41E247355521CBC01DDA826 /* pngyuimageoptimintegrationquestiondialog.cpp in Compile Sources */,
+				E53193B965E815E400CDEAC0 /* executecompressworkerthread.cpp in Compile Sources */,
+				0AC47DE8D92D4F8A8490A39B /* qrc_resource.cpp in Compile Sources */,
+				F3B04214A1128AB8F674F6A1 /* moc_pngyumainwindow.cpp in Compile Sources */,
+				201D30BB9AEF86904E6B09AA /* moc_basicimageview.cpp in Compile Sources */,
+				4676FD2734753C2366CF2BE5 /* moc_pngyupreviewwindow.cpp in Compile Sources */,
+				40B8BD7702C855ADECB06149 /* moc_executecompressthread.cpp in Compile Sources */,
+				4EC0685E6993B91EF17181FE /* moc_pngyupreferencesdialog.cpp in Compile Sources */,
+				6EAE243D9C68AAF60A3496F9 /* moc_pngyuimageoptimintegrationquestiondialog.cpp in Compile Sources */,
+				F39DA98A72382977F192875A /* moc_executecompressworkerthread.cpp in Compile Sources */,
+				034ED4AAD568CD9B9C6425CB /* dummy.cpp in Compile Sources */,
+			);
+			name = "Compile Sources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8349AC4C53A01297A8E3113E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D68E809868D072EACC3DD0E1 /* Qt Preprocess */;
+			targetProxy = CF9662C52E6915B4006155A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		339EE1B2CC4FC24589A0EA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				ARCHS = arm64;
+				"ARCHS[sdk=macosx*]" = arm64;
+				CC = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 5YESB723BS;
+				DYLIB_COMPATIBILITY_VERSION = 1.0;
+				DYLIB_CURRENT_VERSION = 1.0.0;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/opt/homebrew/lib,
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					.,
+					preview_window,
+					preferences_dialog,
+					imageoptim_integration_question_dialog,
+					/opt/homebrew/lib/QtWidgets.framework/Headers,
+					/opt/homebrew/lib/QtGui.framework/Headers,
+					/opt/homebrew/lib/QtCore.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					"/opt/homebrew/Cellar/qt/6.9.2/share/qt/mkspecs/macx-clang",
+				);
+				INFOPLIST_FILE = resource/info.plist;
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				LIBRARY_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/System/Library/Frameworks/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-Wextra",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-stdlib=libc++",
+					"-std=c++17",
+					"-O2",
+					"-std=gnu++1z",
+					"-Wall",
+					"-Wextra",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_LDFLAGS = (
+					"-stdlib=libc++",
+					"-headerpad_max_install_names",
+					"-Wl,-rpath,@executable_path/../Frameworks",
+					"-Wl,-rpath,/opt/homebrew/lib",
+					"-F/opt/homebrew/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cameronbanga.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = PngyuNeue;
+				QMAKE_FULL_VERSION = 1.0.0;
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QMAKE_SHORT_VERSION = 1.0;
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = macosx;
+				SYMROOT = .xcode;
+			};
+			name = Release;
+		};
+		3AA6C32AC930069E80220CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				ARCHS = arm64;
+				"ARCHS[sdk=macosx*]" = arm64;
+				CC = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 5YESB723BS;
+				DYLIB_COMPATIBILITY_VERSION = 1.0;
+				DYLIB_CURRENT_VERSION = 1.0.0;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/opt/homebrew/lib,
+				);
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					.,
+					preview_window,
+					preferences_dialog,
+					imageoptim_integration_question_dialog,
+					/opt/homebrew/lib/QtWidgets.framework/Headers,
+					/opt/homebrew/lib/QtGui.framework/Headers,
+					/opt/homebrew/lib/QtCore.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					"/opt/homebrew/Cellar/qt/6.9.2/share/qt/mkspecs/macx-clang",
+				);
+				INFOPLIST_FILE = resource/info.plist;
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				LIBRARY_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/System/Library/Frameworks/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-Wextra",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-stdlib=libc++",
+					"-std=c++17",
+					"-O2",
+					"-std=gnu++1z",
+					"-Wall",
+					"-Wextra",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_LDFLAGS = (
+					"-stdlib=libc++",
+					"-headerpad_max_install_names",
+					"-Wl,-rpath,@executable_path/../Frameworks",
+					"-Wl,-rpath,/opt/homebrew/lib",
+					"-F/opt/homebrew/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cameronbanga.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = PngyuNeue;
+				QMAKE_FULL_VERSION = 1.0.0;
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QMAKE_SHORT_VERSION = 1.0;
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = macosx;
+				SYMROOT = .xcode;
+			};
+			name = Debug;
+		};
+		6666AA5E688052234F6758D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				"ARCHS[sdk=macosx*]" = arm64;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 5YESB723BS;
+				ENABLE_BITCODE = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cameronbanga.PngyuNeue;
+				PRODUCT_NAME = PngyuNeue;
+				QMAKE_FULL_VERSION = 1.0.0;
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QMAKE_SHORT_VERSION = 1.0;
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		77418F46922677BB04ED38DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				"ARCHS[sdk=macosx*]" = arm64;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 5YESB723BS;
+				ENABLE_BITCODE = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cameronbanga.PngyuNeue;
+				PRODUCT_NAME = PngyuNeue;
+				QMAKE_FULL_VERSION = 1.0.0;
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QMAKE_SHORT_VERSION = 1.0;
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6CC3B5D2136C7CD6A5CF5A59 /* Build configuration list for PBXNativeTarget "PngyuNeue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77418F46922677BB04ED38DD /* Debug */,
+				6666AA5E688052234F6758D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAC4C1AA5EDEA1C85E9CA5E6 /* Build configuration list for PBXProject "PngyuNeue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA6C32AC930069E80220CF1 /* Debug */,
+				339EE1B2CC4FC24589A0EA95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
 	};
-	rootObject = "6DB9C3763D02B1415CD9D565";
+	rootObject = 6DB9C3763D02B1415CD9D565 /* Project object */;
 }

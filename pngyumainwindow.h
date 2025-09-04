@@ -66,8 +66,6 @@ public:
   void set_dither_enabled( const bool b );
   bool dither_enabled() const;
 
-  void set_ie6_alpha_support_enabled( const bool b );
-  bool ie6_alpha_support_enabled() const;
 
   void set_compress_speed( const int speed );
   int compress_speed() const;
