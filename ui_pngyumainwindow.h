@@ -1000,7 +1000,7 @@ public:
         radioButton_output_same_directory->setText(QCoreApplication::translate("PngyuMainWindow", "Same Directory", nullptr));
         toolButton_output_option_custom->setText(QCoreApplication::translate("PngyuMainWindow", "Custom", nullptr));
         toolButton_output_option_overwrite_original->setText(QCoreApplication::translate("PngyuMainWindow", "Overwrite the original", nullptr));
-        label_homepage->setText(QCoreApplication::translate("PngyuMainWindow", "<a href=\"http://nukesaq88.github.io/Pngyu/\" style=\"color: darkgray;\">Home Page</a>", nullptr));
+        label_homepage->setText(QCoreApplication::translate("PngyuMainWindow", "<a href=\"https://pngyuneue.cameron.software\" style=\"color: darkgray;\">Home Page</a>", nullptr));
         groupBox_compress_option->setTitle(QCoreApplication::translate("PngyuMainWindow", "Compress Option", nullptr));
         pushButton_preview->setText(QCoreApplication::translate("PngyuMainWindow", "Preview", nullptr));
         label_colors->setText(QCoreApplication::translate("PngyuMainWindow", "Colors (PNG)", nullptr));

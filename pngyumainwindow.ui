@@ -715,7 +715,7 @@ QPushButton#pushButton_filelist_clear:pressed {
        </sizepolicy>
       </property>
       <property name="text">
-       <string>&lt;a href=&quot;http://nukesaq88.github.io/Pngyu/&quot; style=&quot;color: darkgray;&quot;&gt;Home Page&lt;/a&gt;</string>
+       <string>&lt;a href=&quot;https://pngyuneue.cameron.software&quot; style=&quot;color: darkgray;&quot;&gt;Home Page&lt;/a&gt;</string>
       </property>
       <property name="textFormat">
        <enum>Qt::RichText</enum>
