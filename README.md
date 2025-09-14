@@ -2,7 +2,7 @@ Pngyu Neue is a work to get the original Pngyu to compile and run on modern Appl
 
 For more information on Pngyu: https://nukesaq88.github.io/Pngyu/
 
-For information on this fork, 
+For information on this fork: https://pngyuneue.cameron.software
 
 Pngyu is Front-end GUI application of pngquant.
 Pngyu is distributed under the BSD license. 
