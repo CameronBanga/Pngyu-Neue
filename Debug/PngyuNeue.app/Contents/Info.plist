@@ -24,7 +24,9 @@
 	<key>CFBundleGetInfoString</key>
 	<string>Created by Qt/QMake</string>
 	<key>CFBundleIconFile</key>
-	<string>icon.icns</string>
+	<string>AppIcon</string>
+	<key>CFBundleIconName</key>
+	<string>AppIcon</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.cameronbanga.PngyuNeue</string>
 	<key>CFBundlePackageType</key>
@@ -56,7 +58,7 @@
 	<key>DTXcodeBuild</key>
 	<string>16C5032a</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>12.0</string>
+	<string>14.6</string>
 	<key>LSUIElement</key>
 	<false/>
 	<key>NOTE</key>

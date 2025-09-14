@@ -45,6 +45,7 @@
 		A99B2AA0F9CBBDD12BA126A4 /* DiskArbitration.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */; };
 		B3FE8FAC746D3D5BB24FA398 /* Metal.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 1B2543FCC48E9436F21C4F63 /* Metal.framework */; };
 		C4612779BD147E9E990DA208 /* main.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = E112A95CC58D2C8A417C0C46 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
+		CFFF2F4F2E77211E008D3CDE /* AssetCatalog.xcassets in Copy Bundle Resources */ = {isa = PBXBuildFile; fileRef = CFFF2F4E2E77211E008D3CDE /* AssetCatalog.xcassets */; };
 		E10D80BB8B68B480BDAB74CE /* pngyupreferencesdialog.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A814361A105AABBC536DD6CF /* pngyupreferencesdialog.cpp */; settings = {ATTRIBUTES = (); }; };
 		E53193B965E815E400CDEAC0 /* executecompressworkerthread.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = CDD0DB50BE3F13906DFA3BEF /* executecompressworkerthread.cpp */; settings = {ATTRIBUTES = (); }; };
 		F2A75ACAC9DF6A3F4E5711E7 /* AppKit.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 723F90793B2C195E2CCB2233 /* AppKit.framework */; };
@@ -120,6 +121,7 @@
 		CD8F1101BCAA21A764D2384D /* pngyuimageoptimintegrationquestiondialog.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = pngyuimageoptimintegrationquestiondialog.ui; path = /Users/cameronbanga/Developer/git/Pngyu/imageoptim_integration_question_dialog/pngyuimageoptimintegrationquestiondialog.ui; sourceTree = "<absolute>"; };
 		CDD0DB50BE3F13906DFA3BEF /* executecompressworkerthread.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = executecompressworkerthread.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/executecompressworkerthread.cpp; sourceTree = "<absolute>"; };
 		CF9662C82E692A4D006155A9 /* PngyuNeue.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PngyuNeue.entitlements; sourceTree = "<group>"; };
+		CFFF2F4E2E77211E008D3CDE /* AssetCatalog.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AssetCatalog.xcassets; sourceTree = "<group>"; };
 		D38285A4BB9ADFA0D198F74C /* ui_pngyuimageoptimintegrationquestiondialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_pngyuimageoptimintegrationquestiondialog.h; path = /Users/cameronbanga/Developer/git/Pngyu/ui_pngyuimageoptimintegrationquestiondialog.h; sourceTree = "<absolute>"; };
 		D420E6CC430A4EC5D2EBB7E1 /* moc_pngyupreviewwindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_pngyupreviewwindow.cpp; path = /Users/cameronbanga/Developer/git/Pngyu/moc_pngyupreviewwindow.cpp; sourceTree = "<absolute>"; };
 		D4B32C2222F82AC56BADEB21 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				E112A95CC58D2C8A417C0C46 /* main.cpp */,
+				CFFF2F4E2E77211E008D3CDE /* AssetCatalog.xcassets */,
 				2B00B777CCBB7190AFB54DC4 /* pngyumainwindow.cpp */,
 				E46CEEEAEB28C24E4224D9EB /* pngyu_execute_pngquant_command.cpp */,
 				334D2A5F7DA7F9CCF2929918 /* pngyu_execute_jpegoptim_command.cpp */,
@@ -405,6 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFFF2F4F2E77211E008D3CDE /* AssetCatalog.xcassets in Copy Bundle Resources */,
 			);
 			name = "Copy Bundle Resources";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -673,6 +677,8 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				"ARCHS[sdk=macosx*]" = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = PngyuNeue.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
@@ -681,6 +687,9 @@
 				DEVELOPMENT_TEAM = 5YESB723BS;
 				ENABLE_BITCODE = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pngyu Neue";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cameronbanga.PngyuNeue;
 				PRODUCT_NAME = PngyuNeue;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -697,6 +706,8 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				"ARCHS[sdk=macosx*]" = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = PngyuNeue.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
@@ -706,6 +717,9 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pngyu Neue";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cameronbanga.PngyuNeue;
 				PRODUCT_NAME = PngyuNeue;
